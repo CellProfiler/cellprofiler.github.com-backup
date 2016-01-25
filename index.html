@@ -1,450 +1,284 @@
-<!DOCTYPE html>
-
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    
-    <title></title>
-    
-    <meta name="description" content="">
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    
-    <link rel="stylesheet" href="stylesheets/application.css">
-
-    <script src="javascripts/libraries/modernizr-2.8.3.min.js">
-
-    </script>
-  </head>
-  
-  <body>
-    <div id="mainwrapper">
-      <div id="header">
-        <div>
-          <a href="/"><img border="0" class="header1" src=
-          "http://d1zymp9ayga15t.cloudfront.net/images/cp_logo_smaller.png" width="400"></a> <a href=
-          "http://www.broadinstitute.org/"><img alt="Broad Institute logo"
-          border="0" class="header2" height="68" src=
-          "http://d1zymp9ayga15t.cloudfront.net/images/BroadInstituteLogo_smaller.png" width="220"></a>
-          <div id="navigation">
-            <hr>
-
-            <ul>
-              <li>
-                <a href="/" id="header_main">home</a>
-              </li>
-
-              <li>
-                <a href="#" id="header_getting_started" onclick=
-                "return false;">getting started</a>
-                <ul>
-                  <li>
-                    <a href="/faq.html">What is CellProfiler? FAQ</a>
-                  </li>
-
-                  <li>
-                    <a href="/examples.html">examples</a>
-                  </li>
-
-                  <li>
-                    <a href="/tutorials.html">tutorials</a>
-                  </li>
-
-                  <li>
-                    <a href=
-                    "http://d1zymp9ayga15t.cloudfront.net/content/CellProfilerSoftwareBrochure.pdf">brochure</a>
-                  </li>
-                </ul>
-              </li>
-
-              <li>
-                <a href="#" id="header_download" onclick=
-                "return false;">download</a>
-                <ul>
-                  <li>
-                    <a href="/download.html">CellProfiler</a>
-                  </li>
-
-                  <li>
-                    <a href="/downloadCPA.html">CellProfiler Analyst</a>
-                  </li>
-                </ul>
-              </li>
-
-              <li style="width:109px;text-align:center;">
-                <a href="#" id="header_help" onclick="return false;">help</a>
-                <ul>
-                  <li>
-                    <a href="http://forum.cellprofiler.org/">forum</a>
-                  </li>
-
-                  <li>
-                    <a href="/supportplan.html">support plan</a>
-                  </li>
-
-                  <li>
-                    <a href="http://www.broadinstitute.org/bbbc/">BBBC</a>
-                  </li>
-
-                  <li>
-                    <a href=
-                    "https://github.com/CellProfiler/CellProfiler/wiki">for
-                    developers</a>
-                  </li>
-
-                  <li>
-                    <a href="/manuals.html">manuals</a>
-                  </li>
-
-                  <li>
-                    <a href="/wormtoolbox">WormToolbox</a>
-                  </li>
-
-                  <li>
-                    <a href="/imagingflowcytometry">Imaging Flow Cytometry</a>
-                  </li>
-                </ul>
-              </li>
-
-              <li>
-                <a href="#" id="header_aboutus" onclick="return false;">about
-                us</a>
-                <ul>
-                  <li>
-                    <a href="/about.html">CellProfiler Team</a>
-                  </li>
-
-                  <li>
-                    <a href="/impact.html">impact</a>
-                  </li>
-
-                  <li>
-                    <a href="/press.html">press</a>
-                  </li>
-
-                  <li>
-                    <a href="/citations.html">citations</a>
-                  </li>
-
-                  <li>
-                    <a href="/outreach.html">outreach</a>
-                  </li>
-
-                  <li>
-                    <a href="/interfaces.html">interfaces</a>
-                  </li>
-
-                  <li>
-                    <a href="/#CurrentNews">news</a>
-                  </li>
-                </ul>
-              </li>
-
-              <li class="navsearch">
-                <form action="http://google.com/search" method="get" onsubmit=
-                "location.href = this.action + '?&q=%2Bsite:cellprofiler.org+' + this.query.value; return false;">
-                <input maxlength="255" name="query" size="20" type="text"
-                  value=""> <input type="submit" value="search">
-                </form>
-              </li>
-            </ul>
-            <br>
-
-            <hr style="clear:left">
-          </div>
-        </div>
-      </div>
-
-      <div id="content">
-        <table border="0" cellpadding="5">
-          <tr>
-            <td align="center" style="text-align:center" width="40%">
-              <a href="./download.html" title="Download CellProfiler Free Image Analysis Software">
-                <div class="boxed">
-                  <img alt="Download CellProfiler free image analysis software" border="0" height="120" src="http://d1zymp9ayga15t.cloudfront.net/images/cp_download_button.png">
-                </div>
-              </a>
-            </td>
-            
-            <td align="left" width="10%">
-            </td>
-            
-            <td align="center" width="40%">
-              <a href="./downloadCPA.html" title="Download CellProfiler Analyst Free Image Analyst Software">         
-                <div class="boxed">
-                  <img alt="Download CellProfiler Analyst free machine learning image analysis software" border="0" height="120" src="http://d1zymp9ayga15t.cloudfront.net/images/cpa_download_button.png">
-                </div>
-              </a>
-            </td>
-          </tr>
-
-          <tr>
-            <td align="left" valign="top">
-              <b>CellProfiler</b> is free open-source software designed to
-              enable biologists without training in computer vision or
-              programming to quantitatively measure phenotypes from thousands
-              of images automatically. See our papers on analyzing <a href=
-              "http://genomebiology.com/2006/7/10/R100">cell images</a> and
-              <a href=
-              "http://www.biotechniques.com/biotechniques/BiotechniquesJournal/2007/January/CellProfiler-free-versatile-software-for-automated-biological-image-analysis/biotechniques-40380.html">
-              non-cell images</a>.
-              <p>
-              </p>
-            </td>
-            <td>
-            </td>
-            <td align="left" valign="top">
-              <b>CellProfiler Analyst</b> is free open-source software for
-              exploring and analyzing large, high-dimensional image-derived
-              data. It includes machine learning tools for identifying complex
-              and subtle phenotypes. See our papers on <a href=
-              "http://www.biomedcentral.com/1471-2105/9/482">data
-              visualization</a> and <a href=
-              "http://www.pnas.orghttp://d1zymp9ayga15t.cloudfront.net/content/106/6/1826.long">machine
-              learning</a>.
-              <p>
-              </p>
-            </td>
-          </tr>
-
-          <tr>
-            <td align="center">
-              <img alt="CellProfiler image" height="230" src=
-              "http://d1zymp9ayga15t.cloudfront.net/images/frontpage_bigfig_left.jpg">
-            </td>
-            <td align="center">
-              <img alt="arrow" height="25" src="http://d1zymp9ayga15t.cloudfront.net/images/arrow.jpg">
-            </td>
-            <td align="center">
-              <img alt=
-              "CellProfiler detects and analyses biological images free software"
-              height="230" src="http://d1zymp9ayga15t.cloudfront.net/images/frontpage_bigfig_right.jpg">
-            </td>
-          </tr>
-        </table>
-
-        <h3>
-          <a href=".http://d1zymp9ayga15t.cloudfront.net/content/CellProfilerSoftwareBrochure.pdf" title=
-          "CellProfiler Microscopy Biological Software">Brochure</a> about
-          CellProfiler and CellProfiler Analyst
-        </h3>
-
-        <h2 style="margin-top:25px">
-          <a id="CurrentNews" name="CurrentNews">CellProfiler News</a>
-        </h2>
-
-        <h3>
-          November 6, 2015 &mdash; New CellProfiler forum and CellProfiler
-          tutorial at the Broad Institute
-        </h3>
-
-        <p>
-          CellProfiler has a new forum! Visit us at <a href=
-          "http://forum.cellprofiler.org">forum.cellprofiler.org</a>. All posts and
-          account information remains the same. Also, on November 23, Mark Bray
-          will present a CellProfiler tutorial at the Broad Institute. Email
-          imagingadmin@broadinstitue.org for signup information and to be
-          notified about future tutorials
-        </p>
-
-        <h3>
-          August 3, 2015 &mdash; CellProfiler tutorial at SBI2 2015!
-        </h3>
-
-        <p>
-          Just announced! Mark Bray of the Broad Institute's Imaging Platform
-          will present a CellProfiler tutorial at the 2015 Annual Society of
-          Biomolecular Imaging and Informatics Meeting in Boston, Ma. The
-          tutorial will take place on September 15, 2015. For more information,
-          and to register, visit <a href=
-          "http://www.sbi2.org/2nd-annual-conference/">http://www.sbi2.org/2nd-annual-conference/</a>.
-          We look forward to seeing you there!
-        </p>
-
-        <h3>
-          July 25, 2014 &mdash; CellProfiler 2.1.1 release
-        </h3>
-
-        <p>
-          The CellProfiler team is pleased to announce the release of
-          CellProfiler 2.1.1. This is a scheduled patch release whose primary
-          purpose is to address any issues in 2.1.0.[<a href=
-          "https://github.com/CellProfiler/CellProfiler/wiki/CellProfiler-release-notes">more
-          details</a>]
-        </p>
-
-        <h3>
-          July 2, 2014 &mdash; CellProfiler NIH grant has been renewed!
-        </h3>
-
-        <p>
-          Great news! We are pleased to announce that the NIH will continue to
-          support CellProfiler through 2018 (R01 GM089652). We are grateful
-          that NIH recognizes the community value of open source tools and the
-          variety of research that widely benefits from their continued
-          maintenance. [<a href=
-          "http://cellprofiler.org/forum/viewtopic.php?f=14&t=3891">more
-          details</a>]
-        </p>
-
-        <h3>
-          April 30, 2014 &mdash; Impact of CellProfiler on human health
-        </h3>
-
-        <p>
-          Our CellProfiler software has yielded discoveries in several
-          translational projects, some of which may ultimately have a direct
-          impact on the treatment of disease. For example, CellProfiler has
-          been used to identify several small molecules that are effective in
-          treating particular diseases in mouse models. In some cases,
-          discoveries made using CellProfiler have even led to planning
-          clinical trials in humans, which could directly improve patient
-          outcomes. [<a href="http://cellprofiler.org/impact.html">more
-          details</a>]
-        </p>
-
-        <h3>
-          April 30, 2014 &mdash; WormToolbox tutorial videos now available
-        </h3>
-
-        <p>
-          Tutorial videos for the WormToolbox detailed in a recent publication
-          in <em><a href=
-          "http://dx.doi.org/10.1016/j.ymeth.2014.04.017">Methods</a></em> are
-          now accessible here at <a href=
-          "http://cellprofiler.org/wormtoolbox">CellProfiler.org/WormToolbox</a>.
-        </p>
-
-        <h3>
-          January 31, 2014 &mdash; Now available: CellProfiler Annual Support
-          and Training Plan
-        </h3>
-
-        <p>
-          Gain direct access to the CellProfiler team, while supporting the
-          CellProfiler project!
-        </p>
-
-        <p>
-          Starting in 2014, we are pleased to offer the CellProfiler Annual
-          Support and Training Plan, a bundle of services to help you to
-          optimize your use of CellProfiler.
-        </p>
-
-        <p>
-          Subscribing organizations will receive project-specific image assay
-          development, training, configuration assistance, and custom software
-          engineering to add features of interest to the open-source
-          CellProfiler project. Support is offered by email, phone, and
-          in-person at our laboratory in Cambridge, Massachusetts. Plus, gain
-          access to easily installable, code-signed packages of unreleased
-          versions of CellProfiler and 20% discounts on CellProfiler training
-          workshops.
-        </p>
-
-        <p>For more details: <a href="supportplan.html" title="CellProfiler support plan">CellProfiler Annual Training and Support Plan</a></p>
-
-        <h3>
-          January 24, 2014 &mdash; CellProfiler 2.1.0 release!
-        </h3>
-
-        <p>
-          The CellProfiler team is excited to announce the release of
-          CellProfiler 2.1.0!
-        </p>
-
-        <p>
-          In this major update, we have made it easier to load complicated
-          collections of images and associated data. The new version is often
-          many times faster on computers with multiple CPU cores, so very large
-          sets of images can now be processed on a regular personal computer.
-          Memory handling is also improved, and there are many new image
-          processing options, features, usability enhancements, speed
-          improvements, and bug fixes. More details are in the release notes:
-          <a href=
-          "https://github.com/CellProfiler/CellProfiler/wiki/CellProfiler-release-notes">
-          https://github.com/CellProfiler/CellProfiler/wiki/CellProfiler-release-notes</a>
-        </p>
-
-        <h3>
-          January 16, 2014 &mdash; CYTO University webinar on CellProfiler now
-          available
-        </h3>
-
-        <p>
-          Mark-Anthony Bray recently presented a webinar on CellProfiler
-          entitled "Using CellProfiler for Biological Image Analysis" for CYTO
-          University. Check out the <a href=
-          "http://cytou.peachnewmedia.com/store/seminar/seminar.php?seminar=23217">
-          overview</a> and the <a href=
-          "http://cytou.peachnewmedia.com/store/streaming/seminar-launch.php?key=7eF5jJBjnFE8EMNdlbJh2igDM2XsYxyI3Gv0Fg4bftA%3D#">
-          webinar</a>.
-        </p>
-
-        <h3>
-          <a href="archives.html">Old news…</a> 
-          <!-- | <a type="application/rss+xml" href="news.rss">RSS feed for news</a></h3>-->
-        </h3>
-
-        <hr>
-
-        <h3>
-        </h3>
-
-        <p align="center" style="margin-top:25px; margin-bottom:25px">
-          <a href="http://www.facebook.com/CellProfiler"><img align="absmiddle"
-          border="0" src="http://d1zymp9ayga15t.cloudfront.net/images/Facebook_Badge_Xsmall.jpg"></a> <a href=
-          "http://www.linkedin.com/groups/CellProfiler-4837622"><img align=
-          "absmiddle" border="0" src="http://d1zymp9ayga15t.cloudfront.net/images/linkedin-25.png"></a> <a href=
-          "http://twitter.com/cellprofiler"><img align="absmiddle" border="0"
-          src="http://d1zymp9ayga15t.cloudfront.net/images/twitter_logo.png" width="25"></a>
-        </p>
-
-        <hr>
-
-        <p align="center" style="margin-top:25px">
-          Funding and support for the CellProfiler project has been provided
-          by:<br>
-          <br>
-          <a href="http://broadinstitute.org"><img src=
-          "http://d1zymp9ayga15t.cloudfront.net/images/BroadInstituteLogo.png"></a>&nbsp;&nbsp; <a href=
-          "http://www.lilly.com"><img src="http://d1zymp9ayga15t.cloudfront.net/images/lilly.gif"></a>&nbsp;&nbsp;
-          <a href="http://www.nigms.nih.gov/"><img src=
-          "http://d1zymp9ayga15t.cloudfront.net/images/banner_nigms.gif"></a><br>
-          <a href="http://astrazeneca.com"><img src=
-          "http://d1zymp9ayga15t.cloudfront.net/images/AstraZeneca1.PNG"></a>&nbsp; <a href=
-          "http://mit.edu"><img src="http://d1zymp9ayga15t.cloudfront.net/images/mit_logo.png"></a>&nbsp; <a href=
-          "http://whitehead.mit.edu"><img src=
-          "http://d1zymp9ayga15t.cloudfront.net/images/whitehead-banner.gif"></a><br>
-          <a href="http://www.sbsonline.org"><img src=
-          "http://d1zymp9ayga15t.cloudfront.net/images/SBS.gif"></a>&nbsp; <a href="http://merck.com"><img src=
-          "http://d1zymp9ayga15t.cloudfront.net/images/logo_Merck_no_be_well.jpg"></a>&nbsp; <a href=
-          "http://novartis.com"><img src="http://d1zymp9ayga15t.cloudfront.net/images/novartis-logo.gif"></a><br>
-          <a href="http://www.goldmanpartnerships.org/"><img src=
-          "http://d1zymp9ayga15t.cloudfront.net/images/goldman.gif"></a>&nbsp; <a href=
-          "http://www.loreal.com/"><img src="http://d1zymp9ayga15t.cloudfront.net/images/loreal.png"></a> <a href=
-          "http://www.defense.gov"><img src="http://d1zymp9ayga15t.cloudfront.net/images/DeptOfDefense.png"></a>
-        </p>
-      </div>
-
-      <div id="footer">
-        <div>
-          <center>
-            <img alt="Banner" src="http://d1zymp9ayga15t.cloudfront.net/images/banner_small.png" style="margin-top:20px" width="100%">
-          </center>
-        </div>
-      </div>
-    </div>
-
-    <script src="https://code.jquery.com/jquery-2.2.0.min.js">
-
-    </script>
-
-    <script>
-      window.jQuery || document.write('<script src="javascripts/libraries/jquery-2.2.0.min.js"><\/script>')
-    </script>
-  </body>
-</html>
+---
+layout: default
+---
+
+<table border="0" cellpadding="5">
+  <tr>
+    <td align="center" style="text-align:center" width="40%">
+      <a href="./download.html" title=
+      "Download CellProfiler Free Image Analysis Software">
+      <div class="boxed">
+        <img alt="Download CellProfiler free image analysis software"
+        border="0" height="120" src=
+        "http://d1zymp9ayga15t.cloudfront.net/images/cp_download_button.png">
+      </div></a>
+    </td>
+    <td align="left" width="10%">
+    </td>
+    <td align="center" width="40%">
+      <a href="./downloadCPA.html" title=
+      "Download CellProfiler Analyst Free Image Analyst Software">
+      <div class="boxed">
+        <img alt=
+        "Download CellProfiler Analyst free machine learning image analysis software"
+        border="0" height="120" src=
+        "http://d1zymp9ayga15t.cloudfront.net/images/cpa_download_button.png">
+      </div></a>
+    </td>
+  </tr>
+
+  <tr>
+    <td align="left" valign="top">
+      <b>CellProfiler</b> is free open-source software designed to enable
+      biologists without training in computer vision or programming to
+      quantitatively measure phenotypes from thousands of images
+      automatically. See our papers on analyzing <a href=
+      "http://genomebiology.com/2006/7/10/R100">cell images</a> and
+      <a href="http://www.biotechniques.com/biotechniques/BiotechniquesJournal/2007/January/CellProfiler-free-versatile-software-for-automated-biological-image-analysis/biotechniques-40380.html">
+      non-cell images</a>.
+      <p>
+      </p>
+    </td>
+    <td>
+    </td>
+    <td align="left" valign="top">
+      <b>CellProfiler Analyst</b> is free open-source software for
+      exploring and analyzing large, high-dimensional image-derived data.
+      It includes machine learning tools for identifying complex and subtle
+      phenotypes. See our papers on <a href=
+      "http://www.biomedcentral.com/1471-2105/9/482">data visualization</a>
+      and <a href=
+      "http://www.pnas.orghttp://d1zymp9ayga15t.cloudfront.net/content/106/6/1826.long">
+      machine learning</a>.
+      <p>
+      </p>
+    </td>
+  </tr>
+
+  <tr>
+    <td align="center">
+      <img alt="CellProfiler image" height="230" src=
+      "http://d1zymp9ayga15t.cloudfront.net/images/frontpage_bigfig_left.jpg">
+    </td>
+    <td align="center">
+      <img alt="arrow" height="25" src=
+      "http://d1zymp9ayga15t.cloudfront.net/images/arrow.jpg">
+    </td>
+    <td align="center">
+      <img alt=
+      "CellProfiler detects and analyses biological images free software"
+      height="230" src=
+      "http://d1zymp9ayga15t.cloudfront.net/images/frontpage_bigfig_right.jpg">
+    </td>
+  </tr>
+</table>
+
+<h3>
+  <a href=
+  ".http://d1zymp9ayga15t.cloudfront.net/content/CellProfilerSoftwareBrochure.pdf"
+  title="CellProfiler Microscopy Biological Software">Brochure</a> about
+  CellProfiler and CellProfiler Analyst
+</h3>
+
+<h2 style="margin-top:25px">
+  <a id="CurrentNews" name="CurrentNews">CellProfiler News</a>
+</h2>
+
+<h3>
+  November 6, 2015 &mdash; New CellProfiler forum and CellProfiler tutorial
+  at the Broad Institute
+</h3>
+
+<p>
+  CellProfiler has a new forum! Visit us at <a href=
+  "http://forum.cellprofiler.org">forum.cellprofiler.org</a>. All posts and
+  account information remains the same. Also, on November 23, Mark Bray
+  will present a CellProfiler tutorial at the Broad Institute. Email
+  imagingadmin@broadinstitue.org for signup information and to be notified
+  about future tutorials
+</p>
+
+<h3>
+  August 3, 2015 &mdash; CellProfiler tutorial at SBI2 2015!
+</h3>
+
+<p>
+  Just announced! Mark Bray of the Broad Institute's Imaging Platform will
+  present a CellProfiler tutorial at the 2015 Annual Society of
+  Biomolecular Imaging and Informatics Meeting in Boston, Ma. The tutorial
+  will take place on September 15, 2015. For more information, and to
+  register, visit <a href=
+  "http://www.sbi2.org/2nd-annual-conference/">http://www.sbi2.org/2nd-annual-conference/</a>.
+  We look forward to seeing you there!
+</p>
+
+<h3>
+  July 25, 2014 &mdash; CellProfiler 2.1.1 release
+</h3>
+
+<p>
+  The CellProfiler team is pleased to announce the release of CellProfiler
+  2.1.1. This is a scheduled patch release whose primary purpose is to
+  address any issues in 2.1.0.[<a href=
+  "https://github.com/CellProfiler/CellProfiler/wiki/CellProfiler-release-notes">more
+  details</a>]
+</p>
+
+<h3>
+  July 2, 2014 &mdash; CellProfiler NIH grant has been renewed!
+</h3>
+
+<p>
+  Great news! We are pleased to announce that the NIH will continue to
+  support CellProfiler through 2018 (R01 GM089652). We are grateful that
+  NIH recognizes the community value of open source tools and the variety
+  of research that widely benefits from their continued maintenance.
+  [<a href="http://cellprofiler.org/forum/viewtopic.php?f=14&t=3891">more
+  details</a>]
+</p>
+
+<h3>
+  April 30, 2014 &mdash; Impact of CellProfiler on human health
+</h3>
+
+<p>
+  Our CellProfiler software has yielded discoveries in several
+  translational projects, some of which may ultimately have a direct impact
+  on the treatment of disease. For example, CellProfiler has been used to
+  identify several small molecules that are effective in treating
+  particular diseases in mouse models. In some cases, discoveries made
+  using CellProfiler have even led to planning clinical trials in humans,
+  which could directly improve patient outcomes. [<a href=
+  "http://cellprofiler.org/impact.html">more details</a>]
+</p>
+
+<h3>
+  April 30, 2014 &mdash; WormToolbox tutorial videos now available
+</h3>
+
+<p>
+  Tutorial videos for the WormToolbox detailed in a recent publication in
+  <em><a href=
+  "http://dx.doi.org/10.1016/j.ymeth.2014.04.017">Methods</a></em> are now
+  accessible here at <a href=
+  "http://cellprofiler.org/wormtoolbox">CellProfiler.org/WormToolbox</a>.
+</p>
+
+<h3>
+  January 31, 2014 &mdash; Now available: CellProfiler Annual Support and
+  Training Plan
+</h3>
+
+<p>
+  Gain direct access to the CellProfiler team, while supporting the
+  CellProfiler project!
+</p>
+
+<p>
+  Starting in 2014, we are pleased to offer the CellProfiler Annual Support
+  and Training Plan, a bundle of services to help you to optimize your use
+  of CellProfiler.
+</p>
+
+<p>
+  Subscribing organizations will receive project-specific image assay
+  development, training, configuration assistance, and custom software
+  engineering to add features of interest to the open-source CellProfiler
+  project. Support is offered by email, phone, and in-person at our
+  laboratory in Cambridge, Massachusetts. Plus, gain access to easily
+  installable, code-signed packages of unreleased versions of CellProfiler
+  and 20% discounts on CellProfiler training workshops.
+</p>
+
+<p>
+  For more details: <a href="supportplan.html" title=
+  "CellProfiler support plan">CellProfiler Annual Training and Support
+  Plan</a>
+</p>
+
+<h3>
+  January 24, 2014 &mdash; CellProfiler 2.1.0 release!
+</h3>
+
+<p>
+  The CellProfiler team is excited to announce the release of CellProfiler
+  2.1.0!
+</p>
+
+<p>
+  In this major update, we have made it easier to load complicated
+  collections of images and associated data. The new version is often many
+  times faster on computers with multiple CPU cores, so very large sets of
+  images can now be processed on a regular personal computer. Memory
+  handling is also improved, and there are many new image processing
+  options, features, usability enhancements, speed improvements, and bug
+  fixes. More details are in the release notes: <a href=
+  "https://github.com/CellProfiler/CellProfiler/wiki/CellProfiler-release-notes">
+  https://github.com/CellProfiler/CellProfiler/wiki/CellProfiler-release-notes</a>
+</p>
+
+<h3>
+  January 16, 2014 &mdash; CYTO University webinar on CellProfiler now
+  available
+</h3>
+
+<p>
+  Mark-Anthony Bray recently presented a webinar on CellProfiler entitled
+  "Using CellProfiler for Biological Image Analysis" for CYTO University.
+  Check out the <a href=
+  "http://cytou.peachnewmedia.com/store/seminar/seminar.php?seminar=23217">overview</a>
+  and the <a href=
+  "http://cytou.peachnewmedia.com/store/streaming/seminar-launch.php?key=7eF5jJBjnFE8EMNdlbJh2igDM2XsYxyI3Gv0Fg4bftA%3D#">
+  webinar</a>.
+</p>
+
+<h3>
+  <a href="archives.html">Old news…</a>
+</h3>
+
+<hr>
+
+<p align="center" style="margin-top:25px; margin-bottom:25px">
+  <a href="http://www.facebook.com/CellProfiler"><img align="absmiddle"
+  border="0" src=
+  "http://d1zymp9ayga15t.cloudfront.net/images/Facebook_Badge_Xsmall.jpg"></a>
+  <a href="http://www.linkedin.com/groups/CellProfiler-4837622"><img align=
+  "absmiddle" border="0" src=
+  "http://d1zymp9ayga15t.cloudfront.net/images/linkedin-25.png"></a>
+  <a href="http://twitter.com/cellprofiler"><img align="absmiddle" border=
+  "0" src="http://d1zymp9ayga15t.cloudfront.net/images/twitter_logo.png"
+  width="25"></a>
+</p>
+
+<hr>
+
+<p align="center" style="margin-top:25px">
+  Funding and support for the CellProfiler project has been provided
+  by:<br>
+  <br>
+  <a href="http://broadinstitute.org"><img src=
+  "http://d1zymp9ayga15t.cloudfront.net/images/BroadInstituteLogo.png"></a>&nbsp;&nbsp;
+  <a href="http://www.lilly.com"><img src=
+  "http://d1zymp9ayga15t.cloudfront.net/images/lilly.gif"></a>&nbsp;&nbsp;
+  <a href="http://www.nigms.nih.gov/"><img src=
+  "http://d1zymp9ayga15t.cloudfront.net/images/banner_nigms.gif"></a><br>
+  <a href="http://astrazeneca.com"><img src=
+  "http://d1zymp9ayga15t.cloudfront.net/images/AstraZeneca1.PNG"></a>&nbsp;
+  <a href="http://mit.edu"><img src=
+  "http://d1zymp9ayga15t.cloudfront.net/images/mit_logo.png"></a>&nbsp;
+  <a href="http://whitehead.mit.edu"><img src=
+  "http://d1zymp9ayga15t.cloudfront.net/images/whitehead-banner.gif"></a><br>
+
+  <a href="http://www.sbsonline.org"><img src=
+  "http://d1zymp9ayga15t.cloudfront.net/images/SBS.gif"></a>&nbsp; <a href=
+  "http://merck.com"><img src=
+  "http://d1zymp9ayga15t.cloudfront.net/images/logo_Merck_no_be_well.jpg"></a>&nbsp;
+  <a href="http://novartis.com"><img src=
+  "http://d1zymp9ayga15t.cloudfront.net/images/novartis-logo.gif"></a><br>
+  <a href="http://www.goldmanpartnerships.org/"><img src=
+  "http://d1zymp9ayga15t.cloudfront.net/images/goldman.gif"></a>&nbsp;
+  <a href="http://www.loreal.com/"><img src=
+  "http://d1zymp9ayga15t.cloudfront.net/images/loreal.png"></a> <a href=
+  "http://www.defense.gov"><img src=
+  "http://d1zymp9ayga15t.cloudfront.net/images/DeptOfDefense.png"></a>
+</p>
