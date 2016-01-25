@@ -1,0 +1,580 @@
+<html>
+  <head>
+    <title>
+      CellProfiler support and training plan
+    </title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <link rel="stylesheet" href="stylesheets/application.css">
+    <style>
+    
+    div.hours-banner
+    {
+    width:600px;
+    font-weight:bold;
+    font-size:x-large;
+    background-color:#FFEF99;
+    border:3px outset #FFF7CC;
+    padding:20px;
+    }
+
+    div.feature-wrapper
+    {
+    width:800px;
+    }
+
+    div.feature-row
+    {
+    padding:25px 0px;
+    display:inline-block;
+    margin-left:auto;
+    margin-right:auto;
+    }
+
+    div.feature-box
+    {
+    float:left;
+    width:300px;
+    }
+
+    div.feature-pic
+    {
+    width:280px;
+    height:160px;
+    }
+
+    div.feature-title
+    {
+    width:280px;
+    font-weight:bold;
+    font-size:large;
+    padding-top:15px;
+    padding-bottom:5px;
+    }
+
+    div.feature-details
+    {
+    width:280px;
+    text-align:left;
+    }
+
+    div.link-button
+    {
+    margin:10px;
+    width:280px;
+    height:160px;
+    line-height:100px;
+    display:table-cell;
+    vertical-align:middle;
+    }
+
+    p.link-button-text
+    {
+    font-size:xx-large;
+    color:#FFFFFF;
+    font-weight:bold;
+    vertical-align:middle;
+    }
+
+    p.line-statement
+    {
+    font-style:italic;
+    }
+
+    a.button-link:link
+    {
+    text-decoration:none;
+    }
+
+    a.button-link:hover
+    {
+    text-decoration:underline;
+    color:#FFFFFF;
+    }
+
+    img.pro-pic
+    {
+    width:280px;
+    height:160px;
+    }
+
+    div.bonus-features
+    {
+    display:inline-table;
+    max-width:520px;
+    width:520px;
+    height:83px;
+    font-weight:bold;
+    font-size:large;
+    }
+
+    div.bonus-left-part
+    {
+    display:table-cell;
+    font-size:x-large;
+    height:83px;
+    width:80px;
+    line-height:40px;
+    vertical-align:middle;
+    padding-left:10px;
+    font-weight:bold;
+    }
+
+    div.bonus-right-part
+    {
+    display:inline-table;
+    width:520px;
+    height:83px;
+    text-align:left;
+    padding-left:20px;
+    font-weight:normal;
+    }
+
+    ul.bonus-list
+    {
+    margin:0px;
+    padding-left:20px;
+    line-height:30px;
+    }
+
+    .sign-up-button
+    {
+    -moz-box-shadow:inset 0px 1px 0px 0px #f9eca0;
+    -webkit-box-shadow:inset 0px 1px 0px 0px #f9eca0;
+    box-shadow:inset 0px 1px 0px 0px #f9eca0;
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #fff099), color-stop(1, #f2ab1e) );
+    background:-moz-linear-gradient( center top, #fff099 5%, #f2ab1e 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff099', endColorstr='#f2ab1e');
+    background-color:#fff099;
+    -webkit-border-top-left-radius:20px;
+    -moz-border-radius-topleft:20px;
+    border-top-left-radius:20px;
+    -webkit-border-top-right-radius:20px;
+    -moz-border-radius-topright:20px;
+    border-top-right-radius:20px;
+    -webkit-border-bottom-right-radius:20px;
+    -moz-border-radius-bottomright:20px;
+    border-bottom-right-radius:20px;
+    -webkit-border-bottom-left-radius:20px;
+    -moz-border-radius-bottomleft:20px;
+    border-bottom-left-radius:20px;
+    text-indent:0;
+    border:1px solid #e6b045;
+    display:inline-block;
+    color:#000000;
+    font-family:Arial;
+    font-size:24px;
+    font-weight:bold;
+    font-style:normal;
+    height:60px;
+    line-height:60px;
+    width:250px;
+    text-decoration:none;
+    text-align:center;
+    text-shadow:1px 1px 0px #ded17c;
+    }
+
+    .sign-up-button:hover
+    {
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f2ab1e), color-stop(1, #fff099) );
+    background:-moz-linear-gradient( center top, #f2ab1e 5%, #fff099 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f2ab1e', endColorstr='#fff099');
+    background-color:#f2ab1e;
+    }
+
+    .sign-up-button:active
+    {
+    position:relative;
+    top:1px;
+    }
+    /* This button was initially generated using CSSButtonGenerator.com and customized by Matthew Veneskey */
+
+    .questions-button
+    {
+    -moz-box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+    -webkit-box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+    box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #79bbff), color-stop(1, #378de5) );
+    background:-moz-linear-gradient( center top, #79bbff 5%, #378de5 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#79bbff', endColorstr='#378de5');
+    background-color:#79bbff;
+    -webkit-border-top-left-radius:20px;
+    -moz-border-radius-topleft:20px;
+    border-top-left-radius:20px;
+    -webkit-border-top-right-radius:20px;
+    -moz-border-radius-topright:20px;
+    border-top-right-radius:20px;
+    -webkit-border-bottom-right-radius:20px;
+    -moz-border-radius-bottomright:20px;
+    border-bottom-right-radius:20px;
+    -webkit-border-bottom-left-radius:20px;
+    -moz-border-radius-bottomleft:20px;
+    border-bottom-left-radius:20px;
+    text-indent:0;
+    border:1px solid #84bbf3;
+    display:inline-block;
+    color:#000000;
+    font-family:Arial;
+    font-size:24px;
+    font-weight:bold;
+    font-style:normal;
+    height:60px;
+    line-height:60px;
+    width:250px;
+    text-decoration:none;
+    text-align:center;
+    text-shadow:1px 1px 0px #528ecc;
+    }
+
+    .questions-button:hover
+    {
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #378de5), color-stop(1, #79bbff) );
+    background:-moz-linear-gradient( center top, #378de5 5%, #79bbff 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#378de5', endColorstr='#79bbff');
+    background-color:#378de5;
+    }
+
+    .questions-button:active
+    {
+    position:relative;
+    top:1px;
+    }
+    /* This button was initially generated using CSSButtonGenerator.com and customized by Matthew Veneskey */
+    
+    </style>
+    <link href=
+    'https://fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,500'
+    rel='stylesheet' type='text/css' />
+    <script async="async" src="http://www.google-analytics.com/ga.js" type=
+    "text/javascript">
+    </script>
+    <script>
+    
+    function clientSideInclude(id, url) { return; }
+    
+    </script>
+    <style type="text/css">
+    
+    div.boxed {background:#CCCCFF;color:#000;display:inline-block}
+    
+    </style>
+    <link href="NiftyCube/niftyCorners.css" rel="stylesheet" type="text/css" />
+    <script src="NiftyCube/niftycube.js" type="text/javascript">
+    </script>
+    <link href="news.rss" rel="alternate" title="CellProfiler News" type=
+    "application/rss+xml" />
+    <script type="text/javascript">
+    //
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-4307992-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+    //
+    </script>
+    <link href="NiftyCube/niftyCorners.css" media="screen" rel="stylesheet"
+    type="text/css" />
+  </head>
+  <body onload=
+  "clientSideInclude('header','header.txt'); clientSideInclude('footer','footer.txt'); Nifty('div.boxed','big'); document.getElementById('header_help').id='current';">
+  <div id="mainwrapper">
+      <div id="header">
+        <div>
+          <a href="/"><img border="0" class="header1" src=
+          "http://d1zymp9ayga15t.cloudfront.net/images/cp_logo_smaller.png" width="400" /></a> <a href=
+          "http://www.broadinstitute.org/science/platforms/imaging/imaging-platform">
+          <img alt="Broad Institute logo" border="0" class="header2" height=
+          "68" src="http://d1zymp9ayga15t.cloudfront.net/images/BroadInstituteLogo_smaller.png" width="220" /></a>
+          <div id="navigation">
+            <hr />
+
+            <ul>
+              <li>
+                <a href="/" id="header_main">home</a>
+              </li>
+
+              <li>
+                <a href="/gettingStarted.html" id=
+                "header_getting_started">getting started</a>
+                <ul>
+                  <li>
+                    <a href="/faq.html">What is CellProfiler?</a>
+                  </li>
+
+                  <li>
+                    <a href="/examples.html">examples</a>
+                  </li>
+
+                  <li>
+                    <a href="/tutorials.html">tutorials</a>
+                  </li>
+
+                  <li>
+                    <a href=
+                    "http://d1zymp9ayga15t.cloudfront.net/content/CellProfilerSoftwareBrochure.pdf">brochure</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="/download.html" id="header_download">download</a>
+                <ul>
+                  <li>
+                    <a href="/download.html">CellProfiler</a>
+                  </li>
+
+                  <li>
+                    <a href="/downloadCPA.html">CellProfiler Analyst</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li style="width:94px;text-align:center;">
+                <a href="/forum/" id="header_help">help</a>
+                <ul>
+                  <li>
+                    <a href="/forum/">forum</a>
+                  </li>
+                  <!--<li><a href="/supportplan.html">support plan</a>-->
+
+                  <li>
+                    <a href="http://www.broadinstitute.org/bbbc/">BBBC</a>
+                  </li>
+
+                  <li>
+                    <a href=
+                    "https://github.com/CellProfiler/CellProfiler/wiki">for
+                    developers</a>
+                  </li>
+
+                  <li>
+                    <a href="/manuals.html">manuals</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="/about.html" id="header_aboutus">about us</a>
+                <ul>
+                  <li>
+                    <a href="/press.html">press</a>
+                  </li>
+
+                  <li>
+                    <a href="/citations.html">citations</a>
+                  </li>
+
+                  <li>
+                    <a href="/outreach.html">outreach</a>
+                  </li>
+
+                  <li>
+                    <a href="/interfaces.html">interfaces</a>
+                  </li>
+
+                  <li>
+                    <a href="/#CurrentNews">news</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="navsearch">
+                <form action="http://google.com/search" method="get" onsubmit=
+                "location.href = this.action + '?&q=%2Bsite:cellprofiler.org+' + this.query.value; return false;">
+                <input maxlength="255" name="query" size="20" type="text"
+                  value="" /> <input type="submit" value="search" />
+                </form>
+              </li>
+            </ul>
+            <br />
+
+            <hr style="clear:left" />
+          </div>
+        </div>
+      </div>
+
+      <div id="content">
+        <center>
+          <div>
+            <div style="width:800px;">
+              <img align="center" alt=
+              "CellProfiler Annual Support and Training Plan logo" src=
+              "http://d1zymp9ayga15t.cloudfront.net/images/cp_icon_gold.png" width="400" />
+            </div>
+
+            <div style="width:800px;">
+              <p class="line-statement">
+                Gain direct access to the CellProfiler team, while supporting
+                the CellProfiler project!
+              </p>
+              <br />
+            </div>
+          </div>
+
+          <div class="feature-wrapper">
+            <div class="hours-banner">
+              50 hours of CellProfiler-related support and training<br />
+              from the team behind CellProfiler
+            </div>
+          </div>
+
+          <div class="feature-wrapper">
+            <div class="feature-row">
+              <div class="feature-box">
+                <div class="feature-pic">
+                  <img alt=
+                  "Anne Carpenter CellProfiler Annual Support and Training Plan"
+                  class="pro-pic" src="http://d1zymp9ayga15t.cloudfront.net/images/AnneTeaching.png" />
+                </div>
+
+                <div class="feature-title">
+                  Image pipeline development
+                </div>
+
+                <div class="feature-details">
+                  Image analysis pipeline development and optimization, plus
+                  expert advice in designing an image-based experiment
+                  including sample preparation and image acquisition
+                </div>
+              </div>
+
+              <div class="feature-box">
+                <div class="feature-pic">
+                  <img alt="David Logan Image Assay Development CellProfiler"
+                  class="pro-pic" src="http://d1zymp9ayga15t.cloudfront.net/images/DavidIAD.jpg" />
+                </div>
+
+                <div class="feature-title">
+                  Custom software engineering
+                </div>
+
+                <div class="feature-details">
+                  Adding features of interest to the open-source CellProfiler
+                  project that do not conflict with CellProfiler's roadmap
+                </div>
+              </div>
+            </div>
+
+            <div class="feature-row">
+              <div class="feature-box">
+                <div class="feature-pic">
+                  <img alt="Mark Bray CellProfiler Tutorial" class="pro-pic"
+                  src="http://d1zymp9ayga15t.cloudfront.net/images/MarkWorkshop.jpg" />
+                </div>
+
+                <div class="feature-title">
+                  Training
+                </div>
+
+                <div class="feature-details">
+                  From basic introductions to the software, to advanced
+                  training sessions
+                </div>
+              </div>
+
+              <div class="feature-box">
+                <div class="feature-pic">
+                  <img alt="CellProfiler consultancy" class="pro-pic" src=
+                  "http://d1zymp9ayga15t.cloudfront.net/images/ServerConfig.jpg" />
+                </div>
+
+                <div class="feature-title">
+                  Configuration
+                </div>
+
+                <div class="feature-details">
+                  Assistance in configuring CellProfiler to your local
+                  computing environment and infrastructure
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-wrapper">
+            <hr style="width:600px;" />
+
+            <div class="bonus-features">
+              <div class="bonus-left-part">
+                PLUS
+              </div>
+
+              <div class="bonus-right-part">
+                <ul class="bonus-list">
+                  <li>20% discount on workshops held at your location
+                  </li>
+
+                  <li>Easily installable, code-signed packages of unreleased
+                  versions of CellProfiler
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <hr style="width:600px;" />
+          </div>
+
+          <div class="feature-wrapper">
+            <div style="width:580px">
+              <div align="left">
+                <h2 align="center">
+                  Key information
+                </h2>
+
+                <p>
+                  Support can be offered by email, scheduled phone calls, and
+                  in most cases, in-person visits to our laboratory in
+                  Cambridge, Massachusetts.
+                </p>
+
+                <p>
+                  Please note that time is available annually and cannot be
+                  rolled over from year to year.
+                </p>
+
+                <h2 align="center">
+                  Cost: $10,000/year
+                </h2>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-wrapper">
+            <div class="feature-row">
+              <div align="center" class="feature-box">
+                <button class="sign-up-button" onclick=
+                'window.open("mailto:imagingadmin@broadinstitute.org?subject=CellProfiler%20Annual%20Support%20and%20Training%20Plan&body=Send%20me%20more%20info%20about%20the%20CellProfiler%20Annual%20Support%20and%20Training%20Plan.%20Thanks!")'
+                type="button">Sign up!</button>
+              </div>
+
+              <div class="feature-box">
+                <button class="questions-button" onclick=
+                'window.open("mailto:imagingadmin@broadinstitute.org?subject=Question%28s%29%20about%20the%20CellProfiler%20Annual%20Support%20and%20Training%20Plan")'
+                type="button">Questions?</button>
+              </div>
+            </div>
+
+            <p class="line-statement" style="font-size:small;">
+              The Broad Institute is a 501(c)(3) nonprofit biomedical research
+              organization and offers this plan to facilitate scientific
+              discovery.
+            </p>
+          </div>
+        </center>
+      </div>
+    </div>
+
+    <div id="footer">
+      <div>
+        <center>
+          <img alt="Banner" src="http://d1zymp9ayga15t.cloudfront.net/images/banner_small.png" style=
+          "margin-top:20px" width="100%" />
+        </center>
+      </div>
+    </div>
+  </body>
+</html>

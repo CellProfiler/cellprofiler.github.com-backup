@@ -1,0 +1,608 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    
+<html><head>
+<title>CellProfiler cell image analysis software</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<style type="text/css" media="all">
+	@import "../cp_stylesheet.css";
+	</style>
+<style>
+	div.hours-banner
+	{
+	width:600px;
+	font-weight:bold;
+	font-size:x-large;
+	background-color:#FFEF99;
+	border:3px outset #FFF7CC;
+	padding:20px;
+	}
+
+	div.feature-wrapper
+	{
+	width:800px;
+	}
+
+	div.feature-row
+	{
+	padding:25px 0px;
+	display:inline-block;
+	margin-left:auto;
+	margin-right:auto;
+	}
+
+	div.feature-box
+	{
+	float:left;
+	width:340px;
+	}
+
+	div.feature-pic
+	{
+	width:280px;
+	height:160px;
+	}
+
+	div.feature-title
+	{
+	width:280px;
+	font-weight:bold;
+	font-size:large;
+	padding-top:15px;
+	padding-bottom:5px;
+	}
+
+	div.feature-details
+	{
+	width:280px;
+	text-align:left;
+	}
+
+	div.link-button
+	{
+	margin:10px;
+	width:280px;
+	height:160px;
+	line-height:100px;
+	display:table-cell;
+	vertical-align:middle;
+	}
+	
+	p.link-button-text
+	{
+	font-size:xx-large;
+	color:#FFFFFF;
+	font-weight:bold;
+	vertical-align:middle;
+	}
+	
+	p.line-statement
+	{
+	font-style:italic;
+	}
+		
+	a.button-link:link
+	{
+	text-decoration:none;
+	}
+	
+	a.button-link:hover
+	{
+	text-decoration:underline;
+	color:#FFFFFF;
+	}
+	
+	img.pro-pic
+	{
+	width:280px;
+	height:160px;
+	}
+
+	div.bonus-features
+	{
+	display:inline-table;
+	max-width:520px;
+	width:520px;
+	height:83px;
+	font-weight:bold;
+	font-size:large;
+	}
+	
+	div.bonus-left-part
+	{
+	display:table-cell;
+	font-size:x-large;
+	height:83px;
+	width:80px;
+	line-height:40px;
+	vertical-align:middle;
+	padding-left:10px;
+	font-weight:bold;
+	}
+	
+	div.bonus-right-part
+	{
+	display:inline-table;
+	width:520px;
+	height:83px;
+	text-align:left;
+	padding-left:20px;
+	font-weight:normal;
+	}
+
+	ul.bonus-list
+	{
+	margin:0px;
+	padding-left:20px;
+	line-height:30px;
+	}
+
+	.sign-up-button 
+	{
+	-moz-box-shadow:inset 0px 1px 0px 0px #f9eca0;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #f9eca0;
+	box-shadow:inset 0px 1px 0px 0px #f9eca0;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #fff099), color-stop(1, #f2ab1e) );
+	background:-moz-linear-gradient( center top, #fff099 5%, #f2ab1e 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff099', endColorstr='#f2ab1e');
+	background-color:#fff099;
+	-webkit-border-top-left-radius:20px;
+	-moz-border-radius-topleft:20px;
+	border-top-left-radius:20px;
+	-webkit-border-top-right-radius:20px;
+	-moz-border-radius-topright:20px;
+	border-top-right-radius:20px;
+	-webkit-border-bottom-right-radius:20px;
+	-moz-border-radius-bottomright:20px;
+	border-bottom-right-radius:20px;
+	-webkit-border-bottom-left-radius:20px;
+	-moz-border-radius-bottomleft:20px;
+	border-bottom-left-radius:20px;
+	text-indent:0;
+	border:1px solid #e6b045;
+	display:inline-block;
+	color:#000000;
+	font-family:Arial;
+	font-size:24px;
+	font-weight:bold;
+	font-style:normal;
+	height:60px;
+	line-height:60px;
+	width:250px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #ded17c;
+	}
+	
+	.sign-up-button:hover 
+	{
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f2ab1e), color-stop(1, #fff099) );
+	background:-moz-linear-gradient( center top, #f2ab1e 5%, #fff099 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f2ab1e', endColorstr='#fff099');
+	background-color:#f2ab1e;
+	}
+
+	.sign-up-button:active 
+	{
+	position:relative;
+	top:1px;
+	}
+	/* This button was initially generated using CSSButtonGenerator.com and customized by Matthew Veneskey */
+	
+	.questions-button 
+	{
+	-moz-box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+	box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #79bbff), color-stop(1, #378de5) );
+	background:-moz-linear-gradient( center top, #79bbff 5%, #378de5 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#79bbff', endColorstr='#378de5');
+	background-color:#79bbff;
+	-webkit-border-top-left-radius:20px;
+	-moz-border-radius-topleft:20px;
+	border-top-left-radius:20px;
+	-webkit-border-top-right-radius:20px;
+	-moz-border-radius-topright:20px;
+	border-top-right-radius:20px;
+	-webkit-border-bottom-right-radius:20px;
+	-moz-border-radius-bottomright:20px;
+	border-bottom-right-radius:20px;
+	-webkit-border-bottom-left-radius:20px;
+	-moz-border-radius-bottomleft:20px;
+	border-bottom-left-radius:20px;
+	text-indent:0;
+	border:1px solid #84bbf3;
+	display:inline-block;
+	color:#000000;
+	font-family:Arial;
+	font-size:24px;
+	font-weight:bold;
+	font-style:normal;
+	height:60px;
+	line-height:60px;
+	width:250px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #528ecc;
+	}
+	
+	.questions-button:hover 
+	{
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #378de5), color-stop(1, #79bbff) );
+	background:-moz-linear-gradient( center top, #378de5 5%, #79bbff 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#378de5', endColorstr='#79bbff');
+	background-color:#378de5;
+	}
+
+	.questions-button:active 
+	{
+	position:relative;
+	top:1px;
+	}
+	/* This button was initially generated using CSSButtonGenerator.com and customized by Matthew Veneskey */
+</style>
+
+
+<script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script><script> function clientSideInclude(id, url) { return; }</script>
+
+
+<style type="text/css">div.boxed {background:#CCCCFF;color:#000;display:inline-block}</style> 
+<link rel="stylesheet" type="text/css" href="../NiftyCube/niftyCorners.css"> 
+<script type="text/javascript" src="../NiftyCube/niftycube.js"></script> 
+<link rel="alternate" type="application/rss+xml" href="../news.rss" title="CellProfiler News">
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-4307992-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<link type="text/css" rel="stylesheet" href="../NiftyCube/niftyCorners.css" media="screen"></head>
+
+<body onload="clientSideInclude('header','../header.txt');
+              clientSideInclude('footer','../footer.txt');
+              Nifty('div.boxed','big');
+              document.getElementById('header_help').id='current';">
+
+<div id="mainwrapper">
+
+<div id="header">
+<div> 
+<a href="/">
+<img class="header1" src=".http://d1zymp9ayga15t.cloudfront.net/images/cp_logo_smaller.png" width="400" border="0"></a>
+
+<a href="http://www.broadinstitute.org/science/platforms/imaging/imaging-platform">
+<img class="header2" src=".http://d1zymp9ayga15t.cloudfront.net/images/BroadInstituteLogo_smaller.png" width="220" height="68" border="0" alt="Broad Institute logo"></a>
+
+<div id="navigation">
+<hr />
+  <ul>
+    <li><a href="/" id="header_main">home</a> </li>
+    <li><a href="/gettingStarted.html" id="header_getting_started">getting started </a> 
+      <ul>
+       <li><a href="/faq.html">What is CellProfiler?</a></li>
+       <li><a href="/examples.html">examples</a></li>
+       <li><a href="/tutorials.html">tutorials</a></li>
+       <li><a href="http://d1zymp9ayga15t.cloudfront.net/content/CellProfilerSoftwareBrochure.pdf">brochure</a></li>
+      </ul>
+    </li>     
+    <li><a href="/download.html" id="header_download">download</a> 
+      <ul>
+        <li><a href="/download.html">CellProfiler</a></li>
+        <li><a href="/downloadCPA.html">CellProfiler Analyst</a></li>
+      </ul>
+    </li>
+	<li style="width:109px;text-align:center;"><a href="/forum/" id="header_help">help</a>
+      <ul>
+    	<li><a href="/forum/">forum</a></li>
+	<li><a href="/supportplan.html">support plan</a>
+       	<li><a href="http://www.broadinstitute.org/bbbc/">BBBC</a></li> 
+    	<li><a href="https://github.com/CellProfiler/CellProfiler/wiki">for developers</a></li> 
+	<li><a href="/manuals.html">manuals</a></li>
+	<li><a href="/wormtoolbox">WormToolbox</a></li>
+      </ul>
+	</li>
+    <li><a href="/about.html" id="header_aboutus">about us</a>
+      <ul>
+      	<li><a href="/about.html">CellProfiler Team</a>
+        <li><a href="/press.html">press</a></li>
+        <li><a href="/citations.html">citations</a></li>
+	<li><a href="/impact.html">impact</a></li>
+        <li><a href="/outreach.html">outreach</a></li>
+	<li><a href="/interfaces.html">interfaces</a></li>
+    	<li><a href="/#CurrentNews">news</a> </li>
+      </ul>
+    </li> 
+    <li class="navsearch">
+      <form method="get" action="http://google.com/search"
+            onsubmit="location.href = this.action + '?&q=%2Bsite:cellprofiler.org+' + this.query.value; return false;">
+        <input type="text" name="query" size="20" maxlength="255" value="" />
+        <input type="submit" value="search" />
+      </form>
+  </ul>
+  
+  <br />
+  <hr style="clear:left"/>
+</div>
+</div>
+
+</div>
+
+	
+<div id="content">
+<!--Content here-->
+
+
+		<h1>WormToolbox</h1>
+		<p style="font-style:italic;">A component of CellProfiler cell image analysis software</p>
+		<p>The WormToolbox is a toolbox for high-throughput screening of image-based 
+			<span style="font-style:italic;">Caenorhabditis elegans</span> phenotypes. 
+			The image analysis algorithms measure morphological phenotypes in individual 
+			worms and are effective for a variety of assays and imaging systems. WormToolbox 
+			is available through CellProfiler and enables objective scoring of whole-worm 
+			high-throughput image-based assays of <span style="font-style:italic;">C. elegans
+			</span> for the study of diverse biological pathways that are relevant to human disease
+			[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3433711/">Nature Methods paper</a>].
+		</p>
+
+		<hr />
+
+		<h2>Tutorials overview</h2>
+		<table>
+			<tr>
+				<td>
+					<img src="http://d1zymp9ayga15t.cloudfront.net/images/WTB_diagram.png" width="350px">
+				</td>
+				<td width="350px">
+					<p>The main analysis pipeline, Pipeline 1, shown in blue, 
+						is fully automated, and consists of the following steps:  
+					</p>
+					<ol type="a">
+						<li>Load input images from QORO assay.</li>
+						<li>Pre-process to detect artifacts such as bubbles and well edges.</li>
+						<li>Detect worms and clusters of worms. Individual worms/worm clusters are 
+							randomly colored. </li>
+						<li>Delineate individual worms by model-based worm untangling. Now, each 
+							individual detected worm has a unique color.</li>
+						<li>Digitally straighten worms and align them to a simple worm atlas for 
+							measurement of stain distribution.</li> 
+						<li>Detect fatty regions within worms. Once worms and fatty regions are 
+							identified, a large number of intensity, shape and texture measurements 
+							are extracted.</li>
+					</ol>
+
+					<p>If the provided default worm model does not fit the input data (e.g. due to a 
+						different image resolution or different worm strain), a new worm model can be 
+						created using Pipeline 2 (pink) to (g) manually select non-touching worms making 
+						up a training set for a new model built by Pipeline 3.
+					</p> 
+					<p>For low-throughput experiments, it is possible to manually curate faulty 
+						segmentation results using Pipeline 4 (orange) by (h) manual editing of the output 
+						from step d of pipeline 1, and (i) manual flipping of digitally straightened 
+						worms so that they all align in with heads or tails up. Measurements, such as 
+						intensity of stain, fat stain distribution, fat region size, worm width etc. 
+						may also be extracted from individual worms after manual correction. All 
+						measurements are exported to a database for further exploration and phenotyping. 
+					</p>
+					<p>Note that CellProfiler 2.1 should be used.</p>
+				</td>
+			</tr>
+		</table>
+		<hr />
+
+		<h2>Video tutorials</h2>
+<style>
+	td.a {
+	padding-left:30px;
+	padding-right:30px;
+	vertical-align:top;
+}
+
+	table.a {
+    border-collapse: separate;
+}
+</style>
+
+		<table class="a">
+			<tr>
+			<!--PIPELINE 1 VIDEO-->
+				<td class="a" width="320px">
+					<iframe width="400" height="225" src="//www.youtube.com/embed/J0JPUrDNHJ0" frameborder="0" allowfullscreen></iframe>
+				</td>
+			<!--PIPELINE 2 VIDEO-->
+				<td class="a" width="320px">
+					<iframe width="400" height="225" src="//www.youtube.com/embed/o8JetgOnj5M" frameborder="0" allowfullscreen></iframe>
+				</td>
+			</tr>
+			<tr>
+			<!--PIPELINE 1 TEXT-->
+				<td class="a" width="320px">
+					<p style="font-size:medium;font-weight:bold;">Pipeline 1: Identify and collect 
+						measurements from individual worms and sub-regions
+					</p>
+					<p style="font-size:small;">CellProfiler 2.1 pipeline: <a href="worm_files/Pipeline1_UntangleWormsExtractMeasurements.cppipe">Pipeline1_UntangleWormsExtractMeasurements.cppipe</a></p>
+					<p style="font-size:small;">Worm model: <a href="worm_files/DefaultWormModel.xml">DefaultWormModel</a></p>
+					<p style="font-size:small;">Download this video: <a href="worm_files/Pipeline1.mp4">Pipeline1.mp4</a></p>
+					<p style="font-size:small;">This is the main pipeline for delineating worms (also those in clusters) and extracting different kinds of shape and intensity measurements. It requires a worm model as input. This model could either be the DefaultWormModel.xml provided above, or a new worm model created by pipelines 2 and 3 above. This pipeline is fully automated, does not need any user input (once optimized), and can be run on a large number of images organizing output based on information extracted from the input file names. Example image data is provided below.
+					</p>
+					<p style="font-size:small;">Steps of the pipeline:</p>
+					<ol type="A" style="font-size:small;">
+						<li>Load data.</li>
+						<li>Pre-process data by removing artifacts such as well edges and bubbles.</li>
+						<li>Separate worms and worm clusters the from image background by foreground/background image segmentation.</li>
+						<li>Identify individual worms by worm untangling and extract measurements.</li>
+						<li>Straighten worms and extract measurements.</li>
+						<li>Identify sub-regions (fat) and extract measurements.</li>
+						<li>Export measurements to an SQLite database, save worm segmentation masks and images of worm and fat outlines.</li>	
+					</ol>
+				</td>
+			<!--PIPELINE 2 TEXT-->
+				<td class="a" width="320px">
+					<p style="font-size:medium;font-weight:bold;">Pipeline 2: Find, select, and save individual worms
+					</p>
+					<p style="font-size:small;">CellProfiler 2.1 pipeline: <a href="worm_files/Pipeline2_SelectSingleWorms.cppipe">Pipeline2_SelectSingleWorms.cppipe</a></p>
+					<p style="font-size:small;">Download this video: <a href="worm_files/Pipeline2.mp4">Pipeline2.mp4</a></p>
+					<p style="font-size:small;">This pipeline may be omitted if a previously created model (e.g. DefaultWormModel.xml provided with Pipeline 1) fits the new data. Steps A-C are the same as in Pipeline 1; the same pre-processing and foreground/background segmentation should be applied both when creating the worm model and when running the analysis as changes to the pre-processing may affect the appearance of the width of the worms, in turn influencing the model. This pipeline requires manual interaction selecting representative non-touching worms.
+					</p>
+					<p style="font-size:small;">Steps of the pipeline:</p>
+					<ol type="A" style="font-size:small;">
+						<li>Load data.</li>
+						<li>Pre-process data by compensating for non-uniform illumination and removing artifacts such as well edges and bubbles.</li>
+						<li>Separate worms and worm clusters the from image background by foreground/background image segmentation.</li>
+						<li>Manually select single worms for worm modeling. Approximately 50 worms representing the variability in the dataset is usually sufficient.</li>
+						<li>Make sure that the selected single worms are saved as training worms.</li>					
+					</ol>
+					<p style="font-size:small;"><span style="font-weight:bold;">NOTE</span>: The video incorrectly states that WormObjects should be used as input for the ConvertObjectsToImage module. The correct input for that module is SelectedSingleWorms.
+					</p>
+				</td>
+			</tr>
+			<tr>
+			<!--PIPELINE 3 VIDEO-->
+				<td class="a">
+					<iframe width="400" height="225" src="//www.youtube.com/embed/2LBfR9H9bKs" frameborder="0" allowfullscreen></iframe>
+				</td>
+				<!--PIPELINE 4 VIDEO-->
+				<td class="a">
+					<iframe width="400" height="225" src="//www.youtube.com/embed/aMwSAxWKZRk" frameborder="0" allowfullscreen></iframe>
+				</td>
+			</tr>
+			<tr>
+			<!--PIPELINE 3 TEXT-->
+				<td class="a" width="320px">
+					<p style="font-size:medium;font-weight:bold;">Pipeline 3: Create a new worm model from individual worms </p>
+					<p style="font-size:small;">CellProfiler 2.1 pipeline: <a href="worm_files/Pipeline3_TrainModel.cppipe">Pipeline3_TrainModel.cppipe</a></p>
+					<p style="font-size:small;">Download this video: <a href="worm_files/Pipeline3.mp4">Pipeline3.mp4</a></p>
+					<p style="font-size:small;">This module takes the manually selected training worms from 
+						Pipeline 2 as input. It is recommended to visually browse through the binary input images 
+						before running this pipeline to make sure that they represent single worms. The pipeline 
+						is fully automated, and the resulting model will be called MyWormModel.xml.
+					</p>
+					<ol type="A" style="font-size:small;">
+						<li>Load data (output from Pipeline 2).</li>
+						<li>Train and save model.</li>
+					</ol>
+				</td>
+			<!--PIPELINE 4 TEXT-->
+				<td class="a" width="320px">
+					<p style="font-size:medium;font-weight:bold;">Pipeline 4: Untangle, correct, and straighten worm clusters
+					</p>
+					<p style="font-size:small;">CellProfiler 2.1 pipeline: <a href="worm_files/Pipeline4_ManuallyCorrectStraighten.cppipe">Pipeline4_ManuallyCorrectStraighten.cppipe</a></p>
+					<p style="font-size:small;">Worm model: <a href="worm_files/DefaultWormModel.xml">DefaultWormModel.xml</a></p>
+					<p style="font-size:small;">Download this video: <a href="worm_files/Pipeline4.mp4">Pipeline4.mp4</a></p>
+					<p style="font-size:small;">This pipeline loads the untangling results from Pipeline 1 and allows 
+						the user to edit any errors in the untangling prior to straightening the worms for visualization 
+						and extraction of measurements. A worm model (DefaultWormModel.xml or a new model created by 
+						Pipelines 2 and 3) is needed as input for the straightening step.
+					</p>
+					<ol type="A" style="font-size:small;">
+						<li>Load data (output from Pipeline 1).</li>
+						<li>Manually correct segmentation errors.</li>
+						<li>Digitally align worms, select orientation (heads or tails up).</li>
+						<li>Save result.</li>
+					</ol>
+				</td>
+			</tr>
+
+		</table>
+
+		<hr />
+		
+		<h2>Files needed for the tutorials</h2>
+			<ul>
+				<li><a href="worm_files/WormToolbox_tutorial_pipelines.zip">CellProfiler 2.1 tutorial Pipelines 1–4 (zip)</a></li>
+				<!--<li><a href="worm_files/ORO_controls_130801.zip">Image data (zip)</a></li>-->
+				<li><a href="worm_files/Example_image_data.zip">Example image data for tutorials (zip)</a></li>
+			</ul>
+
+		<h2>Video tutorials on how to use CellProfiler Analyst</h2>
+			<ul>
+				<li><a href="http://d1zymp9ayga15t.cloudfront.net/content/movies/DemoExploringImageData.mov">Exploring image data</a> <span style="font-weight:bold;">(5 min 30 sec, 33MB .mov)</span> Demonstrates some of CellProfiler Analyst's data exploration features.</li>
+				<li><a href="http://d1zymp9ayga15t.cloudfront.net/content/movies/ScoringCellSubpopulations.mov">Scoring cell populations</a> <span style="font-weight:bold;">(3 min 30 sec, 23MB .mov)</span> Provides an example of selecting phenotypes using gating.</li>
+				<li><a href="http://d1zymp9ayga15t.cloudfront.net/content/movies/ClassifierDemo2.mov">Classifying cells with machine learning</a> <span style="font-weight:bold;">(7 mins 38.5MB .mov)</span> Shows how to apply the machine learning tool to identify a phenotype of interest.</li>
+			</ul>
+
+		<h2>Example pipelines</h2>
+			<p style="font-size:small;margin-left:27px;">Previously published example pipelines using the WormToolbox</p>
+			<p style="font-size:small;font-style:italic;margin-left:27px;">As presented in Wählby et al. 2012, these additional pipelines 
+				include illumination correction and feature extraction from fluorescence microscopy data.</p>
+			<ul>
+				<li><a href="http://cellprofiler.org/examples.html#UntangleWorms">Untangle worms</a></li>
+				<li><a href="http://cellprofiler.org/examples.html#StraightenWorms">Straighten worms and extract intensity measurements using a low-resolution atlas</a></li>
+				<li><a href="http://cellprofiler.org/examples.html#CreateModel">Create your own worm model</a></li>
+				<li><a href="http://cellprofiler.org/examples.html#UntangleWormsBright-field">Untangle worms and make measurements bright-field staining pattern phenotype</a></li>
+			</ul>
+			
+		<h2>Broad Bioimage Benchmark Collection (BBBC) <em>C. elegans</em> datasets</h2>
+			<ul>
+				<li><a href="http://www.broadinstitute.org/bbbc/BBBC010/">BBBC010 <em>C. elegans</em> live/dead assay</a></li>
+				<li><a href="http://www.broadinstitute.org/bbbc/BBBC011/">BBBC011 <em>C. elegans</em> metabolism assay</a></li>
+				<li><a href="http://www.broadinstitute.org/bbbc/BBBC012/">BBBC012 <em>C. elegans</em> infection marker</a></li>
+			</ul>
+
+		<h2>Teaching materials</h2>
+			<ul>
+				<li><a href="../outreach.html"><em>C. elegans</em> image analysis written exercise</a></li>
+			</ul>
+		
+		<hr />
+
+		<h2>Publications</h2>
+		<ol>
+			<li>Wählby C, Kamentsky L, Liu ZH, Riklin-Raviv T, Conery AL, O'Rourke EJ, Sokolnicki KL, 
+				Visvikis O, Ljosa V, Irazoqui JE, Golland P, Ruvkun G, Ausubel FM and Carpenter AE (2012) 
+				An image analysis toolbox for high-throughput <em>C. elegans</em> assays. <i>Nature 
+				Methods</i> 9(7):714-U273. doi: 10.1038/nmeth.1984 PMID: 22522656. PMCID: PMC3433711. 
+				Available at <a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3433711/">
+				http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3433711/</a>
+			</li>
+			<li>Riklin-Raviv T, Ljosa V, Conery AL, Ausubel FM, Carpenter AE, Golland P and Wählby C 
+				(2010) Morphology-guided graph search for untangling objects: <span style="font-style:italic">
+				C elegans</span> analysis. In <em>Medical Image Computing and Computer Assisted Intervention</em> 
+				(MICCAI) 2010; 13(3):634-641. PMID: 20879454. PMCID: PMC3050593. Available at 
+				<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3050593/">
+				http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3050593/</a>
+			</li>
+			<li>Wählby C, Riklin-Raviv T, Ljosa V, Conery AL, Golland P, Ausubel FM and Carpenter AE 
+				(2010) Resolving clustered worms via probabilistic shape models. In <em>ISBI 2010 (Proceedings 
+				of the IEEE International Symposium on Biomedical Imaging: From Nano to Macro)</em>, 552-555. 
+				doi: 10.1109/ISBI.2010.5490286 PMID: 21383863. PMCID: PMC3048333. Available at 
+				<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3048333/">
+				http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3048333/</a>
+			</li>
+			<li>Wählby C, Lee Conery A, Bray MA, Kamentsky L, Larkins-Ford J, Sokolnicki KL, Veneskey M, 
+				Michaels K, Carpenter AE and O'Rourke EJ (2014). High- and low-throughput scoring of fat mass 
+				and body fat distribution in C. elegans.<i> Methods</i> 68(3):492-499. doi: 10.1016/j.ymeth.2014.04.017 
+				PMID: 24784529 PMCID: 4112171. Available at 
+				<a href="http://www.ncbi.nlm.nih.gov/pubmed/24784529">
+				http://www.ncbi.nlm.nih.gov/pubmed/24784529</a>
+			</li>
+		</ol>
+		
+<!--End content-->
+</div>
+
+
+
+
+</div>
+
+
+
+
+<div id="footer">
+<div>
+<center><img src=".http://d1zymp9ayga15t.cloudfront.net/images/banner_small.png" width="100%" alt="Banner" style="margin-top:20px"/></center>
+
+</div>
+
+</div>
+
+</body>
+</html>

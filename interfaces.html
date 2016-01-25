@@ -1,0 +1,694 @@
+<html>
+  <head>
+    <title>
+      CellProfiler software for analyzing CellProfiler data and CellProfiler
+      software partnerships
+    </title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <link rel="stylesheet" href="stylesheets/application.css">
+    <link href=
+    'https://fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,500'
+    rel='stylesheet' type='text/css' />
+
+
+
+    <script type="text/javascript">
+    //
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-4307992-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+    //
+    </script>
+  </head>
+  <body onload=
+  "clientSideInclude('header','header.txt'); clientSideInclude('footer','footer.txt'); document.getElementById('header_aboutus').id='current';">
+  <div id="mainwrapper">
+      <div id="header">
+        <div>
+          <a href="/"><img border="0" class="header1" src=
+          "http://d1zymp9ayga15t.cloudfront.net/images/cp_logo_smaller.png" width="400" /></a> <a href=
+          "http://www.broadinstitute.org/"><img alt="Broad Institute logo"
+          border="0" class="header2" height="68" src=
+          "http://d1zymp9ayga15t.cloudfront.net/images/BroadInstituteLogo_smaller.png" width="220" /></a>
+          <div id="navigation">
+            <hr />
+
+            <ul>
+              <li>
+                <a href="/" id="header_main">home</a>
+              </li>
+
+              <li>
+                <a href="#" id="header_getting_started" onclick=
+                "return false;">getting started</a>
+                <ul>
+                  <li>
+                    <a href="/faq.html">What is CellProfiler? FAQ</a>
+                  </li>
+
+                  <li>
+                    <a href="/examples.html">examples</a>
+                  </li>
+
+                  <li>
+                    <a href="/tutorials.html">tutorials</a>
+                  </li>
+
+                  <li>
+                    <a href=
+                    "http://d1zymp9ayga15t.cloudfront.net/content/CellProfilerSoftwareBrochure.pdf">brochure</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#" id="header_download" onclick=
+                "return false;">download</a>
+                <ul>
+                  <li>
+                    <a href="/download.html">CellProfiler</a>
+                  </li>
+
+                  <li>
+                    <a href="/downloadCPA.html">CellProfiler Analyst</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li style="width:109px;text-align:center;">
+                <a href="#" id="header_help" onclick="return false;">help</a>
+                <ul>
+                  <li>
+                    <a href="http://forum.cellprofiler.org/">forum</a>
+                  </li>
+
+                  <li>
+                    <a href="/supportplan.html">support plan</a>
+                  </li>
+
+                  <li>
+                    <a href="http://www.broadinstitute.org/bbbc/">BBBC</a>
+                  </li>
+
+                  <li>
+                    <a href=
+                    "https://github.com/CellProfiler/CellProfiler/wiki">for
+                    developers</a>
+                  </li>
+
+                  <li>
+                    <a href="/manuals.html">manuals</a>
+                  </li>
+
+                  <li>
+                    <a href="/wormtoolbox">WormToolbox</a>
+                  </li>
+
+                  <li>
+                    <a href="/imagingflowcytometry">Imaging Flow Cytometry</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#" id="header_aboutus" onclick="return false;">about
+                us</a>
+                <ul>
+                  <li>
+                    <a href="/about.html">CellProfiler Team</a>
+                  </li>
+
+                  <li>
+                    <a href="/impact.html">impact</a>
+                  </li>
+
+                  <li>
+                    <a href="/press.html">press</a>
+                  </li>
+
+                  <li>
+                    <a href="/citations.html">citations</a>
+                  </li>
+
+                  <li>
+                    <a href="/outreach.html">outreach</a>
+                  </li>
+
+                  <li>
+                    <a href="/interfaces.html">interfaces</a>
+                  </li>
+
+                  <li>
+                    <a href="/#CurrentNews">news</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="navsearch">
+                <form action="http://google.com/search" method="get" onsubmit=
+                "location.href = this.action + '?&q=%2Bsite:cellprofiler.org+' + this.query.value; return false;">
+                <input maxlength="255" name="query" size="20" type="text"
+                  value="" /> <input type="submit" value="search" />
+                </form>
+              </li>
+            </ul>
+            <br />
+
+            <hr style="clear:left" />
+          </div>
+        </div>
+      </div>
+
+      <div id="content">
+        <h1>
+          Software Interfaces
+        </h1>
+
+        <ul>
+          <li>
+            <a href="#datatools">Software for analyzing CellProfiler-produced
+            data</a>
+          </li>
+
+          <li>
+            <a href="#partners">Software partnerships</a>
+          </li>
+        </ul>
+        <a name="datatools"></a>
+        <h2>
+          Software for analyzing CellProfiler-produced data
+        </h2>
+
+        <table border="0" cellpadding="15">
+          <tr>
+            <td align="center">
+              <b>Software</b>
+            </td>
+            <td align="center">
+              <b>Description</b>
+            </td>
+            <td align="center">
+              <b>Interface</b>
+            </td>
+          </tr>
+
+          <tr>
+            <td align="center">
+              <a href="http://www.cellprofiler.org/download.html" style=
+              "text-decoration:none"><img src="http://d1zymp9ayga15t.cloudfront.net/images/cp_128.png" vspace="5"
+              width="100" /><br />
+              <b>CellProfiler</b></a>
+            </td>
+            <td align="center">
+              In addition to performing image analysis to generate
+              measurements, CellProfiler has built-in tools in the <i>Data
+              Tools</i> menu to generate a few types of plots.
+            </td>
+            <td>
+              CellProfiler output files in MATLAB (.mat) and HDF5 (.h5) can be
+              opened by CellProfiler's data tools.
+            </td>
+          </tr>
+
+          <tr>
+            <td align="center">
+              <a href="http://www.cellprofiler.org/downloadCPA.html" style=
+              "text-decoration:none"><img src="http://d1zymp9ayga15t.cloudfront.net/images/cpa_128.png" vspace="5"
+              width="100" /><br />
+              <b>CellProfiler Analyst</b></a>
+            </td>
+            <td>
+              CellProfiler Analyst allows analysis, exploration and
+              machine-learning for high-dimensional image-based data.
+            </td><!--<table cellpadding="5">
+<tr><td align="center"><a href="http://www.mysql.com/"><img src="http://d1zymp9ayga15t.cloudfront.net/images/logo_mysql.jpg" height=50></a></td><td align="center"><a href="http://www.sqlite.org/"><img src="http://d1zymp9ayga15t.cloudfront.net/images/logo_sqlite.gif" width=100></a></td></tr>
+</table> -->
+
+            <td align="center">
+              CellProfiler Analyst can be used with data that follows a simple
+              format: One image table with rows of databases produced in
+              CellProfiler using the <a href=
+              "http://cellprofiler.org/CPmanual/ExportToDatabase.html">ExportToDatabase</a>
+              module or data tool.
+            </td>
+          </tr>
+
+          <tr>
+            <td align="center">
+              <a href="http://accelrys.com/platform/enterprise-platform.html"
+              style="text-decoration:none"><img src="http://d1zymp9ayga15t.cloudfront.net/images/logo_accelrys.png"
+              vspace="5" width="200" /><br />
+              <b>Accelrys</b></a>
+            </td>
+            <td>
+              The Component Collections of the Accelrys Enterprise Platform
+              (AEP) allows researchers to build, deploy, analyze and report on
+              complex scientific data types within the Accelrys applications
+              framework and other third-party applications.
+            </td>
+            <td align="center">
+              The Pipeline Pilot <a href=
+              "http://accelrys.com/products/pipeline-pilot/component-collections/imaging.html">
+              Imaging Component Collection</a> provides a component,
+              'CellProfiler (on Server)', for integration with CellProfiler.
+              The user can run a protocol and send images to be analyzed into
+              CellProfiler as input, and allows for images and analysis data to
+              be retrieved from CellProfiler for downstream data workflows
+              enabled by AEP. Some details on using the component are provided
+              <a href=
+              "http://d1zymp9ayga15t.cloudfront.net/content/Accelyrs_AEP_CellProfilerOnServer_Usage_tips.pdf">here</a>.
+            </td>
+          </tr>
+
+          <tr>
+            <td align="center">
+              <a href=
+              "http://www.perkinelmer.com/pages/020/cellularimaging/products/columbus.xhtml"
+              style="text-decoration:none"><img src="http://d1zymp9ayga15t.cloudfront.net/images/logo_columbus.png"
+              vspace="5" width="200" /><br />
+              <b>Columbus</b></a>
+            </td>
+            <td>
+              The Columbus system (Perkin Elmer) is a universal high-volume
+              image data storage and analysis system that brings access to
+              images from a wide range of sources including all major high
+              content screening instruments via the Internet.
+            </td>
+            <td align="center">
+              Using the final building block (Define Results) of a Columbus
+              analysis routine, data can be exported in a format that
+              CellProfiler Analyst can read. Instructions <a href=
+              "http://d1zymp9ayga15t.cloudfront.net/content/Exporting_images_data_from_Columbus_to_CellProfiler_Analyst.pdf">
+              here</a>.
+            </td>
+          </tr>
+
+          <tr>
+            <td align="center">
+              <table>
+                <tr>
+                  <td align="center">
+                    <a href="http://office.microsoft.com/en-us/excel/" style=
+                    "text-decoration:none"><img hspace="20" src=
+                    "http://d1zymp9ayga15t.cloudfront.net/images/logo_excel.png" vspace="5" width="50" /><br />
+                    <b>Excel</b></a>
+                  </td>
+                  <td align="center">
+                    <a href="http://www.libreoffice.org/features/calc/" style=
+                    "text-decoration:none"><img hspace="20" src=
+                    "http://d1zymp9ayga15t.cloudfront.net/images/logo_openofficecalc.png" vspace="5" width=
+                    "50" /><br />
+                    <b>Calc</b></a>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td align="center">
+                    <a href=
+                    "http://www.graphpad.com/scientific-software/prism/" style=
+                    "text-decoration:none"><img hspace="20" src=
+                    "http://d1zymp9ayga15t.cloudfront.net/images/logo_graphpadprism.png" vspace="5" width=
+                    "50" /><br />
+                    <b>Prism</b></a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+            <td>
+              Spreadsheet programs like these are useful for plotting small
+              amounts of data. Excel (Microsoft) is a general business
+              comercial package, whereas Prism (Graphpad) is a commercial
+              program tailored towards research scientists for statistical
+              analyses. Calc (LibreOffice) is open-source software and
+              freely-available.
+            </td>
+            <td align="center">
+              These tools can read comma- or tab-delimited files generated by
+              the CellProfiler <a href=
+              "http://cellprofiler.org/CPmanual/ExportToSpreadsheet.html">ExportToSpreadsheet</a>
+              module or data tool.
+            </td>
+          </tr>
+
+          <tr>
+            <td align="center">
+              <a href="http://www.denovosoftware.com/" style=
+              "text-decoration:none"><img src="http://d1zymp9ayga15t.cloudfront.net/images/logo_fcs_express.jpg"
+              vspace="5" width="200" /><br />
+              <b>FCS Express Image Cytometry</b></a>
+            </td>
+            <td>
+              FCS Express 4 Image Cytometry (De Novo Software) provides
+              population based analytical tools common in flow cytometry. The
+              image cytometry version allows the user to review and analyze
+              multi-parametric data sets and relate results back to the
+              original images.
+            </td>
+            <td align="center">
+              FCS Express 4 software can <a href=
+              "http://www.denovosoftware.com/site/manual/index.html?cell_profiler_export.htm">
+              import</a> comma-delimited files produced by the CellProfiler
+              <a href=
+              "http://cellprofiler.org/CPmanual/ExportToSpreadsheet.html">ExportToSpreadsheet</a>
+              module or data tool.
+            </td>
+          </tr>
+
+          <tr>
+            <td align="center">
+              <a href=
+              "http://www.broadinstitute.org/cancer/software/genepattern/"
+              style="text-decoration:none"><img src=
+              "http://d1zymp9ayga15t.cloudfront.net/images/logo_genepattern.jpg" vspace="5" width="200" /><br />
+              <b>GenePattern</b></a>
+            </td>
+            <td>
+              GenePattern (Broad Institute) is open source software that gives
+              a broad audience access to a growing repository of sophisticated
+              analytic tools for genomic data, while an API supports
+              computational biologists.
+            </td>
+            <td align="center">
+              CellProfiler can format and export image-based data as a
+              GenePattern GCT file (.gct) through the <a href=
+              "http://cellprofiler.org/CPmanual/ExportToSpreadsheet.html">ExportToSpreadsheet</a>
+              module or data tool.
+            </td>
+          </tr>
+
+          <tr>
+            <td align="center">
+              <a href=
+              "http://www.gelifesciences.com/webapp/wcs/stores/servlet/CategoryDisplay?categoryId=1169748&catalogId=69143&productId=&top=Y&storeId=11787&langId=-1"
+              style="text-decoration:none"><img src="http://d1zymp9ayga15t.cloudfront.net/images/GE_logo.png" width=
+              "180" /><br />
+              <b>IN Cell Analyzer</b></a>
+            </td>
+            <td>
+              IN Cell Analyzer automated cell imaging systems yield
+              morphological and molecular data via high content imaging and
+              analysis.
+            </td>
+            <td align="center">
+              The IN Cell Analyzer acquisition software from GE Healthcare
+              generates customizable CSV reports in a format that allows
+              CellProfiler to import images and metadata via the LoadData
+              module.
+            </td>
+          </tr>
+
+          <tr>
+            <td align="center">
+              <a href="http://www.knime.org/" style=
+              "text-decoration:none"><img src="http://d1zymp9ayga15t.cloudfront.net/images/logo_knime.jpg" width=
+              "200" /><br />
+              <b>KNIME</b></a>
+            </td>
+            <td>
+              KNIME (University of Konstanz) is an open source modular data
+              exploration platform that enables the user to visually create
+              data flows, selectively execute some or all analysis steps, and
+              later investigate the results through interactive views on data
+              and models.
+            </td>
+            <td align="center">
+              KNIME includes a Database Reader node that can access
+              CellProfiler-produced data. [<a href=
+              "https://github.com/CellProfiler/CellProfiler/wiki/Interfacing-with-other-software">more</a>]
+            </td>
+          </tr>
+
+          <tr>
+            <td align="center">
+              <a href="http://www.mathworks.com/products/matlab/" style=
+              "text-decoration:none"><img src="http://d1zymp9ayga15t.cloudfront.net/images/logo_matlab.png" vspace=
+              "5" width="100" /><br />
+              <b>MATLAB</b></a>
+            </td>
+            <td>
+              MATLAB (Mathworks) is a high-level language and interactive
+              environment for data analysis and visualization.
+            </td>
+            <td align="center">
+              CellProfiler can produce MATLAB (.mat) output files.
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <table cellpadding="5">
+                <tr>
+                  <td align="center">
+                    <a href="http://www.r-project.org/" style=
+                    "text-decoration:none"><img height="50" hspace="20" src=
+                    "http://d1zymp9ayga15t.cloudfront.net/images/logo_r.png" vspace="5" /><br />
+                    <b>R</b></a>
+                  </td>
+                  <td align="center">
+                    <a href="http://www.python.org/" style=
+                    "text-decoration:none"><img height="50" hspace="20" src=
+                    "http://d1zymp9ayga15t.cloudfront.net/images/logo_python.png" vspace="5" /><br />
+                    <b>Python</b></a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+            <td>
+              Any analysis or visualization tools that can query a database
+              (such as R or python+pylab) can be used to analyze data that has
+              been deposited into a MySQL database.
+            </td>
+            <td align="center">
+              Databases containing image and/or object data can be produced
+              using the CellProfiler <a href=
+              "http://cellprofiler.org/CPmanual/ExportToDatabase.html">ExportToDatabase</a>
+              module or data tool. <a href=
+              "http://code.google.com/p/cellprofile-r/">CellProfile-R</a>, an R
+              package for CellProfiler database access and analysis, is
+              available. Users can write their own CellProfiler modules in
+              Python by following the instructions <a href=
+              "https://github.com/CellProfiler/CellProfiler/wiki#wiki-What_if_I_want_to_contribute_to_CellProfiler">
+              here</a>.
+            </td>
+          </tr>
+
+          <tr>
+            <td align="center">
+              <a href="http://www.cambridgesoft.com/ensemble/spotfire/" style=
+              "text-decoration:none"><img src="http://d1zymp9ayga15t.cloudfront.net/images/logo_perkinspotfire.png"
+              vspace="5" width="200" /><br />
+              <b>Spotfire</b></a>
+            </td>
+            <td>
+              Spotfire provides a dynamic, collaborative interface that
+              assimilates data from multiple sources— chemical structures,
+              text, numbers, images, chemical properties, biological assays,
+              and more—and empowers you to perform complex analyses and create
+              easy-to-use visual dashboards.
+            </td>
+            <td align="center">
+              SpotFire is able to import data generated by the CellProfiler
+              <a href=
+              "http://cellprofiler.org/CPmanual/ExportToSpreadsheet.html">ExportToSpreadsheet</a>
+              (for small data sets) or <a href=
+              "http://cellprofiler.org/CPmanual/ExportToDatabase.html">ExportToDatabase</a>
+              modules or data tools (for large data sets).
+            </td>
+          </tr>
+        </table>
+
+        <h2>
+          <a name="partners">Software Partnerships</a>
+        </h2>
+
+        <p>
+          <a name="partners">CellProfiler has partnered with academic and
+          commercial groups to create a variety of software interfaces. These
+          efforts not only expand the functionality of CellProfiler and
+          CellProfiler Analyst but also leverage the strengths of other
+          packages.</a>
+        </p>
+
+        <table border="0" cellpadding="15">
+          <tr>
+            <td align="center">
+              <b>Software</b>
+            </td>
+            <td align="center">
+              <b>Description</b>
+            </td>
+            <td align="center">
+              <b>Interface</b>
+            </td>
+          </tr>
+
+          <tr>
+            <td align="center">
+              <a href=
+              "https://www.openmicroscopy.org/site/products/bio-formats" style=
+              "text-decoration:none"><img src="http://d1zymp9ayga15t.cloudfront.net/images/logo_bioformats.png"
+              vspace="5" width="200" /><br />
+              <b>BioFormats</b></a>
+            </td>
+            <td>
+              Bio-Formats is an open source Java library for reading and
+              writing microscopy file formats. It facilitates the exchange of
+              microscopy data by converting proprietary microscopy data into
+              the OME data model standard.
+            </td>
+            <td align="center">
+              CellProfiler 2.1.0 is packaged with Bio-Formats and uses it to
+              read/write images from disk, as well as write movies. [<a href=
+              "http://loci.wisc.edu/bio-formats/cellprofiler">more</a>]
+            </td>
+          </tr>
+
+          <tr>
+            <td align="center">
+              <a href="http://www.ilastik.org/" style=
+              "text-decoration:none"><img src="http://d1zymp9ayga15t.cloudfront.net/images/logo_ilastik.png" vspace=
+              "5" width="75" /><br />
+              <b>Ilastik</b></a>
+            </td>
+            <td>
+              Ilastik is an open source tool for pixel-based classification of
+              2,3 and 4D images. The user first trains a classifier by
+              identifying areas of images that fall into one of several
+              classes, such as cell body, nucleus, background or membrane. The
+              classifier can then be applied to those and similar images to
+              identify areas in those images that correspond to the trained
+              classes.
+            </td>
+            <td align="center">
+              CellProfiler can read a classifier file from Ilastik and apply
+              its classifiers to an image using the <a href=
+              "http://www.cellprofiler.org/CPmanual/ClassifyPixels.html">ClassifyPixels</a>
+              module to produce a probability map: an image whose intensity is
+              higher for parts of images that are likely to be the chosen
+              class. [<a href=
+              "http://old.ilastik.org/index.php?cat=20_Documentation&page=03_Cellprofiler">more</a>]
+            </td>
+          </tr>
+
+          <tr>
+            <td align="center">
+              <a href="http://rsb.info.nih.gov/ij/" style=
+              "text-decoration:none"><img src="http://d1zymp9ayga15t.cloudfront.net/images/logo_imagej.png" vspace=
+              "5" width="75" /><br />
+              <b>ImageJ</b></a>
+            </td>
+            <td>
+              ImageJ is an open source image processing program providing
+              extensibility via Java plugins and recordable macros. Custom
+              acquisition, analysis and processing plugins can be developed
+              using a built-in editor and a Java compiler.
+            </td>
+            <td align="center">
+              Via the RunImageJ module, CellProfiler can load images, run an
+              ImageJ macro or plugin on them, and retrieve the results for
+              downstream analysis via the <a href=
+              "http://cellprofiler.org/CPmanual/RunImageJ.html">RunImageJ</a>
+              module.
+            </td>
+          </tr>
+
+          <tr>
+            <td align="center">
+              <a name="OMERO"></a><a href="http://www.openmicroscopy.org/site"
+              style="text-decoration:none"><img src="http://d1zymp9ayga15t.cloudfront.net/images/logo_ome.png"
+              vspace="5" width="200" /><br />
+              <b>Open Microscopy Environment (OME)</b></a>
+            </td>
+            <td>
+              OMERO is an open source application for visualization,
+              management, and analysis of biological image data. It allows the
+              scientists to remotely manage, view, annotate and measure
+              multi-dimensional images from anywhere.
+            </td>
+            <td align="center">
+              The 2.1.0 release of CellProfiler has first-class support for
+              loading images from OMERO. Details can be found by following
+              <a href=
+              "https://github.com/CellProfiler/CellProfiler/wiki/Accessing-images-from-OMERO-in-CellProfiler-2.1.0">
+              this link</a>.
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <table>
+                <tr>
+                  <td align="center">
+                    <a href=
+                    "http://www.imls.uzh.ch/research/pelkmans/softwareprojects/iBRAIN.html"
+                    style="text-decoration:none"><img hspace="20" src=
+                    "http://d1zymp9ayga15t.cloudfront.net/images/logo_ibrain.png" vspace="5" width="100" /><br />
+                    <b>iBrain</b></a>
+                  </td>
+                  <td align="center">
+                    <a href="http://www.cisd.ethz.ch/software/openBIS" style=
+                    "text-decoration:none"><img src="http://d1zymp9ayga15t.cloudfront.net/images/logo_openbis.png"
+                    vspace="5" width="100" /><br />
+                    <b>openBIS</b></a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+            <td>
+              OpenBIS is a data management framework to track and annotate raw
+              data for screening, proteomics, FACS and deep sequencing data.
+              iBRAIN is a platform for performing image analysis on large
+              datasets automatically.
+            </td>
+            <td align="center">
+              The SyBIT project, part of <a href=
+              "http://www.SystemsX.ch">SystemsX</a>, delivers integrated
+              analysis pipelines that use CellProfiler as a building block.
+              SyBIT has developed automated workflows for data exchange and
+              analysis based on the openBIS database, CellProfiler, and iBRAIN,
+              using cluster infrastructures for data processing. The project
+              continues to tailor these workflows to suit the research needs of
+              several systems biology projects.
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div id="footer">
+        <div>
+          <center>
+            <img alt="Banner" src="http://d1zymp9ayga15t.cloudfront.net/images/banner_small.png" style=
+            "margin-top:20px" width="100%" />
+          </center>
+        </div>
+      </div>
+    </div>
+    <!-- Piwik -->
+    <script type="text/javascript">
+    //
+    var _paq = _paq || [];
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+    var u="//159.203.72.67/piwik/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', 1]);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+    })();
+    //
+    </script> <noscript>
+    <p>
+      <img alt="" src="//159.203.72.67/piwik/piwik.php?idsite=1" style=
+      "border:0;" />
+    </p></noscript> <!-- End Piwik Code -->
+  </body>
+</html>

@@ -1,0 +1,873 @@
+<html>
+  <head>
+    <title>
+      CellProfiler cell image analysis software
+    </title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <link rel="stylesheet" href="stylesheets/application.css">
+
+
+
+
+    <script type="text/javascript">
+    //
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-4307992-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+    //
+    </script>
+  </head>
+  <body onload=
+  "clientSideInclude('header','header.txt'); clientSideInclude('footer','footer.txt'); document.getElementById('header_main').id='current';">
+  <div id="mainwrapper">
+      <div id="header">
+        <div>
+          <a href="/"><img border="0" class="header1" src=
+          "http://d1zymp9ayga15t.cloudfront.net/images/cp_logo_smaller.png" width="400" /></a> <a href=
+          "http://www.broadinstitute.org/"><img alt="Broad Institute logo"
+          border="0" class="header2" height="68" src=
+          "http://d1zymp9ayga15t.cloudfront.net/images/BroadInstituteLogo_smaller.png" width="220" /></a>
+          <div id="navigation">
+            <hr />
+
+            <ul>
+              <li>
+                <a href="/" id="header_main">home</a>
+              </li>
+
+              <li>
+                <a href="#" id="header_getting_started" onclick=
+                "return false;">getting started</a>
+                <ul>
+                  <li>
+                    <a href="/faq.html">What is CellProfiler? FAQ</a>
+                  </li>
+
+                  <li>
+                    <a href="/examples.html">examples</a>
+                  </li>
+
+                  <li>
+                    <a href="/tutorials.html">tutorials</a>
+                  </li>
+
+                  <li>
+                    <a href=
+                    "http://d1zymp9ayga15t.cloudfront.net/content/CellProfilerSoftwareBrochure.pdf">brochure</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#" id="header_download" onclick=
+                "return false;">download</a>
+                <ul>
+                  <li>
+                    <a href="/download.html">CellProfiler</a>
+                  </li>
+
+                  <li>
+                    <a href="/downloadCPA.html">CellProfiler Analyst</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li style="width:109px;text-align:center;">
+                <a href="#" id="header_help" onclick="return false;">help</a>
+                <ul>
+                  <li>
+                    <a href="http://forum.cellprofiler.org/">forum</a>
+                  </li>
+
+                  <li>
+                    <a href="/supportplan.html">support plan</a>
+                  </li>
+
+                  <li>
+                    <a href="http://www.broadinstitute.org/bbbc/">BBBC</a>
+                  </li>
+
+                  <li>
+                    <a href=
+                    "https://github.com/CellProfiler/CellProfiler/wiki">for
+                    developers</a>
+                  </li>
+
+                  <li>
+                    <a href="/manuals.html">manuals</a>
+                  </li>
+
+                  <li>
+                    <a href="/wormtoolbox">WormToolbox</a>
+                  </li>
+
+                  <li>
+                    <a href="/imagingflowcytometry">Imaging Flow Cytometry</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#" id="header_aboutus" onclick="return false;">about
+                us</a>
+                <ul>
+                  <li>
+                    <a href="/about.html">CellProfiler Team</a>
+                  </li>
+
+                  <li>
+                    <a href="/impact.html">impact</a>
+                  </li>
+
+                  <li>
+                    <a href="/press.html">press</a>
+                  </li>
+
+                  <li>
+                    <a href="/citations.html">citations</a>
+                  </li>
+
+                  <li>
+                    <a href="/outreach.html">outreach</a>
+                  </li>
+
+                  <li>
+                    <a href="/interfaces.html">interfaces</a>
+                  </li>
+
+                  <li>
+                    <a href="/#CurrentNews">news</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="navsearch">
+                <form action="http://google.com/search" method="get" onsubmit=
+                "location.href = this.action + '?&q=%2Bsite:cellprofiler.org+' + this.query.value; return false;">
+                <input maxlength="255" name="query" size="20" type="text"
+                  value="" /> <input type="submit" value="search" />
+                </form>
+              </li>
+            </ul>
+            <br />
+
+            <hr style="clear:left" />
+          </div>
+        </div>
+      </div>
+
+      <div id="content">
+        <h1>
+          Old News…
+        </h1>
+        <!--
+      <h3><a href="./previousReleases.html">Previous CellProfiler Versions</a> </h3>
+      <h3><a href="./previousReleasesCPA.html">Previous CellProfiler Analyst Versions</a> </h3>
+        -->
+
+        <h3>
+          May 7, 2013 &mdash; Upcoming workshop in Sweden featuring
+          CellProfiler June 3–5
+        </h3>
+
+        <p>
+          Meet our own lead software developer Lee Kamentsky and learn how to
+          contribute to the CellProfiler project at a workshop organized by
+          Carolina Wahlby (also one of our own) on 'How to use and make
+          additions to open-source software for image processing, analysis, and
+          visualization in medicine and microscopy.' June 3-5 at the Centre for
+          Image Analysis, Uppsala University, Sweden.
+        </p>
+
+        <p>
+          Space is limited to twenty participants, so be sure to see <a href=
+          "http://www.cb.uu.se/~carolina/SummerSchool2013/">the workshop's
+          webpage</a> to register soon!
+        </p>
+
+        <h3>
+          May 6, 2013 &mdash; CellProfiler tutorial at CYTO 2013
+        </h3>
+
+        <p>
+          Our own David Logan will be presenting a scientific tutorial on
+          CellProfiler at CYTO 2013! Registration for the tutorial is ongoing
+          and can be done onsite, subject to seat availability. See <a href=
+          'http://cellprofiler.org/forum/viewtopic.php?f=19&t=3314'>this forum
+          post</a> for more information; registration with CYTO for the
+          tutorial can be done independently of conference registration.
+        </p>
+
+        <h3>
+          March 6, 2013 &mdash; Advanced high-content analysis contribution to
+          the Assay Guidance Manual now live!
+        </h3>
+
+        <p>
+          The <a href="http://www.ncbi.nlm.nih.gov/books/NBK53196/">Assay
+          Guidance Manual</a> is a free, online resource provided by the
+          National Institutes of Health to be a compilation of "best practices"
+          in assay development for molecular screens. A <a href=
+          "http://www.ncbi.nlm.nih.gov/books/n/assayguide/highhttp://d1zymp9ayga15t.cloudfront.net/content/">section</a>
+          on the basics of image-based high-content screening (in which
+          CellProfiler got a mention) has already been published, and our group
+          was asked to put together a section on more advanced methods. The
+          contributed chapter has just been posted online and is <a href=
+          "http://www.ncbi.nlm.nih.gov/books/n/assayguide/hcsimage/">available</a>
+          here.
+        </p>
+
+        <h3>
+          February 4, 2013 &mdash; Educational exercises added to the Tutorials
+          page
+        </h3>
+
+        <p>
+          We have just added a couple of educational exercises to assist new
+          users getting started with CellProfiler and CellProfiler Analyst.
+        </p>
+
+        <p>
+          The first is a demonstration of our recently-published <a href=
+          "http://dx.doi.org/10.1038/nmeth.1984">Worm Toolbox</a>. The second
+          provides details on setting up a pipeline in CellProfiler for a
+          translocation assay and visualizing the results in CellProfiler
+          Analyst.
+        </p>
+
+        <p>
+          Both are intended to be in-depth resources for biologists using the
+          software for the first time, or for educators who want to introduce
+          their students to the utility and power of image analysis. To
+          download them, go <a href=
+          "http://www.cellprofiler.org/outreach.html">here</a>.
+        </p>
+
+        <h3>
+          September 7, 2012 &mdash; Upcoming Joint Cell Profiler and FCS
+          Express 4 Image Cytometry Webinar on September 25th
+        </h3>
+
+        <p>
+          We are happy to announce a joint webinar presented by CellProfiler
+          and <a href="http://www.denovosoftware.com/">De Novo Software</a>
+          teams. The back-to-back presentations will demonstrate the use of
+          CellProfiler for running image analysis on nuclear translocation and
+          colony counting assays and import of the results into <a href=
+          "http://www.denovosoftware.com/site/Image-Overview.html">FCS Express
+          4 Image Cytometry</a> for interactive reporting for the images and
+          data.
+        </p>
+
+        <p>
+          The webinar will be on <b>Tuesday, September 25, 2012, 10:00 AM -
+          11:00 AM PDT</b>. You may register by following this <a href=
+          "https://www2.gotomeeting.com/register/537683234">link</a>.
+        </p>
+
+        <ul>
+          <li>Presentation 1: Mark Bray, Ph.D., Broad Institute, "Image
+          analysis using CellProfiler for object identification and
+          quantification."
+          </li>
+
+          <li>Presentation 2: De Novo Software "Analysis and Reporting
+          demonstration with Cell Profiler Data."
+          </li>
+        </ul>
+
+        <p>
+          More details on the interface between CellProfiler and FCS Express 4
+          can be found <a href=
+          "http://cellprofiler.org/interfaces.html#datatools">here</a>.
+        </p>
+
+        <p>
+          &nbsp;&nbsp;<strong>UPDATE (October 5, 2012):</strong> The webinar is
+          now <a href=
+          "https://s3.amazonaws.com/fcsexpressdownloads/Using_CellProfiler_and_FCS_Express_Image_Cytometry_+Joint_Presentations.wmv">
+          online</a> at the DeNovo Software website.
+        </p>
+
+        <h3>
+          April 22, 2012 &mdash; CellProfiler's WormToolbox published in
+          <a href="http://dx.doi.org/10.1038/nmeth.1984">Nature Methods</a>
+        </h3>
+        The Worm Toolbox, a dedicated set of image analysis tools for
+        high-throughput screening of image-based <i>C. elegans</i> phenotypes,
+        is now available through CellProfiler. The toolbox contains image
+        analysis algorithms for measuring morphological phenotypes in static
+        images of individual worms and are effective for a variety of assays.
+        Get started by testing our <a href=
+        "http://www.cellprofiler.org/examples.html#WormToolbox">commented
+        example pipelines</a> or follow our <a href=
+        "http://www.cellprofiler.org/tutorials.html#CPWrittenTutorials">Worm
+        Toolbox tutorial</a>.
+        <h3>
+          April 19, 2012 &mdash; CellProfiler Workshop at the Science for Life
+          Laboratory, Uppsala, Sweden on May 11
+        </h3>
+
+        <p>
+          Carolina Wählby will be co-teaching a workshop titled "Quantitative
+          Automated Analysis of Phenotypes from Microscopic Images using
+          CellProfiler" at the <a href="http://scilifelab.uu.se/">Science for
+          Life Laboratory</a>, Uppsala University, Sweden. See this <a href=
+          "http://scilifelab.uu.se/AboutSciLifeLab/meetings/scilifelab-workshop-on-cellprofiler-/">
+          webpage</a> for more info.
+        </p>
+
+        <h3>
+          March 28, 2012 &mdash; CellProfile-R Available
+        </h3>
+
+        <p>
+          <a href="http://code.google.com/p/cellprofile-r/">CellProfile-R</a>,
+          a library for the statistical programming environment <a href=
+          "http://cran.r-project.org/">R</a>, enables the users of CP/CPA to
+          easily interface their databases using R. This is particularly
+          suitable where database tables exceed the size for practical analysis
+          on spreadsheet applications. A number of convenience functions and
+          workflows are provided that can be extended as necessary.
+        </p>
+
+        <h3>
+          February 27, 2012 &mdash; CellProfiler 2.0 r11710 Released
+        </h3>
+
+        <p>
+          This is a minor <a href=
+          "http://cellprofiler.org/download.html">release</a> incorporating
+          changes to <a href=
+          "http://www.cellprofiler.org/CPmanual/MeasureImageQuality.html">MeasureImageQuality</a>
+          and <a href=
+          "http://www.cellprofiler.org/CPmanual/UntangleWorms.html">UntangleWorms</a>.
+          Unless you use these modules, updating is not critical.
+        </p>
+
+        <h3>
+          February 24, 2012 &mdash; CellProfiler Analyst 2.0 r11710 Released
+        </h3>
+
+        <p>
+          <a href="http://cellprofiler.org/downloadCPA.html">This release</a>
+          deals with a few minor bugfixes. Also please note that the team is
+          mainly focused on CellProfiler and is not able to respond to all
+          queries and requests for improvement for CellProfiler Analyst.
+          However, the source code is available via git at <a href=
+          "https://github.com/CellProfiler/CellProfiler-Analyst">https://github.com/CellProfiler/CellProfiler-Analyst</a>,
+          and we welcome modifications and/or contributions.
+        </p>
+
+        <h3>
+          July 11, 2011 &mdash; Image Analysis Course Announcements
+        </h3>
+
+        <p>
+          Our own Carolina Wählby will be teaching a course in biomedical image
+          analysis during August/September in in Brno, Czech Republic. See
+          <a href="http://cbia.fi.muni.cz/ambia-2011/">here</a> for more
+          details on how to sign up.
+        </p>
+
+        <p>
+          Carolina will also be teaching a pre-conference course on <a href=
+          "http://www.bio-itworldexpoeurope.com/Bio-It_Europe_Content.aspx?id=105980&libID=105937#sc4">
+          "Microscopy Imaging Analysis - quantitative analysis of large-scale
+          biological image data"</a> for the <a href=
+          "http://www.bio-itworldexpoeurope.com/">Bio-IT World Europe
+          Conference</a> to be held in Hannover, Germany in October.
+        </p>
+
+        <h3>
+          June 28, 2011 &mdash; CellProfiler Analyst 2.0 r11306 Released
+        </h3>
+
+        <p>
+          <a href="http://cellprofiler.org/downloadCPA.html">This release</a>
+          is meant to replace r11246 which had a couple of issues detailed
+          <a href=
+          "http://cellprofiler.org/forum/viewtopic.php?f=12&t=1336">here</a>.
+        </p>
+
+        <h3>
+          June 21, 2011 &mdash; Upcoming Joint Cell Profiler and FCS Express 4
+          Image Cytometry Webinar on July 26
+        </h3>
+
+        <p>
+          We are happy to announce a joint webinar presented by CellProfiler
+          and <a href="http://www.denovosoftware.com/">De Novo Software</a>
+          teams. The back-to-back presentations will demonstrate the use of
+          CellProfiler for running image analysis on nuclear translocation and
+          colony counting assays and import of the results into <a href=
+          "http://www.denovosoftware.com/site/Image-Overview.html">FCS Express
+          4 Image Cytometry</a> for interactive reporting for the images and
+          data.
+        </p>
+
+        <p>
+          The webinar will be on <b>Tuesday, July 26, 2011, 10:00 AM - 11:00 AM
+          PDT</b>. You may register by following this <a href=
+          "https://www2.gotomeeting.com/register/513815922">link</a>.
+        </p>
+
+        <ul>
+          <li>Presentation 1: Mark Bray, Ph.D., Broad Institute, "Image
+          analysis using CellProfiler for object identification and
+          quantification."
+          </li>
+
+          <li>Presentation 2: De Novo Software "Analysis and Reporting
+          demonstration with Cell Profiler Data."
+          </li>
+        </ul>
+
+        <p>
+          More details on the interface between CellProfiler and FCS Express 4
+          can be found <a href=
+          "http://cellprofiler.org/interfaces.html#datatools">here</a>.
+        </p>
+
+        <p>
+          &nbsp;&nbsp;<strong>UPDATE (August 1, 2011):</strong> The webinar is
+          now <a href=
+          "https://s3.amazonaws.com/fcsexpressdownloads/CellProfiler_and_FCSE_Joint_Presentation.wmv">
+          online</a> at the DeNovo Software website.
+        </p>
+
+        <h3>
+          June 6, 2011 &mdash; CellProfiler Analyst 2.0 r11246 Released
+        </h3>
+
+        <p>
+          Introducing CellProfiler Analyst r11246. This release addresses some
+          bugs and includes several new features including gating in the
+          plotting tools, annotation tools in PlateViewer, a normalization
+          tool, and improved handling of multiple database tables. Read more
+          <a href=
+          "http://cellprofiler.org/forum/viewtopic.php?f=12&t=1327">here</a> or
+          download it now <a href=
+          "http://cellprofiler.org/downloadCPA.html">here</a>.
+        </p>
+
+        <h3>
+          March 3, 2011 &mdash; CellProfiler 2.0 r10997 Released
+        </h3>
+
+        <p>
+          We have released CellProfiler 2.0 r10997. 
+          <!--This version includes the WormToolbox - a collection of modules and accompanying <a href="examples.html#WormToolbox">sample pipelines</a> for analyzing <i>C. elegans</i>, which is a
+major focus of our current research. 
+-->The Windows release also includes an integration with the <a href=
+"http://www.ilastik.org">Ilastik pixel classifier</a>. Read <a href=
+"http://cellprofiler.org/wiki/index.php/Fixes_by_version#Bugs_fixed_in_release_r10997">
+          the complete release notes</a> for details or <a href=
+          "download.html">download the new version</a>.
+        </p>
+
+        <h3>
+          February 2, 2011
+        </h3>
+
+        <p>
+          CellProfiler is increasingly compatible with a number of open-source
+          and commercial software projects, including National Institutes of
+          Health's ImageJ and <a href="http://www.denovosoftware.com/">De Novo
+          Software's</a> FCS Express 4. See our new <a href=
+          "interfaces.html#partners">Interfaces</a> page for details.
+        </p>
+
+        <h3>
+          October 20, 2010 &mdash; Cellprofiler 2.0 r10415 Released
+        </h3>
+
+        <p>
+          A new version of CellProfiler has been released. The new version
+          provides better image handling (stability, transparancy,
+          multi-channel TIFFs, grouping of movie frames, and loading by order).
+          A new module for unmixing colors can be useful for histologically
+          stained images. Granularity measurements can now be made for each
+          object. It is now possible to call ImageJ on both Windows and Mac.
+          There is a new metadata editor. Finally, a new splines background
+          calculation has been added to CorrectIllumination_Calculate. Read
+          <a href=
+          "http://www.cellprofiler.org/wiki/index.php/CellProfiler_release_notes#Version_10415_released_on_2010-08-20">
+          the complete release notes</a> for details, or <a href=
+          "download.html">download the new version</a>.
+        </p>
+
+        <h3>
+          October 1, 2010 &mdash; CellProfiler Analyst 2.0 r10530 Released
+        </h3>
+
+        <p>
+          A new version of CellProfiler Analyst has been released which
+          addresses several bugs and introduces many new features including the
+          ability to save and load workspaces, edit Classifier's training
+          rules, save and load tables to/from your Database and CSV files
+          seamlessly, create per-image filters on the fly, and create box
+          plots. Read more <a href=
+          "http://cellprofiler.org/forum/viewtopic.php?f=12&t=1098">here</a> or
+          download it now <a href=
+          "http://cellprofiler.org/downloadCPA.html">here</a>.
+        </p>
+
+        <h3>
+          March 29, 2010 &mdash; CellProfiler 2.0 Released
+        </h3>
+
+        <p>
+          Our image analysis software CellProfiler has been completely
+          redesigned and written in Python, and is available for <a href=
+          "download.html">download</a>. <a href=
+          "http://cellprofiler.org/wiki/index.php/New_features_in_CP_2.0">New
+          features</a> include a sparkling new graphical interface, a test mode
+          for experimenting with module settings, improved algorithms and more.
+        </p>
+
+        <h3>
+          Monday, December 7, 2009 &mdash; CellProfiler Analyst 2.0 Released
+        </h3>
+
+        <p>
+          Our data exploration tool CellProfiler Analyst has been re-released
+          and is available for download <a href="downloadCPA.html">here</a>.
+          The software boasts our most current advances to our Classifier tool
+          as well as tools for visualizing and plotting data from CellProfiler.
+        </p>
+
+        <h3>
+          Tuesday, June 22, 2009 &mdash; CellProfiler Reader Node Released for
+          HC/DC-KNIME
+        </h3>
+
+        <p>
+          Recent work at ETH Zurich has produced a high-content screening node
+          set for <a href="http://www.knime.org/">KNIME</a>, an extendable,
+          modular data exploration platform developed at University of
+          Konstanz. The <a href="http://hcdc.ethz.ch/">HC/DC</a> (High Content
+          Data Chain) functional node set for KNIME includes a CellProfiler
+          Reader node which allows users of the tool to easily connect to CP
+          data generated by the "Export to Excel" module.
+        </p>
+
+        <h3>
+          Tuesday, June 9, 2009
+        </h3>
+
+        <p>
+          An updated version of CellProfiler has been released!<br />
+          It has some new features, and many bugfixes. Download it <a href=
+          "download.html">here</a>.
+        </p>
+
+        <p>
+          We are also introducing new resources for CellProfiler/CellProfiler
+          Analyst developers <a href="http://cellprofiler.org/wiki">here</a>,
+          including mailing lists, access to our SVN repositories, information
+          on the next stage of CellProfiler development (namely, porting our
+          entire code base from Matlab to Python) and more.
+        </p>
+
+        <h3>
+          Thursday, April 30, 2009
+        </h3>
+
+        <p style="margin-bottom:40px">
+          <img align="texttop" height="91px" src="http://d1zymp9ayga15t.cloudfront.net/images/bp_awards_smaller.jpg"
+          style="float:left; margin-right:10px" width="80px" /> <span style=
+          "font-style:italic">Bio-IT World</span> magazine awarded CellProfiler
+          a 2009 "Best Practices Award", in the category of IT and Informatics.
+          These awards spotlight examples of the most outstanding innovations,
+          technologies, and practices in the fields of biomedical research,
+          drug development, and clinical research. Read more about these awards
+          <a href=
+          "http://www.prweb.com/releases/2009/04/prweb2373434.htm">here</a>,
+          and an in-depth article about the development of CellProfiler
+          <a href="http://www.bio-itworld.com/news/2009/07/21/BP-Carpenter.html">
+          here.</a>
+        </p>
+
+        <h3 style="clear:left">
+          Thursday, December 11, 2008
+        </h3>
+
+        <p>
+          Classifier 2.0 Beta has been released! This new multi-class
+          classifier will eventually be paired up with visual analytics tools
+          to replace our current version of CellProfiler Analyst. Download it
+          <a href="./downloadCPA.html">here</a>.
+        </p>
+
+        <h3>
+          Monday, September 22nd, 2008
+        </h3>
+
+        <p>
+          A new version of CellProfiler has now been released (version
+          1.0.5811)! Download it <a href="./download.html">here</a>.
+        </p>
+
+        <h3>
+          Wednesday, September 17th, 2008
+        </h3>
+
+        <p>
+          The <a href="http://www.broadinstitute.org/bbbc/">Broad Bioimage
+          Benchmark Collection</a> (BBBC) has been launched. BBBC is a
+          collection of freely available microscopy image sets for testing
+          image analysis algorithms.
+        </p>
+
+        <h3>
+          Friday, May 9th, 2008
+        </h3>
+
+        <p>
+          A new version of CellProfiler Analyst is now available! Download it
+          <a href="./downloadCPA.html">here.</a>
+        </p>
+
+        <h3>
+          Monday, March 17, 2008
+        </h3>
+
+        <p>
+          CellProfiler Analyst has now been released to the public! Download it
+          <a href="./downloadCPA.html">here</a>.
+        </p>
+
+        <p>
+          A new version of CellProfiler has now been released (verson
+          1.0.5122)! Download it <a href="./download.html">here</a>.
+        </p>
+
+        <h3>
+          Sunday, February 24, 2008
+        </h3>
+
+        <p>
+          Anne Carpenter, the co-founder of the CellProfiler project, is
+          featured along with some of her team in a Public television special
+          airing this month nationwide: <span style="font-style:italic">Bold
+          Visions: Women in Science and Technology.</span> <a class=
+          "contentLink" href=
+          "http://www.womenworking.com/tv/airtimes.php?id=23" target=
+          "_blank">[Local listings and broadcast dates ]</a> <a class=
+          "contentLink" href=
+          "http://www.aptonline.org/catalog.nsf/AlphaLookup/A59A9BAF311C7C88852573AF00777F04"
+          target="_blank">[Description]</a> <a class="contentLink" href=
+          "http://www.womenworking.com/tv/media/bold_visions_video.html"
+          target="_blank">[Promotional clip]</a>
+        </p>
+
+        <h3>
+          Tuesday, December 18, 2007
+        </h3>
+
+        <p>
+          A new version of CellProfiler (v1.0.4942) is available! Download it
+          <a href="./download.html">here</a>! Our modifications for
+          CellProfiler are logged in the <a href=
+          '.http://d1zymp9ayga15t.cloudfront.net/content/version.txt'>version notes</a>. (As of version
+          1.0.4818, we are using Matlab R2007a).
+        </p>
+
+        <h3>
+          Tuesday, October 18, 2007
+        </h3>
+
+        <p>
+          A new version of CellProfiler (v1.0.4884) is available! Download it
+          <a href="./download.html">here</a>!
+        </p>
+
+        <h3>
+          Tuesday, September 13, 2007
+        </h3>
+
+        <p>
+          A new version of CellProfiler (v1.0.4828) is available! Download it
+          <a href="./download.html">here</a>! We now support CellProfiler
+          running on Windows Vista.
+        </p>
+
+        <h3>
+          Tuesday, June 19, 2007
+        </h3>
+
+        <p>
+          A new version of CellProfiler (v1.0.4684) is available! Download it
+          <a href="./download.html">here</a>!
+        </p>
+
+        <h3>
+          Wednesday, June 13, 2007
+        </h3>
+
+        <p>
+          A new version of CellProfiler (v1.0.4666) has been released! Download
+          it <a href="./download.html">here</a>!
+        </p>
+
+        <h3>
+          Monday, April 23, 2007
+        </h3>
+
+        <p>
+          A new version of CellProfiler (v1.0.4628) has been released. We now
+          have binaries for Intel Macintosh computers!
+        </p>
+
+        <h3>
+          Friday, January 18, 2007
+        </h3>
+
+        <p>
+          Happy New Year! A new version of CellProfiler (v1.0.4553) has been
+          released today fixing some minor bugs.
+        </p>
+
+        <h3>
+          Tuesday, October 31, 2006
+        </h3>
+
+        <p>
+          The main CellProfiler project article is now freely available in
+          provisional format, accepted at Genome Biology! Check it out on our
+          <a href="./citations.html">Papers</a> page.
+        </p>
+
+        <h3>
+          Wednesday, October 11, 2006
+        </h3>
+
+        <p>
+          Many publications are starting to come out using CellProfiler,
+          including two accepted this week! Check them out on our <a href=
+          "./citations.html">Papers</a> page.
+        </p>
+
+        <h3>
+          Thursday, September 14, 2006
+        </h3>
+
+        <p>
+          There was an error released in yesterday's version. When exporting
+          OUT.mat files, please leave the process info extension empty instead
+          of &quot;.txt&quot; and you will still be able to export. The issue
+          has been fixed and a new version will be made available today.
+        </p>
+
+        <p>
+          UPDATE: The bug has been fixed and the corrected version is available
+          for <a href="./download.html">Download</a>.
+        </p>
+
+        <h3>
+          Wednesday, September 13, 2006
+        </h3>
+
+        <p>
+          A new release of CellProfiler is now available! <a href=
+          "./download.html">Download</a> it for free.
+        </p>
+
+        <h3>
+          Friday, July 7, 2006
+        </h3>
+
+        <p>
+          A new release of CellProfiler is now available! <a href=
+          "./download.html">Download</a> it for free. Be sure also to get the
+          fresh versions of the <a href="./examples.html">Examples</a> to match
+          the new release of CellProfiler.
+        </p>
+
+        <p>
+          The <a href="./citations.html">Papers</a> page has been updated to
+          include recently published and accepted papers using CellProfiler.
+        </p>
+
+        <h3>
+          Friday, January 6, 2006
+        </h3>
+
+        <p>
+          Some people have had problems with the Macintosh version of
+          CellProfiler. For some reason, some machines do not recognize the
+          present working directory where CellProfiler is started. To correct
+          this error, we have uploaded a new version of CellProfiler where the
+          user can set the Module directory in the preferences. This new
+          version also has some bug fixes. Please <a href=
+          "./download.html">download</a> the new version!
+        </p>
+
+        <h3>
+          Wednesday, December 21, 2005
+        </h3>
+
+        <p>
+          We have fixed the problem with our CGI script. You can now <a href=
+          "./download.html">download</a> CellProfiler.
+        </p>
+
+        <h3>
+          Tuesday, December 20, 2005
+        </h3>
+
+        <p>
+          We seem to be experiencing some problems with our download script.
+          Please check back with us to download the CellProfiler software.
+        </p>
+
+        <h3>
+          Friday, December 16, 2005
+        </h3>
+
+        <p>
+          CellProfiler was released to the public! <a href=
+          "./download.html">Download</a> it for free.
+        </p>
+
+        <h3>
+          Wednesday, December 7, 2005
+        </h3>
+
+        <p>
+          The website has been moved. Please change your links to <a href=
+          "http://www.cellprofiler.org" target=
+          "_parent">http://www.cellprofiler.org</a>
+        </p>
+
+        <h3>
+          Thursday, May 12, 2005
+        </h3>
+
+        <p>
+          Anne's talk at MipTec, Basel, Switzerland was awarded Honorable
+          mention for best talk of the conference.
+        </p>
+        <br />
+      </div>
+
+      <div id="footer">
+        <div>
+          <center>
+            <img alt="Banner" src="http://d1zymp9ayga15t.cloudfront.net/images/banner_small.png" style=
+            "margin-top:20px" width="100%" />
+          </center>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

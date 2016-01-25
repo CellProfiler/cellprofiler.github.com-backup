@@ -1,0 +1,536 @@
+<html>
+  <head>
+    <title>
+      CellProfiler cell image analysis software
+    </title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <link rel="stylesheet" href="stylesheets/application.css">
+    <link href=
+    'https://fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,500'
+    rel='stylesheet' type='text/css' />
+
+
+
+    <style type="text/css">
+    
+    div.boxed {background:#CCCCFF;color:#000;display:inline-block}
+    
+    </style>
+    <link href="NiftyCube/niftyCorners.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+    //
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-4307992-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+    //
+    </script>
+  </head>
+  <body onload=
+  "clientSideInclude('header','header.txt'); clientSideInclude('footer','footer.txt'); document.getElementById('header_aboutus').id='current';">
+  <div id="mainwrapper">
+      <div id="header">
+        <div>
+          <a href="/"><img border="0" class="header1" src=
+          "http://d1zymp9ayga15t.cloudfront.net/images/cp_logo_smaller.png" width="400" /></a> <a href=
+          "http://www.broadinstitute.org/"><img alt="Broad Institute logo"
+          border="0" class="header2" height="68" src=
+          "http://d1zymp9ayga15t.cloudfront.net/images/BroadInstituteLogo_smaller.png" width="220" /></a>
+          <div id="navigation">
+            <hr />
+
+            <ul>
+              <li>
+                <a href="/" id="header_main">home</a>
+              </li>
+
+              <li>
+                <a href="#" id="header_getting_started" onclick=
+                "return false;">getting started</a>
+                <ul>
+                  <li>
+                    <a href="/faq.html">What is CellProfiler? FAQ</a>
+                  </li>
+
+                  <li>
+                    <a href="/examples.html">examples</a>
+                  </li>
+
+                  <li>
+                    <a href="/tutorials.html">tutorials</a>
+                  </li>
+
+                  <li>
+                    <a href=
+                    "http://d1zymp9ayga15t.cloudfront.net/content/CellProfilerSoftwareBrochure.pdf">brochure</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#" id="header_download" onclick=
+                "return false;">download</a>
+                <ul>
+                  <li>
+                    <a href="/download.html">CellProfiler</a>
+                  </li>
+
+                  <li>
+                    <a href="/downloadCPA.html">CellProfiler Analyst</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li style="width:109px;text-align:center;">
+                <a href="#" id="header_help" onclick="return false;">help</a>
+                <ul>
+                  <li>
+                    <a href="http://forum.cellprofiler.org/">forum</a>
+                  </li>
+
+                  <li>
+                    <a href="/supportplan.html">support plan</a>
+                  </li>
+
+                  <li>
+                    <a href="http://www.broadinstitute.org/bbbc/">BBBC</a>
+                  </li>
+
+                  <li>
+                    <a href=
+                    "https://github.com/CellProfiler/CellProfiler/wiki">for
+                    developers</a>
+                  </li>
+
+                  <li>
+                    <a href="/manuals.html">manuals</a>
+                  </li>
+
+                  <li>
+                    <a href="/wormtoolbox">WormToolbox</a>
+                  </li>
+
+                  <li>
+                    <a href="/imagingflowcytometry">Imaging Flow Cytometry</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#" id="header_aboutus" onclick="return false;">about
+                us</a>
+                <ul>
+                  <li>
+                    <a href="/about.html">CellProfiler Team</a>
+                  </li>
+
+                  <li>
+                    <a href="/impact.html">impact</a>
+                  </li>
+
+                  <li>
+                    <a href="/press.html">press</a>
+                  </li>
+
+                  <li>
+                    <a href="/citations.html">citations</a>
+                  </li>
+
+                  <li>
+                    <a href="/outreach.html">outreach</a>
+                  </li>
+
+                  <li>
+                    <a href="/interfaces.html">interfaces</a>
+                  </li>
+
+                  <li>
+                    <a href="/#CurrentNews">news</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="navsearch">
+                <form action="http://google.com/search" method="get" onsubmit=
+                "location.href = this.action + '?&q=%2Bsite:cellprofiler.org+' + this.query.value; return false;">
+                <input maxlength="255" name="query" size="20" type="text"
+                  value="" /> <input type="submit" value="search" />
+                </form>
+              </li>
+            </ul>
+            <br />
+
+            <hr style="clear:left" />
+          </div>
+        </div>
+      </div>
+
+      <div id="content">
+        <h1>
+          <a id="PublishedPipelines" name="PublishedPipelines"></a>Published
+          pipelines
+        </h1>
+
+        <p>
+          CellProfiler enables reproducible research because a saved pipeline
+          includes all the modules and settings. Here, we provide links to
+          pipelines used in some published studies, as well as the version of
+          CellProfiler used to create them. You can instead download the most
+          <a href="download.html">current version</a> of CellProfiler; older
+          pipelines should automatically update to the current version when
+          loaded.
+        </p>
+
+        <p>
+          If you used CellProfiler in a publication and would like to post your
+          pipelines here, please <a href=
+          "mailto:imagingadmin@broadinstitute.org">contact us</a>; we would be
+          happy to host them. Please remember to give CellProfiler the proper
+          <a href="citations.html">citation</a> in your paper.
+        </p>
+
+        <p>
+          Please note that each download link contains a compressed ZIP file
+          with the following:
+        </p>
+
+        <ul>
+          <li>The CellProfiler pipelines.
+          </li>
+
+          <li>Supplemental notes describing the pipelines.
+          </li>
+        </ul>
+
+        <p>
+        </p>
+
+        <h2>
+          List of publications
+        </h2>
+
+        <ul>
+          <li class="li_ul">
+            <a name="Logan_2010"></a>Logan DJ, Carpenter AE (2010). Screening
+            cellular feature measurements for image-based assay development.
+            <span style="font-style:italic">J Biomol Screen</span> 15(7):
+            840–846 /<a href=
+            "http://dx.doi.org/10.1177/1087057110370895">doi</a>. PMID:
+            20516293
+          </li>
+
+          <li class="li_ul" style="list-style:none">
+            <a href="http://www.broadinstitute.org/bbbc/BBBC013/">[Broad
+            Bioimage Benchmark Collection entry]</a> (CellProfiler version
+            <a href="previousReleases.html#v10997">2.0.10997</a>)
+          </li>
+
+          <li class="li_ul">
+            <a name="Elkabets_2010"></a>Elkabets M, Gifford AM, Scheel C,
+            Nilsson B, Reinhardt F, Bray MA, Carpenter AE, Jirstr&ouml;m K,
+            Magnuson K, Ebert BL, Ponten F, Weinberg RA, McAllister SS (2011).
+            Human tumors instigate granulin-expressing hematopoietic cells that
+            promote malignancy by activating stromal fibroblasts in mice.
+            <span style="font-style:italic">J Clin Invest</span>
+            121(2):784-99/<a href="http://dx.doi.org/10.1172/JCI43757">doi</a>.
+            PMID: 21266779 PMCID: PMC3026724
+          </li>
+
+          <li class="li_ul" style="list-style:none">
+            <a href=
+            ".http://d1zymp9ayga15t.cloudfront.net/content/PublishedPipelines/Elkabets_2010.zip">[Download]</a>
+            (CellProfiler version <a href=
+            "previousReleases.html#v9978">2.0.9978</a>)
+          </li>
+
+          <li class="li_ul">
+            <a name="Bray_2011"></a>Bray MA, Fraser AN, Hasaka TP, Carpenter AE
+            (2012). Workflow and metrics for image quality control in
+            large-scale high-content screens. <span style="font-style:italic">J
+            Biomol Screening</span> 17(2):135-143 / <a href=
+            "http://dx.doi.org/10.1177/1087057111420292">doi</a>. PMID:
+            21956170
+          </li>
+
+          <li class="li_ul" style="list-style:none">
+            <a href=
+            ".http://d1zymp9ayga15t.cloudfront.net/content/PublishedPipelines/Bray_2011_SupplementalMaterial.zip">
+            [Download]</a> (CellProfiler version <a href=
+            "previousReleases.html#v10997">2.0.10997</a>)
+          </li>
+
+          <li class="li_ul">
+            <a name="Gonzalez_2012"></a>Gonz&aacute;lez JE, Barquinero JF, Lee
+            M, Garc&iacute;a O, Casac&oacute; A (2012). Radiosensitization
+            induced by the anti-epidermal growth factor receptor monoclonal
+            antibodies cetuximab and nimotuzumab in A431 cells. <i>Cancer Biol
+            Ther</i> 13(2):1-6 / <a href=
+            "http://dx.doi.org/10.4161/cbt.13.2.18439">doi</a>. PMID: 22231391
+          </li>
+
+          <li class="li_ul" style="list-style:none">
+            <a href=
+            ".http://d1zymp9ayga15t.cloudfront.net/content/PublishedPipelines/CancerBiolTher_Gonzalez_2012.zip">
+            [Download]</a> (CellProfiler version <a href=
+            "previousReleases.html#v10997">2.0.10997</a>)
+          </li>
+
+          <li class="li_ul">
+            <a name="Kitami_2012"></a>Kitami T, Logan DJ, Negri J, Hasaka T,
+            Tolliday NJ, Carpenter AE, Spiegelman BM, Mootha VK (2012). A
+            chemical screen probing the relationship between mitochondrial
+            content and cell size. <span style="font-style:italic">PLoS
+            ONE</span> 7(3):e33755 / <a href=
+            "http://dx.doi.org/10.1371/journal.pone.0033755">doi</a>. PMID:
+            22479437
+          </li>
+
+          <li class="li_ul" style="list-style:none">
+            <a href=
+            ".http://d1zymp9ayga15t.cloudfront.net/content/PublishedPipelines/PIPE_main_batch_InformerBigRun_Threshold_CP10997.cp">
+            [Download]</a> (CellProfiler version <a href=
+            "previousReleases.html#v10997">2.0.10997</a>)
+          </li>
+
+          <li class="li_ul">
+            <a name="Gonzalez_2012b"></a>González JE, Romero I, Barquinero JF,
+            Garcia O. (2012). Automatic analysis of silver-stained comets by
+            CellProfiler software. <span style="font-style:italic">Mutation
+            Research</span> 748(1-2):60-4 / <a href=
+            "http://dx.doi.org/10.1016/j.mrgentox.2012.06.007">doi</a>. PMID:
+            22771502
+          </li>
+
+          <li class="li_ul" style="list-style:none">
+            <a href=
+            ".http://d1zymp9ayga15t.cloudfront.net/content/PublishedPipelines/MutationResearch_Gonzalez_2012.zip">
+            [Download]</a> (CellProfiler version <a href=
+            "previousReleases.html#v10997">2.0.10997</a>)
+          </li>
+
+          <li class="li_ul">
+            <a name="Hartwell_2012"></a>Hartwell KA, Miller PG, Mukherjee S,
+            Kahn AR, Stewart AL, Logan DJ, Negri JM, Duvet M, J&auml;r&aring;s
+            M, Puram R, Dancik V, Al-Shahrour F, Kindler T, Tothova Z,
+            Chattopadhyay S, Hasaka T, Narayan R, Dai M, Huang C, Shterental S,
+            Chu LP, Haydu JE, Shieh JH, Steensma DP, Munoz B, Bittker JA,
+            Shamji AF, Clemons PA, Tolliday NJ, Carpenter AE, Gilliland DG,
+            Stern AM, Moore MA, Scadden DT, Schreiber SL, Ebert BL, Golub TR
+            (2013). Niche-based screening identifies small-molecule inhibitors
+            of leukemia stem cells. <span style="font-style:italic">Nat Chem
+            Biol</span> 9(12):840-8 / <a href=
+            "http://dx.doi.org/10.1038/nchembio.1367">doi</a>. PMID: 24161946
+          </li>
+
+          <li class="li_ul" style="list-style:none">
+            <a href=
+            ".http://d1zymp9ayga15t.cloudfront.net/content/PublishedPipelines/Hartwell_2012.zip">[Download]</a>
+            (Note:CellProfiler version 7807 for Windows7 64bit included in
+            download) (CellProfiler Analyst version <a href=
+            "downloadCPA.html">11710</a>)
+          </li>
+
+          <li class="li_ul">
+            <a name="Chudnovsky_2012"></a>Chudnovsky Y, Kim D, Zheng S, Whyte
+            WA, Bansal M, Bray MA, Gopal S, Theisen MA, Bilodeau S, Thiru P,
+            Muffat J, Yilmaz OH, Mitalipova M, Woolard K, Lee J, Nishimura R,
+            Sakata N, Fine HA, Carpenter AE, Silver SJ, Verhaak RGW, Califano
+            A, Young RA, Ligon KL, Mellinghoff IK, Root DE, Sabatini DM, Hahn
+            WC, Chheda MG (2014). ZFHX4 interacts with the NuRD core member
+            CHD4 and regulates the glioblastoma tumor-initiating cell state.
+            <span style="font-style:italic">Cell Reports</span> 6(2):313-24 /
+            <a href="http://dx.doi.org/10.1016/j.celrep.2013.12.032">doi</a>.
+            PMID: 24440720
+          </li>
+
+          <li class="li_ul" style="list-style:none">
+            <a href=
+            ".http://d1zymp9ayga15t.cloudfront.net/content/PublishedPipelines/CellReports_Chudnovsky_2012.zip">
+            [Download]</a> (CellProfiler version <a href=
+            "previousReleases.html#v11710">2.0.11710</a>)
+          </li>
+
+          <li class="li_ul">
+            <a name="Nieland_2014"></a>Nieland, TJF; Logan, DJ; Saulnier, J;
+            Lam, D; Johnson, C; Root, DE; Carpenter, AE; Sabatini, BL (2014).
+            High Content Image Analysis Identifies Novel Regulators of
+            Synaptogenesis in a High-Throughput RNAi Screen of Primary Neurons
+            <span style="font-style:italic">PLoS ONE</span> 9(3).e91744 /
+            <a href="http://dx.doi:10.1371/journal.pone.0091744">doi</a>. PMID:
+            24633176
+          </li>
+
+          <li class="li_ul" style="list-style:none">
+            <a href=
+            ".http://d1zymp9ayga15t.cloudfront.net/content/PublishedPipelines/PLoSOne_Nieland_2014.zip">[Download]</a>
+            (CellProfiler version <a href=
+            "previousReleases.html#v11710">2.0.11710</a>)
+          </li>
+
+          <li class="li_ul">
+            <a name="Moldovan_2014"></a>Moldovan L, Anghelina M, Kantor T,
+            Jones D, Ramadan E, Xiang Y, Huang K, Kolipaka A, Malarkey W,
+            Ghasemzadeh N, Mohler PJ, Quyyumi A, Moldovan NI (2014). A module
+            of human peripheral blood mononuclear cell rranscriptional network
+            containing primitive and differentiation markers is related to
+            specific cardiovascular health variables. <span style=
+            "font-style:italic">PLoS ONE</span> 9(4):e95124 / <a href=
+            "http://dx.doi.org/10.1371/journal.pone.0095124">doi</a>. PMID:
+            24759906
+          </li>
+
+          <li class="li_ul" style="list-style:none">
+            <a href=
+            ".http://d1zymp9ayga15t.cloudfront.net/content/PublishedPipelines/PLoSOne_Moldovan_2014.zip">[Download]</a>
+            (CellProfiler version <a href=
+            "previousReleases.html#v11710">2.0.11710</a>)
+          </li>
+
+          <li class="li_ul">
+            <a name="SheikKhalil_2014"></a>Sheik-Khalil E, Bray MA, Ozkaya
+            Şahin G, Scarlatti G, Jansson M, Carpenter AE, Feny&ouml; EM
+            (2014). Automated image-based assay for evaluation of HIV
+            neutralization and cell-to-cell fusion inhibition. <span style=
+            "font-style:italic">BMC Infect Dis</span> 14:472 / <a href=
+            "http://dx.doi.org/10.1186/1471-2334-14-472">doi</a>. PMID:
+            25176034
+          </li>
+
+          <li class="li_ul" style="list-style:none">
+            <a href=
+            ".http://d1zymp9ayga15t.cloudfront.net/content/PublishedPipelines/SheikKhalil_2014.zip">[Download]</a>
+            (CellProfiler version <a href=
+            "previousReleases.html#v11710">2.0.11710</a>)
+          </li>
+
+          <li class="li_ul">
+            <a name="Singh_2014"></a>Singh S, Bray MA, Jones TR, Carpenter AE
+            (2014). Pipeline for illumination correction of images for
+            high-throughput microscopy. <span style="font-style:italic">Journal
+            of Microscopy</span> 256(3):231-6 / <a href=
+            "http://dx.doi.org/10.1111/jmi.12178">doi</a>. PMID: 25228240
+          </li>
+
+          <li class="li_ul" style="list-style:none">
+            <a href=
+            ".http://d1zymp9ayga15t.cloudfront.net/content/PublishedPipelines/JMicroscopy_Singh_2014.zip">[Download]</a>
+            (CellProfiler version <a href=
+            "previousReleases.html#2.1.0">2.1.0</a>)
+          </li>
+
+          <li class="li_ul">
+            <a name="Metelo_2013"></a>Metelo AM, Noonan HR, Li X, Jin Y, Baker
+            R, Kamentsky L, Zhang Y, van Rooijen E, Shin J, Carpenter AE, Yeh
+            JR, Peterson RT, Iliopoulos O (2015). Pharmacological HIF2&alpha;
+            inhibition improves VHL disease-associated phenotypes in zebrafish
+            model. <span style="font-style:italic">Journal of Clinical
+            Investigation</span> 25(5): 1987-97 / <a href=
+            "http://dx.doi.org/10.1172/JCI73665">doi</a>. PMID: 25866969
+          </li>
+
+          <li class="li_ul" style="list-style:none">
+            <a href=
+            ".http://d1zymp9ayga15t.cloudfront.net/content/PublishedPipelines/Metelo_2013.zip">[Download]</a>
+            (CellProfiler version <a href=
+            "previousReleases.html#v11710">2.0.11710</a>)
+          </li>
+
+          <li class="li_ul">
+            <a name="Du_2014"></a>Du Z, Abedalthagafi M, Aizer AA, McHenry AR,
+            Sun HH, Bray MA, Viramontes O, Machaidze R, Brastianos PK, Reardon
+            DA, Dunn IF, Freeman GJ, Ligon KL, Carpenter AE, Alexander BM, Agar
+            NY, Rodig SJ, Bradshaw EM, Santagata S (2014). Increased expression
+            of the immune modulatory molecule PD-L1 (CD274) in anaplastic
+            meningioma. <span style="font-style:italic">Oncotarget</span>
+            10;6(7):4704-16. PMID: 25609200
+          </li>
+
+          <li class="li_ul" style="list-style:none">
+            <a href=
+            ".http://d1zymp9ayga15t.cloudfront.net/content/PublishedPipelines/Du_2014.zip">[Download]</a>
+            (CellProfiler version <a href=
+            "previousReleases.html#2.1.0">2.1.0</a>)
+          </li>
+
+          <li class="li_ul">
+            <a name="Leavesley_2015"></a>Leavesley SJ, Nakhmani A, Gao Y, Rich
+            TC (2015). Automated Image Analysis of FRET Signals for Subcellular
+            cAMP Quantification. <span style="font-style:italic">Methods in
+            Molecular Biology</span> 1294:59-70 / <a href=
+            "http://dx.doi.org/10.1007/978-1-4939-2537-7_5">doi</a>. PMID:
+            25783877
+          </li>
+
+          <li class="li_ul" style="list-style:none">
+            <a href=
+            ".http://d1zymp9ayga15t.cloudfront.net/content/PublishedPipelines/Leavesley_2015.zip">[Download]</a>
+            (CellProfiler version <a href=
+            "http://cellprofiler.org/download.html">2.1.1</a>)
+          </li>
+
+          <li class="li_ul">
+            <a name="Logan_2015"></a>Logan DJ, Shan J, Bhatia SN, Carpenter AE
+            (2015). Quantifying co-cultured cell phenotypes in high-throughput
+            using pixel-based classification. <span style=
+            "font-style:italic">[In Review]</span>
+          </li>
+
+          <li class="li_ul" style="list-style:none">
+            <a href="http://www.broadinstitute.org/bbbc/BBBC026/">[Broad
+            Bioimage Benchmark Collection entry]</a>
+          </li>
+
+          <li class="li_ul">
+            <a name="Jolly_2015"></a>Jolly AL, Luan CH, Dusel BE, Dunne SF,
+            Winding MJ, Dixit VJ, Robins C, Saluk JL, Logan DJ, Carpenter AE,
+            Cohen, AR, Gelfand VI (2015). A Genome-wide RNAi screen for
+            microtubule network formation and lysosome motility regulation in
+            Drosophila S2 cells. <span style="font-style:italic">[In
+            Review]</span>
+          </li>
+
+          <li class="li_ul" style="list-style:none">
+            <a href=
+            ".http://d1zymp9ayga15t.cloudfront.net/content/PublishedPipelines/Jolly_Lysomsome_Motility_2015.zip">
+            [Download]</a> (CellProfiler version <a href=
+            "previousReleases.html#v10997">2.0.10997</a>)
+          </li>
+        </ul>
+
+        <h2>
+          Pre-publication pipelines and data
+        </h2>
+
+        <ul>
+          <li class="li_ul">
+            <a name="Buys_2015"></a>Dordea AC, Bray MA, Allen K, Fei F, Gregory
+            M, Carpenter AE, Buys ES. An open-source computational tool to
+            automatically quantify immunolabeled retinal ganglion cells.
+          </li>
+
+          <li class="li_ul" style="list-style:none">
+            <a href=
+            ".http://d1zymp9ayga15t.cloudfront.net/content/PublishedPipelines/Buys_2015.zip">[Download]</a>
+            (CellProfiler version <a href="download.html">2.1.1</a>)
+          </li>
+        </ul>
+      </div>
+
+      <div id="footer">
+        <div>
+          <center>
+            <img alt="Banner" src="http://d1zymp9ayga15t.cloudfront.net/images/banner_small.png" style=
+            "margin-top:20px" width="100%" />
+          </center>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

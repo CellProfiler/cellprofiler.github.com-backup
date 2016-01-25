@@ -1,0 +1,523 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html><head>
+<title>CellProfiler cell image analysis software</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<style type="text/css" media="all">
+	@import "../cp_stylesheet.css";
+	</style>
+<style>
+	div.hours-banner
+	{
+	width:600px;
+	font-weight:bold;
+	font-size:x-large;
+	background-color:#FFEF99;
+	border:3px outset #FFF7CC;
+	padding:20px;
+	}
+	span.tab{
+		padding: 0 40px;
+    	}
+    	span.space{
+    		padding: 0 8px;
+    	}
+    	span.tspace{
+    		padding: 0 5px;
+    	}
+    	span.ttspace{
+    		padding: 0 2.8px;
+    	}
+    	span.tttspace{
+    		padding: 0 2.2px;
+    	}
+    	div.picture {
+    		height:5px;
+    		width:5px;
+    		padding: 5px;
+    		float: right;
+
+}
+
+    	h1{
+    		font-size: 2.5em;
+    	}
+    	h2{
+    		font-size: em;
+
+    	}
+    	p.pos_fixed {
+    		position: fixed;
+    		top: 30px;
+    		right: 5px;
+    	}
+	span
+	.break-word {
+		word-wrap: break-word;
+	}
+	div.feature-wrapper
+	{
+	width:800px;
+	}
+
+	div.feature-row
+	{
+	padding:25px 0px;
+	display:inline-block;
+	margin-left:auto;
+	margin-right:auto;
+	}
+
+	div.feature-box
+	{
+	float:left;
+	width:340px;
+	}
+
+
+
+
+	div.feature-pic
+	{
+	width:280px;
+	height:160px;
+	}
+
+	span.img {
+		float:right;
+		vertical-align:middle;
+	}
+
+	div.feature-title
+	{
+	width:280px;
+	font-weight:bold;
+	font-size:large;
+	padding-top:15px;
+	padding-bottom:5px;
+	}
+
+	div.feature-details
+	{
+	width:280px;
+	text-align:left;
+	}
+
+	div.link-button
+	{
+	margin:10px;
+	width:280px;
+	height:160px;
+	line-height:100px;
+	display:table-cell;
+	vertical-align:middle;
+	}
+
+	p.link-button-text
+	{
+	font-size:xx-large;
+	color:#FFFFFF;
+	font-weight:bold;
+	vertical-align:middle;
+	}
+
+	p.line-statement
+	{
+	font-style:italic;
+	}
+
+	a.button-link:link
+	{
+	text-decoration:none;
+	}
+
+	a.button-link:hover
+	{
+	text-decoration:underline;
+	color:#FFFFFF;
+	}
+
+	img.pro-pic
+	{
+	width:280px;
+	height:160px;
+	}
+
+	div.bonus-features
+	{
+	display:inline-table;
+	max-width:520px;
+	width:520px;
+	height:83px;
+	font-weight:bold;
+	font-size:large;
+	}
+
+	div.bonus-left-part
+	{
+	display:table-cell;
+	font-size:x-large;
+	height:83px;
+	width:80px;
+	line-height:40px;
+	vertical-align:middle;
+	padding-left:10px;
+	font-weight:bold;
+	}
+
+	}
+
+	img.top {
+    vertical-align: text-top;
+    	}
+
+
+	img {
+		float:right
+	}
+
+	div.bonus-right-part
+	{
+	display:inline-table;
+	width:520px;
+	height:83px;
+	text-align:left;
+	padding-left:20px;
+	font-weight:normal;
+	}
+
+	ul.bonus-list
+	{
+	margin:0px;
+	padding-left:20px;
+	line-height:30px;
+	}
+
+	.sign-up-button
+	{
+	-moz-box-shadow:inset 0px 1px 0px 0px #f9eca0;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #f9eca0;
+	box-shadow:inset 0px 1px 0px 0px #f9eca0;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #fff099), color-stop(1, #f2ab1e) );
+	background:-moz-linear-gradient( center top, #fff099 5%, #f2ab1e 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff099', endColorstr='#f2ab1e');
+	background-color:#fff099;
+	-webkit-border-top-left-radius:20px;
+	-moz-border-radius-topleft:20px;
+	border-top-left-radius:20px;
+	-webkit-border-top-right-radius:20px;
+	-moz-border-radius-topright:20px;
+	border-top-right-radius:20px;
+	-webkit-border-bottom-right-radius:20px;
+	-moz-border-radius-bottomright:20px;
+	border-bottom-right-radius:20px;
+	-webkit-border-bottom-left-radius:20px;
+	-moz-border-radius-bottomleft:20px;
+	border-bottom-left-radius:20px;
+	text-indent:0;
+	border:1px solid #e6b045;
+	display:inline-block;
+	color:#000000;
+	font-family:Arial;
+	font-size:24px;
+	font-weight:bold;
+	font-style:normal;
+	height:60px;
+	line-height:60px;
+	width:250px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #ded17c;
+	}
+
+	.sign-up-button:hover
+	{
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f2ab1e), color-stop(1, #fff099) );
+	background:-moz-linear-gradient( center top, #f2ab1e 5%, #fff099 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f2ab1e', endColorstr='#fff099');
+	background-color:#f2ab1e;
+	}
+
+	.sign-up-button:active
+	{
+	position:relative;
+	top:1px;
+	}
+	/* This button was initially generated using CSSButtonGenerator.com and customized by Matthew Veneskey */
+
+</style>
+
+
+<script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script><script> function clientSideInclude(id, url) { return; }</script>
+
+
+<style type="text/css">div.boxed {display:inline-block}</style>
+<link rel="stylesheet" type="text/css" href="../NiftyCube/niftyCorners.css">
+<script type="text/javascript" src="../NiftyCube/niftycube.js"></script>
+<link rel="alternate" type="application/rss+xml" href="../news.rss" title="CellProfiler News">
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-4307992-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<link type="text/css" rel="stylesheet" href="../NiftyCube/niftyCorners.css" media="screen"></head>
+
+<body onload="clientSideInclude('header','../header.txt');
+              clientSideInclude('footer','../footer.txt');
+              Nifty('div.boxed','big');
+              document.getElementById('header_help').id='current';">
+
+<div id="mainwrapper">
+
+<div id="header">
+<div>
+<a href="/">
+<img class="header1" src=".http://d1zymp9ayga15t.cloudfront.net/images/cp_logo_smaller.png" width="400" border="0"></a>
+
+<a href="http://www.broadinstitute.org/science/platforms/imaging/imaging-platform">
+<img class="header2" src=".http://d1zymp9ayga15t.cloudfront.net/images/BroadInstituteLogo_smaller.png" width="220" height="68" border="0" alt="Broad Institute logo"></a>
+
+<div id="navigation">
+<hr />
+  <ul>
+    <li><a href="/" id="header_main">home</a> </li>
+    <li><a href="/gettingStarted.html" id="header_getting_started">getting started </a>
+      <ul>
+       <li><a href="/faq.html">What is CellProfiler?</a></li>
+       <li><a href="/examples.html">examples</a></li>
+       <li><a href="/tutorials.html">tutorials</a></li>
+       <li><a href="http://d1zymp9ayga15t.cloudfront.net/content/CellProfilerSoftwareBrochure.pdf">brochure</a></li>
+      </ul>
+    </li>
+    <li><a href="/download.html" id="header_download">download</a>
+      <ul>
+        <li><a href="/download.html">CellProfiler</a></li>
+        <li><a href="/downloadCPA.html">CellProfiler Analyst</a></li>
+      </ul>
+    </li>
+	<li style="width:109px;text-align:center;"><a href="/forum/" id="header_help">help</a>
+      <ul>
+    	<li><a href="/forum/">forum</a></li>
+	<li><a href="/supportplan.html">support plan</a>
+       	<li><a href="http://www.broadinstitute.org/bbbc/">BBBC</a></li>
+    	<li><a href="https://github.com/CellProfiler/CellProfiler/wiki">for developers</a></li>
+	<li><a href="/manuals.html">manuals</a></li>
+	<li><a href="/wormtoolbox">WormToolbox</a></li>
+      </ul>
+	</li>
+    <li><a href="/about.html" id="header_aboutus">about us</a>
+      <ul>
+      	<li><a href="/about.html">CellProfiler Team</a>
+        <li><a href="/press.html">press</a></li>
+        <li><a href="/citations.html">citations</a></li>
+	<li><a href="/impact.html">impact</a></li>
+        <li><a href="/outreach.html">outreach</a></li>
+	<li><a href="/interfaces.html">interfaces</a></li>
+    	<li><a href="/#CurrentNews">news</a> </li>
+      </ul>
+    </li>
+    <li class="navsearch">
+      <form method="get" action="http://google.com/search"
+            onsubmit="location.href = this.action + '?&q=%2Bsite:cellprofiler.org+' + this.query.value; return false;">
+        <input type="text" name="query" size="20" maxlength="255" value="" />
+        <input type="submit" value="search" />
+      </form>
+  </ul>
+
+  <br />
+  <hr style="clear:left"/>
+</div>
+</div>
+
+</div>
+
+
+<div id="content">
+<!--Content here-->
+
+
+
+
+
+
+
+
+<big><strong>Imaging flow cytometry analysis using CellProfiler</strong></big><br><br>
+Imaging flow cytometry combines the high-throughput capabilities of conventional flow cytometry with single-cell imaging. CellProfiler
+can be used to analyze the resulting images from imaging flow cytometry, whether brightfield, darkfield, or fluorescence.<br><br>
+In some cases, even unlabeled cells can be scored for particular phenotypes. In the workflow outlined below, we have demonstrated
+label-free prediction of DNA contentand quantification of the mitotic cell cycle phases by applying supervised machine learning to
+morphological features extracted from brightfield and the typically-ignored darkfield images of cells from an imaging cytometer. This
+method facilitates non-destructive monitoring of cells avoiding potentially confounding effects of fluorescent stains while maximizing
+available fluorescence channels.
+<br>
+
+<strong>Protocol:</strong><a href="Protocol/Protocol.pdf">[Download all protocols]</a><br><br>
+<span class="tab"></span>
+
+<!--Boxes below
+1.
+2.
+3.
+4.
+
+
+<div class="tab-content">
+    <div id="tab1" class="tab active">
+        <p>Tab #1 content goes here!</p>
+        <p>Donec pulvinar neque sed semper lacinia. Curabitur lacinia ullamcorper nibh; quis imperdiet velit eleifend ac. Donec blandit mauris eget aliquet lacinia! Donec pulvinar massa         interdum risus ornare mollis.</p>
+    </div>
+
+
+
+<!---Step1 Box--->
+<div style="width:1100px;
+		height:140px;-webkit-border-radius: 30px;-moz-border-radius: 30px;
+		border-radius: 30px;
+		border:2px solid #A9A9A9;
+		background-color:#FFFFFF;">
+
+<br></span>
+<p><span class="space"></span>
+
+<img class="top" src="http://d1zymp9ayga15t.cloudfront.net/images/Step1pic.jpg" hspace="50" width="120" height="100" ; />
+
+<img class="top" src="http://d1zymp9ayga15t.cloudfront.net/images/Ideas.jpg" hspace="80" width="130" height="30" ; />
+
+<strong><big>Step 1:</strong> Extract single cell images & identify cell<br><span class="ttspace"></span>
+
+<span class="space">populations with IDEAS software </p></span></big>
+
+<span class="space"></span>
+
+<small><a href="Protocol/Step1Protocol.pdf">[PDF Protocol]</a>
+
+<span class="ttspace"><a href="http://d1zymp9ayga15t.cloudfront.net/content/info/Step1/input/input_step1.zip">[example input data]</a></span>
+
+<span class="ttspace"><a href="http://cellprofiler.orghttp://d1zymp9ayga15t.cloudfront.net/content/info/Step1/output/Supplementary_data_3_Step2_input_single_tifs.zip">[example output data]</a>
+</span></small>
+
+</div>
+<br>
+<!---Step2 Box--->
+<div style="width:1100px;
+		height:140px;-webkit-border-radius: 30px;-moz-border-radius: 30px;
+		border-radius: 30px;
+		border:2px solid #A9A9A9;
+		background-color:#FFFFFF;">
+
+
+
+<br></span>
+<p><span class="space"></span>
+<img class="top" src="http://d1zymp9ayga15t.cloudfront.net/images/Step2pic2.jpg" hspace="20" width="100" height="80" style="vertical-align:top"; float="right"/>
+
+<img class="top" src="http://d1zymp9ayga15t.cloudfront.net/images/Arrow.png" hspace="10" width="40" height="40" style="vertical-align:top"; float="right" />
+
+<img class="top" src="http://d1zymp9ayga15t.cloudfront.net/images/Step1pic.jpg" hspace="20" width="80" height="60" style="vertical-align:top"; float="right"/>
+
+<img class="top" src="http://d1zymp9ayga15t.cloudfront.net/images/Step2pic1.jpg" hspace="20" width="80" height="60" style="vertical-align:top"; float="right"/>
+
+
+<strong><big>Step 2:</strong> Preprocess the single cell images<br><span class="ttspace"></span>
+<!---Indents--->
+<span class="space"></span>combine them to montages of images using Matlab</p></span></big>
+<!---Space between links and text--->
+<span class="space"></span>
+
+<small><a href="Protocol/Step2Protocol.pdf">[PDF Protocol]</a>
+
+<span class="ttspace"><a href="http://cellprofiler.orghttp://d1zymp9ayga15t.cloudfront.net/content/info/Step1/output/Supplementary_data_3_Step2_input_single_tifs.zip">[example input data]</a>
+
+</span><span class="ttspace"><a href="http://d1zymp9ayga15t.cloudfront.net/content/info/step2/source/Supplementary_code_1_Step2_make_montages.m">[source code]</a>
+
+</span><span class="ttspace"><a href="http://d1zymp9ayga15t.cloudfront.net/content/info/step2/output/Supplementary_data_4_Step2_output_tiled_tifs.zip">[example output data]</a>
+
+</span></small>
+
+</div>
+<br>
+<!---Step3 Box--->
+<div style="width:1100px;
+		height:140px;-webkit-border-radius: 30px;-moz-border-radius: 30px;
+		border-radius: 30px;
+		border:2px solid #A9A9A9;
+		background-color:#FFFFFF;">
+
+<br>
+<p><span class="space"></span>
+
+<img class="top" src="http://d1zymp9ayga15t.cloudfront.net/images/Step3pic1.jpg" hspace="20" width="100" height="80" style="vertical-align:top"; float="right"/>
+
+<img class="top" src="http://d1zymp9ayga15t.cloudfront.net/images/Arrow.png" hspace="10" width="40" height="40" style="vertical-align:top"; float="right" />
+
+<img class="top" src="http://d1zymp9ayga15t.cloudfront.net/images/Step2pic2.jpg" hspace="20" width="100" height="80" style="vertical-align:top"; float="right"/>
+
+<img class="top" src="http://d1zymp9ayga15t.cloudfront.net/images/cplogo.png" hspace="20" width="110" height="50" style="vertical-align:bottom"; float="right" />
+
+
+
+<strong><big>Step 3:</strong>Segment images and extract features
+<br><span class="space"></span>using CellProfiler</p></span></big>
+<span class="space"></span>
+<small><a href="Protocol/Step3Protocol.pdf">[PDF Protocol]</a></span>
+<span class="ttspace"><a href="http://d1zymp9ayga15t.cloudfront.net/content/info/step2/output/Supplementary_data_4_Step2_output_tiled_tifs.zip">[example input data]</a></span>
+<span class="ttspace"><a href="http://d1zymp9ayga15t.cloudfront.net/content/info/step3/pipeline/Supplementary_code_2_CellProfiler_pipeline.cpproj">[example CellProfiler pipeline]</a></span>
+<span class="ttspace"><a href="http://d1zymp9ayga15t.cloudfront.net/content/info/step3/output/Supplementary_data_5_Step3_output_features_txt.zip">[example output data]</a></span></small>
+</div>
+<br>
+<!---Step4 Box--->
+
+<div style="width:1100px;
+		height:140px;-webkit-border-radius: 30px;-moz-border-radius: 30px;
+		border-radius: 30px;
+		border:2px solid #A9A9A9;
+		background-color:#FFFFFF;">
+<br>
+
+<img class="top" src="http://d1zymp9ayga15t.cloudfront.net/images/Step4pic1.jpg" hspace="20" width="170" height="110" style="vertical-align:top"; float="right"/>
+<span class="space"></span>
+<img class="top" src="http://d1zymp9ayga15t.cloudfront.net/images/Step2pic1.jpg" hspace="20" width="100" height="80" style="vertical-align:top"; float="right"/>
+
+
+
+
+<strong><big>Step 4 (optional):</strong> Machine Learning for label-free <br><span class="ttspace"></span>
+<span class="space"></span>prediction of cell phenotypes</p></big>
+</p></span>
+<span class="space"></span>
+<small><span class="tttspace"></span><strong>Preprocessing:</strong><span class="tttspace"><a href="Protocol/Step4_PreProcess.pdf"> [PDF protocol]</a></span><span class="tttspace"><a href="http://d1zymp9ayga15t.cloudfront.net/content/info/step3/output/Supplementary_data_5_Step3_output_features_txt.zip">[example input data]</a><span><span class="tttspace"><a href="http://d1zymp9ayga15t.cloudfront.net/content/info/step4/Preprocessing/code/Supplementary_code_3_Step4_a_prepare_data.m">[source code]</a></span><span class="tttspace"><a href="http://cellprofiler.orghttp://d1zymp9ayga15t.cloudfront.net/content/info/step4/Preprocessing/output/preprocessing_output.zip">[example output data file]</a></span><br><span class="tttspace"></span>
+<span class="space"></span><strong>Classification:</strong><span class="tttspace"><a href="Protocol/Step4_class.pdf"> [PDF protocol]</a></span><span class="tttspace"><a href="http://d1zymp9ayga15t.cloudfront.net/content/info/step4/Classification/input/input_step4_class.zip">[example input file]</a></span><span class="tttspace"><a href="http://cellprofiler.orghttp://d1zymp9ayga15t.cloudfront.net/content/info/step4/Classification/code/Supplementary_code_5_Step4_RUSboosting.m">[source code]</a></span><span class="tttspace"><a href="http://cellprofiler.orghttp://d1zymp9ayga15t.cloudfront.net/content/info/step4/Classification/output/Supplementary_data_10_Step4_output_estimated_phases.mat.zip">[example output data file]</a></span><br><span class="tttspace"></span>
+<span class="space"></span><strong>Regression:</strong><span class="tttspace"><a href="Protocol/step4_regress.pdf"> [PDF protocol]</a></span><span class="tttspace"><a href="http://d1zymp9ayga15t.cloudfront.net/content/info/step4/Regression/input/input_step4_regress.zip">[example input data file]</span><span class="tttspace"><a href="http://cellprofiler.orghttp://d1zymp9ayga15t.cloudfront.net/content/info/step4/Regression/code/Supplementary_code_4_Step4_LSboosting.m">[source code]<a/></span><span class="tttspace"><a href="http://d1zymp9ayga15t.cloudfront.net/content/info/step4/Regression/output/Supplementary_data_9_Step4_output_estimated_nuclear_content.mat.zip">[example output data file]</a></span></small>
+</div>
+
+
+
+
+<script type="text/javascript">
+
+    document.getElementById('content').style.display = 'block';
+
+</script>
+
+<div id="footer">
+<div>
+<center><img src="http://d1zymp9ayga15t.cloudfront.net/images/banner_small.png" width="100%" alt="Banner" style="margin-top:20px"/></center>
+
+</div>
+
+</div>
+
+</div>
+</body>
+</html>

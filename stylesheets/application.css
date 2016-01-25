@@ -1,0 +1,341 @@
+#body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+
+#mainwrapper {
+  width: 95%;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#header {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 25px;
+  clear: both;
+}
+
+.header1 {
+  border: none;
+  position: absolute;
+  top: 15px;
+  clear: both;
+}
+
+.header2 {
+  border: none;
+  position: relative;
+  float: right;
+  margin: 95px 20px 0 0;
+  clear: both;
+}
+
+#footer {
+  margin-left: 20px;
+  margin-top: 25px;
+}
+
+#content {
+  position: relative;
+  top: 30px;
+  margin-left: 20px;
+  margin-right: 20px;
+  position: relative;
+  padding-bottom: 25px;
+  font-family: Roboto,Helvetica,sans-serif;
+  clear: both;
+}
+
+#navigation {
+  position: relative;
+  width: 100%;
+  top: 30px;
+  margin-bottom: 20px;
+  font-family: Roboto,Helvetica,sans-serif;
+  font: bold 16px Roboto,Helvetica,sans-serif;
+  clear: both;
+  z-index: 300;
+}
+
+#navigation ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font: bold 16px Roboto,Helvetica,sans-serif;
+}
+
+#navigation li {
+  float: left;
+  margin: 0;
+  position: relative;
+}
+
+#navigation li.navsearch {
+  float: right;
+  margin: 0;
+  position: relative;
+  z-index: 1000;
+}
+
+#navigation a {
+  display: block;
+  padding: 5px 15px;
+  text-decoration: none;
+}
+
+#navigation ul li a:link {
+  color: #5b3b90;
+}
+
+#navigation ul li a:visited {
+  color: #609;
+}
+
+#navigation ul li a:link:hover,#navigation ul li a:visited:hover {
+  color: #8C59CA;
+  background: #EFF5FB;
+}
+
+#navigation ul li a#current {
+  color: #BB2F4C;
+}
+
+#navigation li ul {
+  width: 100px;
+  border-right: 0;
+  font-size: 12px;
+  display: none;
+  position: absolute;
+}
+
+#navigation li:hover ul {
+  display: block;
+  text-align: left;
+  background: #EFF5FB;
+  display: block;
+  width: 100%;
+}
+
+.boxed_column {
+  background: #CCF;
+  color: #000;
+  padding: 10px;
+  width: 9em;
+  height: 8em;
+  float: left;
+  border-style: solid;
+  border-width: thin;
+  border-color: #999;
+  margin-left: .5em;
+}
+
+#downloadContent {
+  margin-top: 75px;
+}
+
+#downloadCPbutton {
+  top: 0;
+  width: 275px;
+  margin-top: 25px;
+  margin-left: 50px;
+}
+
+#downloadCPAbutton {
+  position: relative;
+  top: -255px;
+  width: 275px;
+  margin-left: 400px;
+}
+
+.exampleImage {
+  float: right;
+  margin-right: 5px;
+}
+
+p {
+  font-family: Roboto,Helvetica,sans-serif;
+  font-size: 16px;
+  width: 100%;
+  margin-right: 75px;
+}
+
+.pDownload {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #000;
+}
+
+.pPapers {
+  font-family: Roboto,Helvetica,sans-serif;
+  font-size: inherit;
+  width: 815px;
+  margin-left: 15px;
+}
+
+.pFinal {
+  padding-bottom: 15px;
+}
+
+h1 {
+  font-family: Roboto,Helvetica,sans-serif;
+  font-size: x-large;
+  font-weight: 700;
+  margin-left: 0;
+  clear: both;
+}
+
+h2 {
+  font-family: Roboto,Helvetica,sans-serif;
+  font-size: large;
+  font-weight: 700;
+}
+
+h3 {
+  font-family: Roboto,Helvetica,sans-serif;
+  font-size: medium;
+  font-weight: 700;
+}
+
+ol {
+  font-family: Roboto,Helvetica,sans-serif;
+  font-size: inherit;
+  margin-left: 0;
+  margin-bottom: 15px;
+}
+
+li {
+  margin-left: 0;
+  font-family: Roboto,Helvetica,sans-serif;
+  font-size: inherit;
+}
+
+.li_ul {
+  font-family: Roboto,Helvetica,sans-serif;
+  font-size: inherit;
+  margin-left: 0;
+  margin-bottom: 15px;
+  list-style: disc;
+}
+
+.li_ul_FAQ {
+  font-family: Roboto,Helvetica,sans-serif;
+  font-size: inherit;
+  margin-left: 0;
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+.li_ol {
+  margin-left: 0;
+  margin-bottom: 15px;
+  font-family: Roboto,Helvetica,sans-serif;
+  font-size: inherit;
+  list-style: decimal;
+}
+
+ul {
+  font-family: Roboto,Helvetica,sans-serif;
+  font-size: inherit;
+  margin-left: 0;
+  margin-bottom: 15px;
+}
+
+#downloadCPAheader {
+  padding-top: 50px;
+  width: 815px;
+  margin-bottom: -100px;
+}
+
+#downloadCPwrapper {
+  width: 800px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #000;
+}
+
+#downloadCP ul {
+  padding: 20px;
+  margin-left: 0;
+  font: bold 14px Roboto,Helvetica,sans-serif;
+  text-align: center;
+  width: 800px;
+}
+
+#downloadCP ul li {
+  list-style: none;
+  margin: 0;
+  display: inline;
+}
+
+#downloadCP ul li a {
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #000;
+  background: #FFF;
+  text-decoration: none;
+}
+
+#downloadCP ul li a:link {
+  color: #00C;
+}
+
+#downloadCP ul li a:visited {
+  color: #609;
+}
+
+#downloadCP ul li a:link:hover,#downloadCP ul li a:visited:hover {
+  color: #333;
+  background: #F99;
+  border-color: #603;
+}
+
+.contentLink {
+  color: #00F;
+}
+
+.cpaLogo {
+  position: relative;
+  top: -125px;
+  margin-left: 575px;
+  clear: both;
+}
+
+th {
+  font-family: Roboto,Helvetica,sans-serif;
+  font-size: 16px;
+}
+
+td {
+  font-family: Roboto,Helvetica,sans-serif;
+  font-size: 16px;
+}
+
+/*afraser: this doesn't seem to work and is redundant with the pdf icon that is drawn in explicitly in download.html*/
+/*
+ a[href $='.pdf'] {
+   padding-right: 18px;
+   background: transparent url(icon_pdf.gif) no-repeat center right;
+}*/
+p.email input {
+  width: 300px;
+}
+
+div.regbox {
+  width: 30em;
+  margin: 10px auto;
+/* background-color: #f9d161; */
+  background-color: #fff;
+}
+
+div.regbox th {
+  font-weight: 400;
+  text-align: right;
+}
+
+div.registration {
+  display: none;
+}
+
+img.spinner {
+  display: none;
+}

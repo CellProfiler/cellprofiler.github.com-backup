@@ -1,0 +1,330 @@
+<html>
+  <head>
+    <title>
+      CellProfiler cell image analysis software
+    </title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <link rel="stylesheet" href="stylesheets/application.css">
+
+
+    <script type="text/javascript">
+    //
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-4307992-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+    //
+    </script>
+  </head>
+  <body onload=
+  "clientSideInclude('header','header.txt'); clientSideInclude('footer','footer.txt'); document.getElementById('header_developers').id='current';">
+  <div id="mainwrapper">
+      <div id="header">
+        <div>
+          <a href="/"><img border="0" class="header1" src=
+          "http://d1zymp9ayga15t.cloudfront.net/images/cp_logo_smaller.png" width="400" /></a> <a href=
+          "http://www.broadinstitute.org/"><img alt="Broad Institute logo"
+          border="0" class="header2" height="68" src=
+          "http://d1zymp9ayga15t.cloudfront.net/images/BroadInstituteLogo_smaller.png" width="220" /></a>
+          <div id="navigation">
+            <hr />
+
+            <ul>
+              <li>
+                <a href="/" id="header_main">home</a>
+              </li>
+
+              <li>
+                <a href="#" id="header_getting_started" onclick=
+                "return false;">getting started</a>
+                <ul>
+                  <li>
+                    <a href="/faq.html">What is CellProfiler? FAQ</a>
+                  </li>
+
+                  <li>
+                    <a href="/examples.html">examples</a>
+                  </li>
+
+                  <li>
+                    <a href="/tutorials.html">tutorials</a>
+                  </li>
+
+                  <li>
+                    <a href=
+                    "http://d1zymp9ayga15t.cloudfront.net/content/CellProfilerSoftwareBrochure.pdf">brochure</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#" id="header_download" onclick=
+                "return false;">download</a>
+                <ul>
+                  <li>
+                    <a href="/download.html">CellProfiler</a>
+                  </li>
+
+                  <li>
+                    <a href="/downloadCPA.html">CellProfiler Analyst</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li style="width:109px;text-align:center;">
+                <a href="#" id="header_help" onclick="return false;">help</a>
+                <ul>
+                  <li>
+                    <a href="http://forum.cellprofiler.org/">forum</a>
+                  </li>
+
+                  <li>
+                    <a href="/supportplan.html">support plan</a>
+                  </li>
+
+                  <li>
+                    <a href="http://www.broadinstitute.org/bbbc/">BBBC</a>
+                  </li>
+
+                  <li>
+                    <a href=
+                    "https://github.com/CellProfiler/CellProfiler/wiki">for
+                    developers</a>
+                  </li>
+
+                  <li>
+                    <a href="/manuals.html">manuals</a>
+                  </li>
+
+                  <li>
+                    <a href="/wormtoolbox">WormToolbox</a>
+                  </li>
+
+                  <li>
+                    <a href="/imagingflowcytometry">Imaging Flow Cytometry</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#" id="header_aboutus" onclick="return false;">about
+                us</a>
+                <ul>
+                  <li>
+                    <a href="/about.html">CellProfiler Team</a>
+                  </li>
+
+                  <li>
+                    <a href="/impact.html">impact</a>
+                  </li>
+
+                  <li>
+                    <a href="/press.html">press</a>
+                  </li>
+
+                  <li>
+                    <a href="/citations.html">citations</a>
+                  </li>
+
+                  <li>
+                    <a href="/outreach.html">outreach</a>
+                  </li>
+
+                  <li>
+                    <a href="/interfaces.html">interfaces</a>
+                  </li>
+
+                  <li>
+                    <a href="/#CurrentNews">news</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="navsearch">
+                <form action="http://google.com/search" method="get" onsubmit=
+                "location.href = this.action + '?&q=%2Bsite:cellprofiler.org+' + this.query.value; return false;">
+                <input maxlength="255" name="query" size="20" type="text"
+                  value="" /> <input type="submit" value="search" />
+                </form>
+              </li>
+            </ul>
+            <br />
+
+            <hr style="clear:left" />
+          </div>
+        </div>
+      </div>
+
+      <div id="content">
+        <h2>
+          Documentation
+        </h2>
+
+        <p>
+          The <a href="http://cellprofiler.org/wiki">Developers' wiki</a>
+          orients developers to the structure of CellProfiler's code, the
+          details of how modules function, the proper use of settings and their
+          display in the user interface, and how image and object measurements
+          are processed and stored.
+        </p>
+
+        <h2>
+          What if I want to contribute to CellProfiler?
+        </h2>
+
+        <p>
+          We will be glad to take a look at any code you wish to contribute to
+          the CellProfiler Python project, though we cannot guarantee that the
+          code will be included. Please refer to this <a href=
+          "http://cellprofiler.org/wiki/index.php/CellProfiler_Developers%27_Wiki#How_do_I_write_my_own_module.3F">
+          section</a> of the developer wiki.
+        </p>
+
+        <p>
+          If you are contributing code, keep these considerations in mind:
+        </p>
+
+        <ul>
+          <li>If possible, include your code as an extension to a current
+          module, such as by adding a new setting.
+          </li>
+
+          <li>If your code is not suited for any of the current modules, create
+          a new module with the new functionality.
+          </li>
+        </ul>
+        We also recommend the following:
+        <ul>
+          <li>During implementation, try to mimic the style already present in
+          the CellProfiler project source code. See our <a href=
+          "http://cellprofiler.org/wiki/index.php/Main_Page#Style_Guide">style
+          guide</a> for more details.
+          </li>
+
+          <li>Provide test code and test cases. The new functionality should
+          pass current and new tests or give expected results. See the section
+          on <a href="http://cellprofiler.org/wiki/index.php/Main_Page#Tests">
+            tests</a> for more details.
+          </li>
+
+          <li>If possible, test the code on more than one platform. It is good
+          to combine testing on Windows with testing on Linux, Mac OS X or
+          another Unix platform.
+          </li>
+        </ul>
+
+        <p>
+        </p>
+
+        <h2>
+          SVN Repositories
+        </h2>
+
+        <p>
+          The source code for the CellProfiler project is hosted in a <a href=
+          "http://crucible.broadinstitute.org/browse/CellProfiler/trunk/CellProfiler">
+          web-browsable</a> subversion (SVN) repository administered by the
+          Broad Institute, which can be checked out at these locations:
+        </p>
+
+        <ul style="list-style:none">
+          <li>CellProfiler 2.0 (Python 2.5): <a href=
+          "https://svn.broadinstitute.org/CellProfiler/trunk/CellProfiler/">https://svn.broadinstitute.org/CellProfiler/trunk/CellProfiler/</a>
+          </li>
+
+          <li>CellProfiler Analyst 2.0 (Python 2.5): <a href=
+          "https://svn.broadinstitute.org/CellProfiler/trunk/CPAnalyst/">https://svn.broadinstitute.org/CellProfiler/trunk/CPAnalyst/</a>
+          </li>
+
+          <li>&nbsp;
+          </li>
+
+          <li>Deprecated versions, no longer actively developed:
+          </li>
+
+          <li>CellProfiler 1.0 (MATLAB, no longer under development):
+            <a href="https://svn.broadinstitute.org/CellProfiler/trunk/CellProfiler_old_matlab/">
+            https://svn.broadinstitute.org/CellProfiler/trunk/CellProfiler_old_matlab/</a>
+          </li>
+
+          <li>CellProfiler Analyst 1.0 (Java 1.6, no longer under development):
+          <a href="https://svn.broadinstitute.org/CellProfiler/trunk/oldCPA/">
+            https://svn.broadinstitute.org/CellProfiler/trunk/oldCPA/</a>
+          </li>
+        </ul>
+
+        <h2>
+          Trunk Builds
+        </h2>
+
+        <p>
+          Compiled, bleeding-edge versions of CellProfiler are available as
+          <a href="http://cellprofiler.org/wiki/index.php/TrunkBuild">trunk
+          builds</a>.
+        </p>
+
+        <h2>
+          Bugs and Feature Requests
+        </h2>
+
+        <p>
+          If you have encountered a bug, please contact us through the <a href=
+          "http://cellprofiler.org/forum">forum</a>. Our bug tracking is
+          currently not visible to users outside the Broad Institute.
+        </p>
+
+        <h2>
+          Mailing Lists
+        </h2>
+
+        <p>
+          There are development lists for the CellProfiler (<a href=
+          "https://imap.broadinstitute.org/archive/cellprofiler-dev/">archive</a>)
+          and CellProfiler Analyst tools (<a href=
+          "https://imap.broadinstitute.org/archive/cpa-dev/">archive</a>).
+          These are not high-traffic lists and are intended for discussions or
+          questions ranging from code details to long-term plans for the
+          projects.To subscribe, send mail with "Subscribe" in the Subject
+          field to:
+        </p>
+
+        <ul style="list-style:none">
+          <li>
+            <a href=
+            "mailto:cellprofiler-dev-request@broadinstitute.org">cellprofiler-dev-request@broadinstitute.org</a>
+          </li>
+
+          <li>
+            <a href=
+            "mailto:cpa-dev-request@broadinstitute.org">cpa-dev-request@broadinstitute.org</a>
+          </li>
+        </ul>
+      </div>
+
+      <div id="footer">
+        <div>
+          <center>
+            <img alt="Banner" src="http://d1zymp9ayga15t.cloudfront.net/images/banner_small.png" style=
+            "margin-top:20px" width="100%" />
+          </center>
+        </div>
+      </div>
+    </div>
+    <script src="http://www.google-analytics.com/urchin.js" type=
+    "text/javascript">
+    </script> 
+    <script type="text/javascript">
+    //
+    _uacct = "UA-4307992-1";
+    urchinTracker();
+    //
+    </script>
+  </body>
+</html>

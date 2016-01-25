@@ -1,0 +1,386 @@
+<html>
+  <head>
+    <title>
+      CellProfiler cell image analysis software
+    </title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <link rel="stylesheet" href="stylesheets/application.css">
+
+
+
+    <style type="text/css">
+    
+    div.boxed {background:#CCCCFF;color:#000;display:inline-block;padding:20px}
+    div.boxed a {margin-top:30px;}
+    
+    </style>
+    <link href="NiftyCube/niftyCorners.css" rel="stylesheet" type="text/css" />
+    <script src="NiftyCube/niftycube.js" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+    //
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-4307992-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+    //
+    </script>
+  </head>
+  <body onload=
+  "clientSideInclude('header','header.txt'); clientSideInclude('footer','footer.txt'); Nifty('div.boxed','big'); document.getElementById('header_download').id='current';">
+  <div id="mainwrapper">
+      <div id="header">
+        <div>
+          <a href="/"><img border="0" class="header1" src=
+          "http://d1zymp9ayga15t.cloudfront.net/images/cp_logo_smaller.png" width="400" /></a> <a href=
+          "http://www.broadinstitute.org/"><img alt="Broad Institute logo"
+          border="0" class="header2" height="68" src=
+          "http://d1zymp9ayga15t.cloudfront.net/images/BroadInstituteLogo_smaller.png" width="220" /></a>
+          <div id="navigation">
+            <hr />
+
+            <ul>
+              <li>
+                <a href="/" id="header_main">home</a>
+              </li>
+
+              <li>
+                <a href="#" id="header_getting_started" onclick=
+                "return false;">getting started</a>
+                <ul>
+                  <li>
+                    <a href="/faq.html">What is CellProfiler? FAQ</a>
+                  </li>
+
+                  <li>
+                    <a href="/examples.html">examples</a>
+                  </li>
+
+                  <li>
+                    <a href="/tutorials.html">tutorials</a>
+                  </li>
+
+                  <li>
+                    <a href=
+                    "http://d1zymp9ayga15t.cloudfront.net/content/CellProfilerSoftwareBrochure.pdf">brochure</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#" id="header_download" onclick=
+                "return false;">download</a>
+                <ul>
+                  <li>
+                    <a href="/download.html">CellProfiler</a>
+                  </li>
+
+                  <li>
+                    <a href="/downloadCPA.html">CellProfiler Analyst</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li style="width:109px;text-align:center;">
+                <a href="#" id="header_help" onclick="return false;">help</a>
+                <ul>
+                  <li>
+                    <a href="http://forum.cellprofiler.org/">forum</a>
+                  </li>
+
+                  <li>
+                    <a href="/supportplan.html">support plan</a>
+                  </li>
+
+                  <li>
+                    <a href="http://www.broadinstitute.org/bbbc/">BBBC</a>
+                  </li>
+
+                  <li>
+                    <a href=
+                    "https://github.com/CellProfiler/CellProfiler/wiki">for
+                    developers</a>
+                  </li>
+
+                  <li>
+                    <a href="/manuals.html">manuals</a>
+                  </li>
+
+                  <li>
+                    <a href="/wormtoolbox">WormToolbox</a>
+                  </li>
+
+                  <li>
+                    <a href="/imagingflowcytometry">Imaging Flow Cytometry</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#" id="header_aboutus" onclick="return false;">about
+                us</a>
+                <ul>
+                  <li>
+                    <a href="/about.html">CellProfiler Team</a>
+                  </li>
+
+                  <li>
+                    <a href="/impact.html">impact</a>
+                  </li>
+
+                  <li>
+                    <a href="/press.html">press</a>
+                  </li>
+
+                  <li>
+                    <a href="/citations.html">citations</a>
+                  </li>
+
+                  <li>
+                    <a href="/outreach.html">outreach</a>
+                  </li>
+
+                  <li>
+                    <a href="/interfaces.html">interfaces</a>
+                  </li>
+
+                  <li>
+                    <a href="/#CurrentNews">news</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="navsearch">
+                <form action="http://google.com/search" method="get" onsubmit=
+                "location.href = this.action + '?&q=%2Bsite:cellprofiler.org+' + this.query.value; return false;">
+                <input maxlength="255" name="query" size="20" type="text"
+                  value="" /> <input type="submit" value="search" />
+                </form>
+              </li>
+            </ul>
+            <br />
+
+            <hr style="clear:left" />
+          </div>
+        </div>
+      </div>
+
+      <div id="content">
+        <h1>
+          Installation Instructions for CellProfiler 1.0 (MATLAB version)<br />
+        </h1>
+
+        <p align="center" class="li_ol">
+          <a href="#Mac_install">Mac</a> <a href="#PC_install">PC</a> <a href=
+          "#Developer_install">Developer's version</a>
+        </p>
+
+        <p>
+          <a href="http://d1zymp9ayga15t.cloudfront.net/content/Documentation/cp1_manual_9717.pdf">Manual</a>
+          (13 MB) - note that all of the information in the manual is also
+          available from help menus within CellProfiler.
+        </p>
+
+        <h2 align="left">
+          <a id="Mac_install" name="Mac_install"></a>CellProfiler Installation
+          Guide: Macintosh OS X Version (PowerPC and Intel)
+        </h2>
+
+        <p>
+          1. Download and unzip CellProfiler to any folder, but all files must
+          remain in the same folder and the folder's name must not have spaces
+          (e.g., /Applications/CellProfiler).
+        </p>
+
+        <p>
+          2. Intel ONLY: Download and run the appropriate <a href=
+          "./download.html#download1">MCR Installer</a>. (PowerPC users skip
+          this step.) Be sure to install the MATLAB_Compiler_Runtime by
+          double-clicking on the MCRInstaller.pkg and installing it into its
+          default directory. If you choose to install it elsewhere, you will
+          need to manually modify 'mcr_path' in your
+          'CellProfilerForMacI.command' or 'CellProfiler.command' file.
+        </p>
+
+        <p>
+          3. Download <a href=
+          "http://www.apple.com/support/downloads/x11formacosx.html">X11</a>.
+          Be sure to install it - usually by doubleclicking the .pkg or .dmg
+          file. If you have trouble with this step, please ask your local tech
+          people for help.
+        </p>
+
+        <p>
+          <span style="font-weight:bold">OS X 10.4 USERS: You must install X11
+          from your Tiger installation CD. The X11 provided by the Macintosh
+          website is not supported in 10.4!</span>
+        </p>
+
+        <p>
+          4. Copy the contents of the DMG file to your computer. To start
+          CellProfiler, double click <span style=
+          "font-weight:bold">CellProfiler.command</span>, located in the folder
+          where CellProfiler was saved. The first time the program is run, it
+          will de-compress supporting files. Due to an undiagnosed bug
+          affecting some installations, we suggest quitting and then restarting
+          CellProfiler.command. Then, please go to <span style=
+          "font-weight:bold">File &gt; Set preferences</span> and check that
+          the Modules folder is listed correctly. If not, please browse to
+          where you have stored the Modules folder and save these preferences.
+        </p>
+
+        <p>
+          5. <span style="font-weight:bold">(Optional steps)</span> Get up and
+          running quickly with one of the sample pipelines on our <a href=
+          "./examples.htm">Examples</a> page, and check out <span style=
+          "font-weight:bold">Help &gt; HelpGettingStarted</span> within
+          CellProfiler. In CellProfiler, set some basic preferences in
+          <span style="font-weight:bold">File &gt; Set preferences</span>,
+          which will make it easier to use CellProfiler. You can drag
+          CellProfiler.command to the dock (on the side near the trash) so the
+          program is easily accessible in the future.
+        </p>
+
+        <h2>
+          <a id="PC_install" name="PC_install"></a>CellProfiler Installation
+          Guide: Windows PC Version (XP and Vista)
+        </h2>
+
+        <p>
+          1. Download and extract CellProfiler.exe, CellProfiler.ctf, and the
+          Modules directory to any folder, but all files must remain in the
+          same folder (e.g., <span style="font-weight:bold">C:\Program
+          Files\CellProfiler</span>).
+        </p>
+
+        <p>
+          2. Download and install the appropriate <a href=
+          "./download.html#download1">MCRInstaller</a> for your operating
+          system. Be sure to install the MCRInstaller.exe by double-clicking on
+          it.
+        </p>
+
+        <p>
+          3. To start CellProfiler, run CellProfiler.exe. The first time the
+          program is run, it will take a bit longer to de-compress the CTF
+          file.
+        </p>
+
+        <p>
+          4. <span style="font-weight:bold">(Optional steps)</span> Get up and
+          running quickly with one of the sample pipelines on our <a href=
+          "./examples.htm">Examples</a> page, and check out <span style=
+          "font-weight:bold">Help &gt; HelpGettingStarted</span> within
+          CellProfiler. In CellProfiler, set some basic preferences in
+          <span style="font-weight:bold">File &gt; Set preferences</span>,
+          which will make it easier to use CellProfiler.
+        </p>
+
+        <h2>
+          <a id="Developer_install" name="Developer_install"></a>CellProfiler
+          Installation Guide: Developer's version
+        </h2>
+
+        <p>
+          1. <span style="font-weight:bold">(Mac only)</span> Set X11
+          setting...<br />
+          <br />
+          Close MATLAB &amp; X11. Open the Mac application called 'Terminal'
+          (<span style="font-weight:bold">Applications &gt; Utilities &gt;
+          Terminal</span>)<br />
+          <br />
+          <span style=
+          "font-family:'Courier New', Courier, monospace; font-weight:bold; font-size:93%">
+          defaults write com.apple.x11 wm_click_through -bool true</span>
+        </p>
+
+        <p>
+          2. Start MATLAB and check licenses...<br />
+          <br />
+          Start MATLAB and type into the main window (command line):<br />
+          <br />
+          <span style=
+          "font-family:'Courier New', Courier, monospace; font-weight:bold; font-size:93%">
+          license('test','image_toolbox')</span><br />
+          <br />
+          If the Image Processing Toolbox is installed with a valid license you
+          will see <span style="font-weight:bold">ans = 1</span>, but if
+          <span style="font-weight:bold">ans = 0</span>, the toolbox and/or
+          license is not installed. CellProfiler was designed for MATLAB
+          Release 14, version 7.1, SP3 although it is possible that many
+          functions will work on other versions. We have noticed lots of MATLAB
+          crashing with Mac OS10.2 but OS10.3 is fine.
+        </p>
+
+        <p>
+          3. Copy the CellProfiler files to your computer...<br />
+          <br />
+          Put them in a folder named CellProfiler at any location.
+          Suggested:<br />
+          <br />
+          <span style="font-weight:bold">On Mac:
+          /Applications/CellProfiler<br />
+          On PC: C:\Program Files</span><br />
+          <br />
+          Once the files are copied, do not move or rename this folder or any
+          folders containing it, or you will have to repeat the next step.
+        </p>
+
+        <p>
+          4. Start CellProfiler...<br />
+          <br />
+          To start CellProfiler for the first time, you must call it directly.
+          After the first time, you may simply type <span style=
+          "font-weight:bold">CellProfiler</span> in the main MATLAB window to
+          start CellProfiler. To call CellProfiler directly, type the following
+          in the main MATLAB window (<span style=
+          "font-weight:bold">LOCATION</span> is where the CellProfiler folder
+          is located):<br />
+          <br />
+          <span style="font-weight:bold">On Mac: <span style=
+          "font-family:'Courier New', Courier, monospace; font-size:93%">run
+          '/LOCATION/CellProfiler/CellProfiler.m'</span></span><br />
+          For example: <span style=
+          "font-family:'Courier New', Courier, monospace; font-weight:bold; font-size:93%">
+          run '/Applications/CellProfiler/CellProfiler.m'</span>
+        </p>
+
+        <p>
+          <span style="font-weight:bold">On PC: <span style=
+          "font-family:'Courier New', Courier, monospace; font-size:93%">run
+          '\LOCATION\CellProfiler\CellProfiler.m'</span></span><br />
+          <br />
+          For example: <span style=
+          "font-family:'Courier New', Courier, monospace; font-weight:bold; font-size:93%">
+          run 'C:\Program Files\CellProfiler\CellProfiler.m'</span>
+        </p>
+
+        <p>
+          5. <span style="font-weight:bold">(Optional steps)</span> Get up and
+          running quickly with one of the sample pipelines on our <a href=
+          "./examples.htm">Examples</a> page, and check out <span style=
+          "font-weight:bold">Help &gt; HelpGettingStarted</span> within
+          CellProfiler. In CellProfiler, set some basic preferences in
+          <span style="font-weight:bold">File &gt; Set preferences</span>,
+          which will make it easier to use CellProfiler.
+        </p>
+
+        <div id="footer">
+          <div>
+            <center>
+              <img alt="Banner" src="http://d1zymp9ayga15t.cloudfront.net/images/banner_small.png" style=
+              "margin-top:20px" width="100%" />
+            </center>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

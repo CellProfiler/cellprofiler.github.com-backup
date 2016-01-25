@@ -1,0 +1,1371 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      CellProfiler example pipelines and utlities
+    </title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <link rel="stylesheet" href="stylesheets/application.css">
+
+    <style media="all" type="text/css">
+    .style1 {
+    font-size: small
+    }
+    </style>
+    <link href=
+    'https://fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,500'
+    rel='stylesheet' type='text/css'>
+
+
+
+    <script type="text/javascript">
+    <!--
+    function MM_preloadImages() { //v3.0
+    var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+    }
+
+    function MM_swapImgRestore() { //v3.0
+    var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+    }
+
+    function MM_findObj(n, d) { //v4.01
+    var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+    if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+    for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+    if(!x && d.getElementById) x=d.getElementById(n); return x;
+    }
+
+    function MM_swapImage() { //v3.0
+    var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+    if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+    }
+    function MM_openBrWindow(theURL,winName,features) { //v2.0
+    window.open(theURL,winName,features);
+    }
+    //-->
+    </script>
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-4307992-1', 'auto');
+    ga('send', 'pageview');
+
+    </script>
+    <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-4307992-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+    </script>
+  </head>
+  <body onload=
+  "clientSideInclude('header','header.txt'); clientSideInclude('footer','footer.txt'); MM_preloadImages('http://d1zymp9ayga15t.cloudfront.net/images/HumanColorNucleism.jpg','http://d1zymp9ayga15t.cloudfront.net/images/Fruitfly-coded.jpg','http://d1zymp9ayga15t.cloudfront.net/images/ExampleTumorID.png','http://d1zymp9ayga15t.cloudfront.net/images/ExampleCometID.png','http://d1zymp9ayga15t.cloudfront.net/images/ExampleYeastPatchID.jpg','http://d1zymp9ayga15t.cloudfront.net/images/YeastCropID.jpg','http://d1zymp9ayga15t.cloudfront.net/images/Clones1colorneighbors.jpg','http://d1zymp9ayga15t.cloudfront.net/images/WOUND-ANALYSIS.gif','http://d1zymp9ayga15t.cloudfront.net/images/ExampleVitraID.png','http://d1zymp9ayga15t.cloudfront.net/images/ExampleSBSID.png','http://d1zymp9ayga15t.cloudfront.net/images/SpecklesCD.gif','http://d1zymp9ayga15t.cloudfront.net/images/TrackingExampleID.gif','http://d1zymp9ayga15t.cloudfront.net/images/InvertedExamples.gif','http://d1zymp9ayga15t.cloudfront.net/images/ExampleRGBSplit.gif','http://d1zymp9ayga15t.cloudfront.net/images/','http://d1zymp9ayga15t.cloudfront.net/images/ExampleIlluminationCorrection_Orig.png', 'http://d1zymp9ayga15t.cloudfront.net/images/ExamplePercentPosImg.png', 'http://d1zymp9ayga15t.cloudfront.net/images/ExampleCreateModelInput.gif', 'http://d1zymp9ayga15t.cloudfront.net/images/ExampleOROinput.gif', 'http://d1zymp9ayga15t.cloudfront.net/images/ExampleStraightenInput.gif', 'http://d1zymp9ayga15t.cloudfront.net/images/ExampleUntangleInput.gif','http://d1zymp9ayga15t.cloudfront.net/images/ExampleInSituSeqInput.jpg', 'http://d1zymp9ayga15t.cloudfront.net/images/ExampleColocalization_Orig.png'); document.getElementById('header_getting_started').id='current';">
+  <div id="mainwrapper">
+      <div id="header">
+        <div>
+          <a href="/"><img border="0" class="header1" src=
+          "http://d1zymp9ayga15t.cloudfront.net/images/cp_logo_smaller.png" width="400"></a> <a href=
+          "http://www.broadinstitute.org/"><img alt="Broad Institute logo"
+          border="0" class="header2" height="68" src=
+          "http://d1zymp9ayga15t.cloudfront.net/images/BroadInstituteLogo_smaller.png" width="220"></a>
+          <div id="navigation">
+            <hr>
+
+            <ul>
+              <li>
+                <a href="/" id="header_main">home</a>
+              </li>
+
+              <li>
+                <a href="#" id="header_getting_started" onclick=
+                "return false;">getting started</a>
+                <ul>
+                  <li>
+                    <a href="/faq.html">What is CellProfiler? FAQ</a>
+                  </li>
+
+                  <li>
+                    <a href="/examples.html">examples</a>
+                  </li>
+
+                  <li>
+                    <a href="/tutorials.html">tutorials</a>
+                  </li>
+
+                  <li>
+                    <a href=
+                    "http://d1zymp9ayga15t.cloudfront.net/content/CellProfilerSoftwareBrochure.pdf">brochure</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#" id="header_download" onclick=
+                "return false;">download</a>
+                <ul>
+                  <li>
+                    <a href="/download.html">CellProfiler</a>
+                  </li>
+
+                  <li>
+                    <a href="/downloadCPA.html">CellProfiler Analyst</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li style="width:109px;text-align:center;">
+                <a href="#" id="header_help" onclick="return false;">help</a>
+                <ul>
+                  <li>
+                    <a href="http://forum.cellprofiler.org/">forum</a>
+                  </li>
+
+                  <li>
+                    <a href="/supportplan.html">support plan</a>
+                  </li>
+
+                  <li>
+                    <a href="http://www.broadinstitute.org/bbbc/">BBBC</a>
+                  </li>
+
+                  <li>
+                    <a href=
+                    "https://github.com/CellProfiler/CellProfiler/wiki">for
+                    developers</a>
+                  </li>
+
+                  <li>
+                    <a href="/manuals.html">manuals</a>
+                  </li>
+
+                  <li>
+                    <a href="/wormtoolbox">WormToolbox</a>
+                  </li>
+
+                  <li>
+                    <a href="/imagingflowcytometry">Imaging Flow Cytometry</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#" id="header_aboutus" onclick="return false;">about
+                us</a>
+                <ul>
+                  <li>
+                    <a href="/about.html">CellProfiler Team</a>
+                  </li>
+
+                  <li>
+                    <a href="/impact.html">impact</a>
+                  </li>
+
+                  <li>
+                    <a href="/press.html">press</a>
+                  </li>
+
+                  <li>
+                    <a href="/citations.html">citations</a>
+                  </li>
+
+                  <li>
+                    <a href="/outreach.html">outreach</a>
+                  </li>
+
+                  <li>
+                    <a href="/interfaces.html">interfaces</a>
+                  </li>
+
+                  <li>
+                    <a href="/#CurrentNews">news</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="navsearch">
+                <form action="http://google.com/search" method="get" onsubmit=
+                "location.href = this.action + '?&q=%2Bsite:cellprofiler.org+' + this.query.value; return false;">
+                <input maxlength="255" name="query" size="20" type="text"
+                  value=""> <input type="submit" value="search">
+                </form>
+              </li>
+            </ul>
+            <br>
+
+            <hr style="clear:left">
+          </div>
+        </div>
+      </div>
+
+      <div id="content">
+        <h1>
+          Examples
+        </h1>
+
+        <p>
+          The best way to learn how to use CellProfiler and CellProfiler
+          Analyst is to download our examples and try it out!
+        </p>
+
+        <h2>
+          <a id="cp_examples" name="cp_examples">CellProfiler example images
+          and pipelines</a> <span style="font-size:75%">(jump to <a href=
+          "#cpa_examples">CellProfiler Analyst example</a>)</span>
+        </h2>
+
+        <div style="margin-left:3em">
+          <h3>
+            How do I get started?
+          </h3>
+
+          <p style="clear:both">
+            Download example images along with pipelines so you can get
+            immediate hands-on experience in using CellProfiler.
+          </p>
+
+          <ol>
+            <li>Select an example from the pipeline list below where the cell
+            type (or object type) resembles yours. You can move your mouse over
+            an image below to see an example of the CellProfiler analysis, or
+            click to see an expanded view.
+            </li>
+
+            <li>Download the example images and pipeline from the list below
+            and run it in CellProfiler to see how it works.
+            </li>
+
+            <li>Try the pipeline on your own images.
+            </li>
+
+            <li>Adjust the pipeline to identify objects properly in your
+            images. This most often includes changing the size range of the
+            objects. See the <a href="tutorials.html">Tutorials</a> page for
+            step by step instructions.
+            </li>
+
+            <li>Still stuck? See if your question has been answered on the
+            <a href="http://cellprofiler.org/forum/index.php">forum</a>.
+            </li>
+          </ol>
+          Please note that each example links to a compressed ZIP file
+          containing the following:
+          <ol>
+            <li>CellProfiler pipelines, in the 2.1.0 version (.cppipe) formats.
+            </li>
+
+            <li>Example images which are to be used as input for the pipeline.
+            </li>
+          </ol>
+        </div>
+
+        <div style="margin-left:3em">
+          <h2>
+            Table of contents
+          </h2>
+
+          <table align="center" border="1">
+            <tr>
+              <th rowspan="4">
+                Basic Pipelines
+              </th>
+              <td>
+                <a href="#HumanCells">Human cells</a>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <a href="#FruitFlyCells">Fruit fly cells</a>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <a href="#Tumors">Tumors</a>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <a href="#Comet">Comet assay</a>
+              </td>
+            </tr>
+
+            <tr>
+              <th rowspan="7">
+                Specialized Pipelines
+              </th>
+              <td>
+                <a href="#PercentPositive">Cell/particle counting, and scoring
+                the percentage of stained objects</a>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <a href="#YeastColonies">Yeast colony classification</a>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <a href="#YeastPatch">Yeast patch identification</a>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <a href="#TissueNeighbors">Tissue Neighbors</a>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <a href="#Wound">Wound Healing</a>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <a href="#IlluminationCorrection">Illumination Correction</a>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <a href="#Colocalization">Colocalization</a>
+              </td>
+            </tr>
+
+            <tr>
+              <th rowspan="3">
+                Pipelines using the WormToolbox
+              </th>
+              <td>
+                <a href="#UntangleWorms">Untangle worms</a>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <a href="#StraightenWorms">Straighten worms and extract
+                intensity measurements using a low-resolution atlas</a>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <a href="#UntangleWormsBright-field">Untangle worms and make
+                measurements bright-field staining pattern phenotype</a>
+              </td>
+            </tr>
+
+            <tr>
+              <th rowspan="5">
+                More Advanced Pipelines
+              </th>
+              <td>
+                <a href="#SBS_Vitra_CNT">Human cytoplasm-nucleus translocation
+                assay (SBS Vitra)</a>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <a href="#SBS_Bioimage_CNT">Human cytoplasm-nucleus
+                translocation assay (SBS Bioimage)</a>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <a href="#Speckles">Speckle Counting</a>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <a href="#Tracking">Object Tracking and Metadata Management</a>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <a href="#InSitu">Sequencing RNA molecules <i>in situ</i>
+                combining CellProfiler with ImageJ plugins</a>
+              </td>
+            </tr>
+
+            <tr>
+              <th rowspan="3">
+                File Utilities
+              </th>
+              <td>
+                <a href="#InvertForPrinting">Invert For Printing</a>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <a href="#ColorToGray">Color To Gray</a>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <a href="#FileConvert">Convert Image File Format</a>
+              </td>
+            </tr>
+
+            <tr>
+              <th>
+                Published Pipelines
+              </th>
+              <td>
+                <a href="#PublishedPipelines">Published Pipelines</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <div style="margin-left:3em">
+          <table border="0">
+            <tr>
+              <td colspan="2">
+                <h3>
+                  Basic Pipelines
+                </h3>
+                These pipelines are made for simple cellular and tissue image
+                assays, and include some basic measurements.
+              </td>
+            </tr>
+            <!-- Example Human cells-->
+
+            <tr>
+              <td valign="top">
+                <ul>
+                  <li>
+                    <a id="HumanCells" name="HumanCells"><span style=
+                    "font-weight:bold">Human cells:</span></a> Human HT29 cells
+                    are fairly smooth and elliptical. This pipeline
+                    demonstrates how to accurately identify these cells and how
+                    to measurements cellular parameters such as morphology,
+                    count, intensity and texture.<br>
+                    <a href=".http://d1zymp9ayga15t.cloudfront.net/content/Examplezips/ExampleHumanImages.zip"
+                    onclick=
+                    "ga('send', 'event', 'BasicPipeline', 'Downoad Human Cells')"
+                    title="Human HT29 Cells Analysis">[Download]</a> (0.3 MB)
+                  </li>
+                </ul>
+              </td>
+              <td valign="center">
+                <img alt="Basic CellProfiler pipeline Human HT29 Cell example"
+                border="0" class="exampleImage" height="128" id="HumanCells"
+                name="HumanCells" onclick=
+                "MM_openBrWindow('http://d1zymp9ayga15t.cloudfront.net/images/HumanNuclei.jpg','','width=512,height=512')"
+                onmouseout="MM_swapImgRestore()" onmouseover=
+                "MM_swapImage('HumanCells','','http://d1zymp9ayga15t.cloudfront.net/images/HumanColorNucleism.jpg',1)"
+                src="http://d1zymp9ayga15t.cloudfront.net/images/HumanNuclei.jpg" style="clear:left">
+              </td>
+            </tr>
+            <!-- Example fruit flies-->
+
+            <tr>
+              <td>
+                <ul>
+                  <li>
+                    <a id="FruitFlyCells" name="FruitFlyCells"><span style=
+                    "font-weight:bold">Fruit fly cells:</span></a> In comtrast
+                    to the HT29 cells, Drosophila Kc167 cells are a highly
+                    textured and clumpy cell type. This pipeline demonstrates
+                    how to identify these clumpy cells and obtain
+                    morphological, intensity and texture measurements.<br>
+                    <a href=".http://d1zymp9ayga15t.cloudfront.net/content/Examplezips/ExampleFlyImages.zip"
+                    onclick=
+                    "ga('send', 'event', 'BasicPipeline', 'Downoad Fruit Flies')"
+                    title=
+                    "Fruit Fly Cell Biological Image Analysis">[Download]</a>
+                    (4 MB)
+                  </li>
+                </ul>
+              </td>
+              <td valign="center">
+                <img alt=
+                "Basic CellProfiler pipeline Fruit Fly Drosophilia Kc167 Cells example"
+                border="0" class="exampleImage" height="128" id="FruitFlyCells"
+                name="FruitFlyCells" onclick=
+                "MM_openBrWindow('http://d1zymp9ayga15t.cloudfront.net/images/FruitflyImg.jpg','','width=479,height=435')"
+                onmouseout="MM_swapImgRestore()" onmouseover=
+                "MM_swapImage('FruitFlyCells','','http://d1zymp9ayga15t.cloudfront.net/images/Fruitfly-coded.jpg',1)"
+                src="http://d1zymp9ayga15t.cloudfront.net/images/FruitflyImg.jpg">
+              </td>
+            </tr>
+            <!-- Example Tumor -->
+
+            <tr>
+              <td valign="top">
+                <ul>
+                  <li>
+                    <a id="Tumors" name="Tumors"><span style=
+                    "font-weight:bold">Tumors:</span></a> A simple pipeline
+                    that identifies and counts tumors in a mouse lung, and then
+                    measures their size.<br>
+                    <a href=".http://d1zymp9ayga15t.cloudfront.net/content/Examplezips/ExampleTumorImages.zip"
+                    onclick=
+                    "ga('send', 'event', 'BasicPipeline', 'Downoad Tumor')"
+                    title="Tumor Cell Analysis Mouse Lung">[Download]</a> (0.9
+                    MB)
+                  </li>
+                </ul>
+              </td>
+              <td valign="center">
+                <img alt=
+                "Basic Cellprofiler pipeline mouse lung Tumor Cell Example"
+                border="0" class="exampleImage" height="128" id="TumorCells"
+                name="TumorCells" onclick=
+                "MM_openBrWindow('http://d1zymp9ayga15t.cloudfront.net/images/ExampleTumorImg.png','','width=400,height=300')"
+                onmouseout="MM_swapImgRestore()" onmouseover=
+                "MM_swapImage('TumorCells','','http://d1zymp9ayga15t.cloudfront.net/images/ExampleTumorID.png',1)"
+                src="http://d1zymp9ayga15t.cloudfront.net/images/ExampleTumorImg.png" style="clear:left">
+              </td>
+            </tr>
+            <!-- Example Comet -->
+
+            <tr>
+              <td valign="top">
+                <ul>
+                  <li>
+                    <a id="Comet" name="Comet"><span style=
+                    "font-weight:bold">Comet assay</span></a> This is a simple
+                    example of a DNA damage assay using single cell gel
+                    electrophoresis. Here, the measurement of interest is the
+                    length and intensity of the comet tail. Also, illumination
+                    correction is used to reduce background flourescence prior
+                    to measurement. Also shown is a silver-stained comet
+                    example in which the percentage of DNA contained in the
+                    tail is calculated.<br>
+                    <a href=".http://d1zymp9ayga15t.cloudfront.net/content/Examplezips/ExampleCometAssay.zip"
+                    onclick=
+                    "ga('send', 'event', 'BasicPipeline', 'Downoad Comet')">[Download]</a>
+                    (0.4 MB)
+                  </li>
+                </ul>
+              </td>
+              <td valign="center">
+                <img alt=
+                "Basic CellProfiler pipeline Comet tail DNA damage assay example"
+                border="0" class="exampleImage" height="128" id="Comet" name=
+                "Comet" onclick=
+                "MM_openBrWindow('http://d1zymp9ayga15t.cloudfront.net/images/ExampleCometImg.png','','width=400,height=300')"
+                onmouseout="MM_swapImgRestore()" onmouseover=
+                "MM_swapImage('Comet','','http://d1zymp9ayga15t.cloudfront.net/images/ExampleCometID.png',1)" src=
+                "http://d1zymp9ayga15t.cloudfront.net/images/ExampleCometImg.png" style="clear:left">
+              </td>
+            </tr>
+
+            <tr>
+              <td colspan="2">
+                <h3>
+                  Specialized pipelines
+                </h3>
+                In addition to cellular object and feature identification,
+                these pipelines include some of the more specialized modules in
+                CellProfiler for image pre-processing or measurement.
+              </td>
+            </tr>
+            <!-- Percent Positive -->
+
+            <tr>
+              <td valign="top">
+                <ul>
+                  <li>
+                    <a id="PercentPositive" name="PercentPositive"><span style=
+                    "font-weight:bold">Cell/particle counting, and scoring the
+                    percentage of stained objects:</span></a> CellProfiler is
+                    commonly used to count cells or other objects as well as
+                    percent-positives, by measuring the per-cell staining
+                    intensity. This pipeline shows how to do both of these
+                    tasks, and demonstrates how various modules may be used to
+                    accomplish the same result.<br>
+                    <a href=
+                    ".http://d1zymp9ayga15t.cloudfront.net/content/Examplezips/ExamplePercentPositive.zip"
+                    onclick=
+                    "ga('send', 'event', 'Special', 'Downoad PercentPositive')">
+                    [Download]</a> (0.2 MB)<br>
+                  </li>
+                </ul>
+              </td>
+              <td valign="center">
+                <img alt=
+                "Specialized CellProfiler pipeline Percent Positive count per-cell stain intensity example"
+                border="0" class="exampleImage" height="128" id=
+                "PercentPositive" name="PercentPositive" onclick=
+                "MM_openBrWindow('http://d1zymp9ayga15t.cloudfront.net/images/ExamplePercentPosImg.png','','width=235,height=235')"
+                onmouseout="MM_swapImgRestore()" onmouseover=
+                "MM_swapImage('PercentPositive','','http://d1zymp9ayga15t.cloudfront.net/images/ExamplePercentPosID.png',1)"
+                src="http://d1zymp9ayga15t.cloudfront.net/images/ExamplePercentPosImg.png" style="clear:left"><br>
+              </td>
+            </tr>
+            <!-- Example Colonies -->
+
+            <tr>
+              <td valign="top">
+                <ul>
+                  <li>
+                    <a id="YeastColonies" name="YeastColonies"><span style=
+                    "font-weight:bold">Yeast colony classification:</span></a>
+                    This pipeline demonstrates how to classify and count
+                    objects on the basis of their measured features. The
+                    example identifies uniformly round objects, in this case,
+                    yeast colonies growing on a dish. The pipeline also shows
+                    how to load a template and align it to a cropped image, as
+                    well as how to use illumination correction to subtract for
+                    background illumination.<br>
+                    <a href=
+                    ".http://d1zymp9ayga15t.cloudfront.net/content/Examplezips/ExampleYeastColonies_BT_Images.zip"
+                    onclick=
+                    "ga('send', 'event', 'Special', 'Downoad YeastColony')">[Download]</a>
+                    (0.2 MB)<br>
+                    <a href=
+                    ".http://d1zymp9ayga15t.cloudfront.net/content/papers/85-Bray_CurrentProtocols_2015.pdf"
+                    onclick=
+                    "ga('send', 'event', 'Special', 'Download YeastColony PDF')">
+                    [Tutorial]</a>
+                  </li>
+                </ul>
+              </td>
+              <td valign="center">
+                <img alt=
+                "Specialized CellProfiler pipeline identify Yeast Colony Classification example"
+                border="0" class="exampleImage" height="128" id="YeastColonies"
+                name="YeastColonies" onclick=
+                "MM_openBrWindow('http://d1zymp9ayga15t.cloudfront.net/images/YeastCrop.jpg','','width=235,height=235')"
+                onmouseout="MM_swapImgRestore()" onmouseover=
+                "MM_swapImage('YeastColonies','','http://d1zymp9ayga15t.cloudfront.net/images/YeastCropID.jpg',1)"
+                src="http://d1zymp9ayga15t.cloudfront.net/images/YeastCrop.jpg" style="clear:left"><br>
+              </td>
+            </tr>
+            <!-- Example Yeast patch -->
+
+            <tr>
+              <td valign="top">
+                <ul>
+                  <li>
+                    <a id="YeastPatch" name="YeastPatch"><span style=
+                    "font-weight:bold">Yeast patch identification:</span></a>
+                    This pipeline identifies patches of yeast growing in a 96
+                    well plate, serving as an introduction to the grid
+                    defintion and identification modules.<br>
+                    <a href=
+                    ".http://d1zymp9ayga15t.cloudfront.net/content/Examplezips/ExampleYeastPatchImages.zip"
+                    onclick=
+                    "ga('send', 'event', 'Special', 'Downoad YeastPatchImages')">
+                    Download]</a> (0.4 MB)
+                  </li>
+                </ul>
+              </td>
+              <td valign="center">
+                <img alt=
+                "Specialized CellProfiler pipeline identify Yeast Patch example"
+                border="0" class="exampleImage" height="128" id="YeastPatch"
+                name="YeastPatch" onclick=
+                "MM_openBrWindow('http://d1zymp9ayga15t.cloudfront.net/images/ExampleYeastPatch.png','','width=235,height=235')"
+                onmouseout="MM_swapImgRestore()" onmouseover=
+                "MM_swapImage('YeastPatch','','http://d1zymp9ayga15t.cloudfront.net/images/ExampleYeastPatchID.png',1)"
+                src="http://d1zymp9ayga15t.cloudfront.net/images/ExampleYeastPatch.png" style="clear:left"><br>
+              </td>
+            </tr>
+            <!--Grid of spots-->
+            <!--
+<tr>
+<td valign="top"">
+<ul><li><span style="font-weight:bold">Annotation: </span>
+Example labeling a cell microarray with an annotated grid.
+<a href=".http://d1zymp9ayga15t.cloudfront.net/content/Examplezips/ExampleGridImages.zip">[Download]</a></li></ul>
+</td>
+-->
+            <!-- Tissue neighbors-->
+
+            <tr>
+              <td valign="top">
+                <ul>
+                  <li>
+                    <a id="TissueNeighbors" name="TissueNeighbors"><span style=
+                    "font-weight:bold">Tissue Neighbors:</span></a> Tissue
+                    samples often have irregularly shaped cells with adjacent
+                    edges. This pipeline shows how to input a color tissue
+                    image, split it into its component channels, and then
+                    identify individual cells from a particular stain and
+                    record the number of neighbors that each cell has.<br>
+                    <a href=
+                    ".http://d1zymp9ayga15t.cloudfront.net/content/Examplezips/ExampleNeighborsImages.zip"
+                    onclick=
+                    "ga('send', 'event', 'Special', 'Downoad TissueNeighbors')">
+                    (0.1 MB)</a>
+                  </li>
+                </ul>
+              </td>
+              <td valign="center">
+                <img alt=
+                "Specialized CellProfiler pipeline color Tissue image identify example"
+                border="0" class="exampleImage" height="128" id=
+                "TissueNeighbors" name="TissueNeighbors" onclick=
+                "MM_openBrWindow('http://d1zymp9ayga15t.cloudfront.net/images/TissueNeighbors.jpg','','width=531,height=426')"
+                onmouseout="MM_swapImgRestore()" onmouseover=
+                "MM_swapImage('TissueNeighbors','','http://d1zymp9ayga15t.cloudfront.net/images/Clones1colorneighbors.jpg',1)"
+                src="http://d1zymp9ayga15t.cloudfront.net/images/TissueNeighbors.jpg" style="clear:left">
+              </td>
+            </tr>
+            <!-- Wound healing-->
+
+            <tr>
+              <td valign="top">
+                <ul>
+                  <li>
+                    <a id="Wound" name="Wound"><span style=
+                    "font-weight:bold">Wound Healing:</span></a> In this
+                    example, cells are grown as a tissue monolayer. Rather than
+                    identifying individual cells, this pipeline quantifies the
+                    area occupied by the tissue sample.<br>
+                    <a href=
+                    ".http://d1zymp9ayga15t.cloudfront.net/content/Examplezips/ExampleWoundHealingImages.zip"
+                    onclick=
+                    "ga('send', 'event', 'Special', 'Downoad Wound')">[Download]</a>
+                    (1.1 MB)
+                  </li>
+                </ul>
+              </td>
+              <td valign="center">
+                <img alt=
+                "Specialized Cellprofiler pipeline quantify area Tissue Monolayer example"
+                class="exampleImage" height="128" id="Wound" name="Wound"
+                onclick=
+                "MM_openBrWindow('http://d1zymp9ayga15t.cloudfront.net/images/WOUND-IMG.gif','','width=255,height=170')"
+                onmouseout="MM_swapImgRestore()" onmouseover=
+                "MM_swapImage('Wound','','http://d1zymp9ayga15t.cloudfront.net/images/WOUND-ANALYSIS.gif',1)" src=
+                "http://d1zymp9ayga15t.cloudfront.net/images/WOUND-IMG.gif">
+              </td>
+            </tr>
+            <!--Illumination correction-->
+
+            <tr>
+              <td valign="top">
+                <ul>
+                  <li>
+                    <a id="IlluminationCorrection" name=
+                    "IlluminationCorrection"><span style=
+                    "font-weight:bold">Illumination Correction:</span></a>
+                    Illumination correction is often important for both
+                    accurate segmentation and for intensity measurements. This
+                    example shows how the CorrectIlluminationCalculate and
+                    CorrectIlluminationApply modules are used to compensate for
+                    the non-uniformities in illumination often present in
+                    microscopy images.<br>
+                    <a href=
+                    ".http://d1zymp9ayga15t.cloudfront.net/content/Examplezips/ExampleIlluminationCorrection.zip"
+                    onclick=
+                    "ga('send', 'event', 'Special', 'Downoad IlluminationCorrection')">
+                    [Download]</a> (14.9 MB)
+                  </li>
+
+                  <li style="list-style: none">
+                    <a href=
+                    ".http://d1zymp9ayga15t.cloudfront.net/content/ExampleIlluminationCorrection_Tutorial.pdf"
+                    oonclick=
+                    "ga('send', 'event', 'Special', 'Downoad IlluminationCorrectionPDF')">
+                    [Tutorial]</a>
+                  </li>
+                </ul>
+              </td>
+              <td valign="center">
+                <img alt=
+                "Specialized Cellprofiler pipeline Illumination Correction example"
+                class="exampleImage" height="128" id="IlluminationCorrection"
+                name="IlluminationCorrection" onclick=
+                "MM_openBrWindow('http://d1zymp9ayga15t.cloudfront.net/images/ExampleIlluminationCorrection_Orig.png','','width=170,height=170')"
+                onmouseout="MM_swapImgRestore()" onmouseover=
+                "MM_swapImage('IlluminationCorrection','','http://d1zymp9ayga15t.cloudfront.net/images/ExampleIlluminationCorrection_Corr.png',1)"
+                src="http://d1zymp9ayga15t.cloudfront.net/images/ExampleIlluminationCorrection_Orig.png">
+              </td>
+            </tr>
+            <!--Colocalization-->
+
+            <tr>
+              <td valign="top">
+                <ul>
+                  <li>
+                    <a id="Colocalization" name="Colocalization"><span style=
+                    "font-weight:bold">Colocalization:</span></a> Measuring the
+                    colocalization between fluorescently labeled molecules is a
+                    widely used appraoch to measure the degree of spatial
+                    coincidence and potential interactions among subcellular
+                    species (e.g., proteins). This example shows how the object
+                    identifcation and RelateObjects modules are used to measure
+                    the degree of overlap between two fluorescent channels.<br>
+                    <a href=
+                    ".http://d1zymp9ayga15t.cloudfront.net/content/Examplezips/ExampleColocalization.zip"
+                    onclick=
+                    "_gaq.push(['_trackEvent', 'SpecialityPipeline', 'Download', 'ColocalizationDownload']);">
+                    [Download]</a> (3.7 MB)
+                  </li>
+
+                  <li style="list-style: none">
+                    <a href=".http://d1zymp9ayga15t.cloudfront.net/content/ExampleColocalization_Tutorial.pdf"
+                    onclick=
+                    "_gaq.push(['_trackEvent', 'SpecialityPDF', 'Download', 'ColocalizationPDF']);">
+                    [Tutorial]</a>
+                  </li>
+                </ul>
+              </td>
+              <td valign="center">
+                <img alt=
+                "Specialized CellProfiler Colocalization Spation Coincidence Subcellular example"
+                class="exampleImage" height="128" id="Colocalization" name=
+                "Colocalization" onclick=
+                "MM_openBrWindow('http://d1zymp9ayga15t.cloudfront.net/images/ExampleColocalization_Orig.png','','width=170,height=170')"
+                onmouseout="MM_swapImgRestore()" onmouseover=
+                "MM_swapImage('Colocalization','','http://d1zymp9ayga15t.cloudfront.net/images/ExampleColocalization_Masked.png',1)"
+                src="http://d1zymp9ayga15t.cloudfront.net/images/ExampleColocalization_Orig.png">
+              </td>
+            </tr>
+
+            <tr>
+              <td colspan="2">
+                <h3>
+                  <a id="WormToolbox" name="WormToolbox">Pipelines using the
+                  WormToolbox</a>
+                </h3>
+                These pipelines have been developed for high-throughput screens
+                on <i>C. elegans</i> and extract measurements on a per-worm
+                basis.<br>
+
+                <p style="font-size:small;font-style:italic;margin-left:27px;">
+                  The <a href="http://www.cellprofiler.org/wormtoolbox/">Worm
+                  Toolbox</a> page has further details on this workflow, as
+                  well as video tutorials, pipelines and image data in addition
+                  to those described below. (from C Wählby <i>et al.
+                  <i>Methods</i>, 2014)<br>
+                  The <a href="http://www.broadinstitute.org/bbbc">BBBC</a>
+                  also has <i>C. elegans</i> sample images and information, as
+                  well as assay "ground truth" of various kinds.</i>
+                </p>
+              </td>
+            </tr>
+            <!--Untangle worms-->
+
+            <tr>
+              <td valign="top">
+                <ul>
+                  <li>
+                    <a id="UntangleWorms" name="UntangleWorms"><span style=
+                    "font-weight:bold">Untangle worms:</span></a> In this
+                    pipeline, we identify individual worms and extract shape
+                    and intensity measurements. Worm untangling requires a worm
+                    model, which is provided together with the pipeline. If
+                    adjusting the pipeline to fit your own data, worm detection
+                    will likely improve by creating a new worm model based on
+                    your own image data.<br>
+                    <a href=
+                    ".http://d1zymp9ayga15t.cloudfront.net/content/Examplezips/ExamplePipelineUntangle.zip"
+                    onclick=
+                    "_gaq.push(['_trackEvent', 'WormPipeline', 'Download', 'UntangleDownload']);">
+                    [Download]</a> (1.3 MB)
+                  </li>
+                </ul>
+              </td>
+              <td valign="center">
+                <img alt=
+                "Worm Toolbox CellProfiler Shape Intensity Untangle Worms CellProfiler"
+                class="exampleImage" height="128" id="Untangle" name="Model"
+                onclick=
+                "MM_openBrWindow('http://d1zymp9ayga15t.cloudfront.net/images/ExampleUntangleInput.gif','','width=382,height=396')"
+                onmouseout="MM_swapImgRestore()" onmouseover=
+                "MM_swapImage('Untangle','','http://d1zymp9ayga15t.cloudfront.net/images/ExampleUntangleOutput.gif',1)"
+                src="http://d1zymp9ayga15t.cloudfront.net/images/ExampleUntangleInput.gif">
+              </td>
+            </tr>
+            <!--Straighten worms-->
+
+            <tr>
+              <td valign="top">
+                <ul>
+                  <li>
+                    <a id="StraightenWorms" name="StraightenWorms"><span style=
+                    "font-weight:bold">Straighten worms and extract intensity
+                    measurements using a low-resolution atlas:</span></a> Once
+                    worms are untangled, this pipeline shows how they can be
+                    straightened and aligned with a low-resolution worm atlas
+                    to extract localized intensity measurements and compare
+                    patterns of reporter signals. Included are steps for
+                    identifying secondary objects (fluorescent marker signals)
+                    and relating these objects to individual worms, enabling
+                    count of signals on a per-worm basis.<br>
+                    <a href=
+                    ".http://d1zymp9ayga15t.cloudfront.net/content/Examplezips/ExamplePipelineStraighten.zip"
+                    onclick=
+                    "_gaq.push(['_trackEvent', 'WormPipeline', 'Download', 'StraightenDownload']);">
+                    [Download]</a> (968 KB)
+                  </li>
+                </ul>
+              </td>
+              <td valign="center">
+                <img alt="Worm Toolbox CellProfiler Straighten Worms example"
+                class="exampleImage" height="128" id="Model" name="Straighten"
+                onclick=
+                "MM_openBrWindow('http://d1zymp9ayga15t.cloudfront.net/images/ExampleStraightenInput.gif','','width=530,height=384')"
+                onmouseout="MM_swapImgRestore()" onmouseover=
+                "MM_swapImage('Straighten','','http://d1zymp9ayga15t.cloudfront.net/images/ExampleStraightenOutput.gif',1)"
+                src="http://d1zymp9ayga15t.cloudfront.net/images/ExampleStraightenInput.gif">
+              </td>
+            </tr>
+            <!--Create worm model-->
+
+            <tr>
+              <td valign="top">
+                <ul>
+                  <li>
+                    <a id="CreateModel" name="CreateModel"><span style=
+                    "font-weight:bold">Create your own worm model:</span></a>
+                    The UntangleWorms module has an &quot;Untangle&quot; mode
+                    and a &quot;Train&quot; mode. This pipeline describes how
+                    the &quot;Train&quot; mode is used to create a worm model.
+                    Training consists of providing a large number of images of
+                    worms that are representative of the worm variation within
+                    the population, and that do not touch or overlap. Note that
+                    this example download includes only two images and will not
+                    result in a good model, as it will not be representative of
+                    all possible variations of the worm shapes. We recommend
+                    using at least 60 worms to create a model.<br>
+                    <a href=
+                    ".http://d1zymp9ayga15t.cloudfront.net/content/Examplezips/ExamplePipelineCreateModel.zip"
+                    onclick=
+                    "_gaq.push(['_trackEvent', 'WormPipeline', 'Download', 'CreateDownload']);">
+                    [Download]</a> (1.6 MB)
+                  </li>
+                </ul>
+              </td>
+              <td valign="center">
+                <img alt=
+                "Worm Toolbox Cellprofiler Create Untangle Train Model Worm example"
+                class="exampleImage" height="128" id="CreateModel" name="Model"
+                onclick=
+                "MM_openBrWindow('http://d1zymp9ayga15t.cloudfront.net/images/ExampleCreateModelInput.gif','','width=390,height=463')"
+                onmouseout="MM_swapImgRestore()" onmouseover=
+                "MM_swapImage('CreateModel','','http://d1zymp9ayga15t.cloudfront.net/images/ExampleCreateModelOutput.gif',1)"
+                src="http://d1zymp9ayga15t.cloudfront.net/images/ExampleCreateModelInput.gif">
+              </td>
+            </tr>
+            <!--Bright-field untangling-->
+
+            <tr>
+              <td valign="top">
+                <ul>
+                  <li>
+                    <a id="UntangleWormsBright-field" name=
+                    "UntangleWormsBright-field"><span style=
+                    "font-weight:bold">Untangle worms and make measurements
+                    bright-field staining pattern phenotype:</span></a> This
+                    pipeline detects individual worms by worm untangling and
+                    finds sub-objects (fatty regions stained with oil red O)
+                    within the worms. Using bright-field data only, it detects
+                    fatty regions by intensity thresholding in a single image
+                    channel and relates the fatty regions to individual worms.
+                    This enables detection of rare phenotypes in heterogeneous
+                    populations, phenotypes that would be missed if population
+                    averages were observed. More data can be found on the
+                    <a href="http://www.broadinstitute.org/bbbc">BBBC</a>.<br>
+                    <a href=
+                    ".http://d1zymp9ayga15t.cloudfront.net/content/Examplezips/ExamplePipelineOilRedO.zip"
+                    onclick=
+                    "_gaq.push(['_trackEvent', 'WormPipeline', 'Download', 'UntangleDownload']);">
+                    [Download]</a> (852 KB)
+                  </li>
+                </ul>
+              </td>
+              <td valign="center">
+                <img alt=
+                "Worm Toolbox CellProfiler Untangle Sub-Object Worm example"
+                class="exampleImage" height="128" id="UntangleWormsBrightfield"
+                name="ORO" onclick=
+                "MM_openBrWindow('http://d1zymp9ayga15t.cloudfront.net/images/ExampleOROinput.gif','','width=390,height=463')"
+                onmouseout="MM_swapImgRestore()" onmouseover=
+                "MM_swapImage('UntangleWormsBrightfield','','http://d1zymp9ayga15t.cloudfront.net/images/ExampleOROoutput.gif',1)"
+                src="http://d1zymp9ayga15t.cloudfront.net/images/ExampleOROinput.gif">
+              </td>
+            </tr>
+
+            <tr>
+              <td colspan="2">
+                <h3>
+                  More Advanced Pipelines
+                </h3>
+                These pipelines are more complex in terms in image processing,
+                feature identification and the desired measurements.
+              </td>
+            </tr>
+            <!-- Example Vitra images-->
+
+            <tr>
+              <td valign="top">
+                <ul>
+                  <li>
+                    <a id="SBS_Vitra_CNT" name="SBS_Vitra_CNT"><span style=
+                    "font-weight:bold">Human cytoplasm-nucleus translocation
+                    assay (SBS Vitra):</span></a> In this human
+                    cytoplasm-nucleus translocation assay, learn how to load a
+                    previously calculated illumination correction function for
+                    two separate channels, measure protein content in the
+                    nucleus and cytoplasm, and calculate the ratio as a measure
+                    of translocation. This is a clumpy cell type, so studying
+                    the settings in primary object identification may be
+                    helpful for users interested in the more advanced options
+                    that module offers. More about these images can be found at
+                    the <a href=
+                    "http://www.broadinstitute.org/bbbc/BBBC014/">BBBC</a>.<br>
+                    <a href=".http://d1zymp9ayga15t.cloudfront.net/content/Examplezips/ExampleVitraImages.zip"
+                    onclick=
+                    "_gaq.push(['_trackEvent', 'AdvancePipeline', 'Download', 'HumanCytoplasmVitraDownload']);">
+                    [Download]</a> (13 MB)
+                  </li>
+                </ul>
+              </td>
+              <td valign="center">
+                <img alt=
+                "Advanced Pipeline CellProfiler Human Cytoplasm-Nucleus Translocation Assay example"
+                class="exampleImage" height="128" id="Vitra" name="Vitra"
+                onclick=
+                "MM_openBrWindow('http://d1zymp9ayga15t.cloudfront.net/images/ExampleVitraImg.png','','width=240,height=249')"
+                onmouseout="MM_swapImgRestore()" onmouseover=
+                "MM_swapImage('Vitra','','http://d1zymp9ayga15t.cloudfront.net/images/ExampleVitraID.png',1)" src=
+                "http://d1zymp9ayga15t.cloudfront.net/images/ExampleVitraImg.png">
+              </td><!--Example SBS-->
+            </tr>
+
+            <tr>
+              <td valign="top">
+                <ul>
+                  <li>
+                    <a id="SBS_Bioimage_CNT" name=
+                    "SBS_Bioimage_CNT"><span style="font-weight:bold">Human
+                    cytoplasm-nucleus translocation assay (SBS
+                    Bioimage):</span></a> This example includes an advanced
+                    example of illumination correction - creating an
+                    illumination correction function from all images in a
+                    96-well plate. This pipeline also demonstrates how to load
+                    dosage information via the LoadData module, how to use
+                    advanced methods for primary and seecondary object
+                    identifcation, and how to calculate the Z' factor, a
+                    measure of assay quality. More about these images can be
+                    found at the <a href=
+                    "http://www.broadinstitute.org/bbbc/BBBC013/">BBBC</a>.<br>
+                    <a href=".http://d1zymp9ayga15t.cloudfront.net/content/Examplezips/ExampleSBSImages.zip"
+                    onclick=
+                    "_gaq.push(['_trackEvent', 'AdvancePipeline', 'Download', 'HumanCytoplasmBioImageDownload']);">
+                    [Download]</a> (40 MB)<br>
+                    <a href=
+                    ".http://d1zymp9ayga15t.cloudfront.net/content/papers/29-Carpenter_MethodsMolBio_2009.pdf">
+                    [Tutorial]</a>
+                  </li>
+                </ul>
+              </td>
+              <td valign="center">
+                <img alt=
+                "Advanced Pipeline CellProfiler Human Cytoplasm-Nucleus Translocation Assay Illumination example"
+                border="0" class="exampleImage" height="128" id=
+                "SBS_Bioimage_CNT" name="SBS_Bioimage_CNT" onclick=
+                "MM_openBrWindow('http://d1zymp9ayga15t.cloudfront.net/images/ExampleSBSImg.png','','width=168,height=176')"
+                onmouseout="MM_swapImgRestore()" onmouseover=
+                "MM_swapImage('SBS_Bioimage_CNT','','http://d1zymp9ayga15t.cloudfront.net/images/ExampleSBSID.png',1)"
+                src="http://d1zymp9ayga15t.cloudfront.net/images/ExampleSBSImg.png" style="clear:left">
+              </td>
+            </tr>
+            <!--Example Speckles -->
+
+            <tr>
+              <td valign="top">
+                <ul>
+                  <li>
+                    <a id="Speckles" name="Speckles"><span style=
+                    "font-weight:bold">Speckle Counting:</span></a> This
+                    pipeline shows how to identify smaller objects (foci)
+                    within larger objects (nuclei) and how to use the Relate
+                    module to establish a relationship between the two as well
+                    as perform per-object aggregate measurements (such as
+                    number of foci per nucleus).<br>
+                    <a href=
+                    ".http://d1zymp9ayga15t.cloudfront.net/content/Examplezips/ExampleSpecklesImages.zip"
+                    onclick=
+                    "_gaq.push(['_trackEvent', 'AdvancePipeline', 'Download', 'SpeckleDownload']);">
+                    [Download]</a> (3 MB)
+                  </li>
+                </ul>
+              </td>
+              <td valign="center">
+                <img alt=
+                "Advanced Pipeline CellProfiler Speckle Counting example"
+                border="0" class="exampleImage" height="128" id="Speckles"
+                name="Speckles" onclick=
+                "MM_openBrWindow('http://d1zymp9ayga15t.cloudfront.net/images/SpecklesAB.gif','','width=256,height=214')"
+                onmouseout="MM_swapImgRestore()" onmouseover=
+                "MM_swapImage('Speckles','','http://d1zymp9ayga15t.cloudfront.net/images/SpecklesCD.gif',1)" src=
+                "http://d1zymp9ayga15t.cloudfront.net/images/SpecklesAB.gif" style="clear:left">
+              </td>
+            </tr>
+            <!-- Object Tracking -->
+
+            <tr>
+              <td valign="top">
+                <ul>
+                  <li>
+                    <a id="Tracking" name="Tracking"><span style=
+                    "font-weight:bold">Object Tracking and Metadata
+                    Management:</span></a> This example shows an example of
+                    object tracking. This pipeline analyzes a time-lapse
+                    experiment to identify the cells and track them from frame
+                    to frame, which is challenging since the cells are also
+                    moving. In addition, this pipeline also extracts metadata
+                    from the filename and uses groups the images by metadata in
+                    order to independently process several sequences of images
+                    and output the measurements of each.<br>
+                    <a href=
+                    ".http://d1zymp9ayga15t.cloudfront.net/content/Examplezips/ExampleTrackObjects.zip"
+                    onclick=
+                    "_gaq.push(['_trackEvent', 'AdvanceDownload', 'Download', 'ObjectTrackDownload']);">
+                    [Download]</a> (10 MB)
+                  </li>
+                </ul>
+              </td>
+              <td valign="center">
+                <img alt=
+                "Advanced Pipeline CellProfiler Object Tracking Metadata Management example"
+                border="0" class="exampleImage" height="128" id="Tracking"
+                name="Tracking" onclick=
+                "MM_openBrWindow('http://d1zymp9ayga15t.cloudfront.net/images/TrackingExampleImg.gif','','width=262,height=128')"
+                onmouseout="MM_swapImgRestore()" onmouseover=
+                "MM_swapImage('Tracking','','http://d1zymp9ayga15t.cloudfront.net/images/TrackingExampleID.gif',1)"
+                src="http://d1zymp9ayga15t.cloudfront.net/images/TrackingExampleImg.gif" style="clear:left">
+              </td>
+            </tr>
+            <!-- In situ Sequencing -->
+
+            <tr>
+              <td valign="top">
+                <ul>
+                  <li>
+                    <a id="InSitu" name="InSitu"><span style=
+                    "font-weight:bold">Sequencing RNA molecules <i>in situ</i>
+                    combining CellProfiler with ImageJ plugins.</span></a> Some
+                    image analysis algorithms, such as more advanced image
+                    alignment, are not available in CellProfiler. However,
+                    functions available as ImageJ plugins can be called from
+                    CellProfiler. This pipeline shows how images from
+                    subsequent base-calling cycles can be aligned using ImageJ
+                    plugins from for RNA sequencing <i>in situ</i>.<br>
+                    Sequencing substrates are generated using gap-fill padlock
+                    probes and rolling circle amplification, followed by the
+                    sequencing-by-ligation chemistry (Ke <i>et al</i>, In situ
+                    sequencing for RNA analysis in preserved tissue and cells,
+                    Nature Methods, published online July 14, 2013, <a href=
+                    "http://dx.doi.org/10.1038/nmeth.2563">http://dx.doi.org/10.1038/nmeth.2563</a>).
+                    Note that additional ImageJ plugins are required and can be
+                    downloaded as described in the included README file. MATLAB
+                    scripts for sequence visualization are also included in the
+                    ZIP file.<br>
+                    <a href=
+                    ".http://d1zymp9ayga15t.cloudfront.net/content/Examplezips/ExampleInSituSequencing.zip"
+                    onclick=
+                    "_gaq.push(['_trackEvent', 'AdvancePipeline', 'Download', 'InSituDownload']);">
+                    [Download]</a> (45 MB)
+                  </li>
+                </ul>
+              </td>
+              <td valign="center">
+                <img alt=
+                "Advanced Pipeline CellProfiler ImageJ In Situ example" border=
+                "0" class="exampleImage" height="150" id="InSitu" name="InSitu"
+                onclick=
+                "MM_openBrWindow('http://d1zymp9ayga15t.cloudfront.net/images/ExampleInSituSeqInput.jpg','','width=195,height=150')"
+                onmouseout="MM_swapImgRestore()" onmouseover=
+                "MM_swapImage('InSitu','','http://d1zymp9ayga15t.cloudfront.net/images/ExampleInSituSeqOutput.jpg',1)"
+                src="http://d1zymp9ayga15t.cloudfront.net/images/ExampleInSituSeqInput.jpg" style="clear:left">
+              </td>
+            </tr>
+
+            <tr>
+              <td colspan="2">
+                <h3>
+                  File Utilities
+                </h3>
+                These pipelines show examples of file display and format
+                manipulation.
+              </td>
+            </tr>
+            <!-- Invert For Printing -->
+
+            <tr>
+              <td valign="top">
+                <ul>
+                  <li>
+                    <a id="InvertForPrinting" name=
+                    "InvertForPrinting"><span style="font-weight:bold">Invert
+                    For Printing:</span></a> Inverts RGB fluorescence
+                    microscopy images from a black background to a white
+                    background.<br>
+                    <a href=
+                    ".http://d1zymp9ayga15t.cloudfront.net/content/Examplezips/ExampleInvertForPrinting.zip"
+                    onclick=
+                    "_gaq.push(['_trackEvent', 'FilePipeline', 'Download', 'InvertPrintDownload']);">
+                    [Download]</a> (0.2 MB)
+                  </li>
+                </ul>
+              </td>
+              <td valign="center">
+                <img alt="File Utility CellProfiler Invert Print example"
+                border="0" class="exampleImage" height="128" id=
+                "InvertForPrinting" name="Inverted" onclick=
+                "MM_openBrWindow('http://d1zymp9ayga15t.cloudfront.net/images/NotInverted.gif','','width=200,height=150')"
+                onmouseout="MM_swapImgRestore()" onmouseover=
+                "MM_swapImage('InvertForPrinting','','http://d1zymp9ayga15t.cloudfront.net/images/InvertedExamples.gif',1)"
+                src="http://d1zymp9ayga15t.cloudfront.net/images/NotInverted.gif">
+              </td>
+            </tr>
+            <!-- Color to Gray -->
+
+            <tr>
+              <td valign="top">
+                <ul>
+                  <li>
+                    <a id="ColorToGray" name="ColorToGray"><span style=
+                    "font-weight:bold">Color To Gray</span></a> Demonstrates
+                    how to separate a color image image into its component
+                    channels, and how to combine grayscale channel images into
+                    an RGB color image.<br>
+                    <a href=".http://d1zymp9ayga15t.cloudfront.net/content/Examplezips/ExampleColorToGray.zip"
+                    onclick=
+                    "_gaq.push(['_trackEvent', 'FilePipeline', 'Download', 'ColorGrayDownload']);">
+                    [Download]</a> (0.8 MB)
+                  </li>
+                </ul>
+              </td>
+              <td valign="center">
+                <img alt="File Utility CellProfiler color to Gray example"
+                border="0" class="exampleImage" height="128" id="ColorToGray"
+                name="ColorToGray" onclick=
+                "MM_openBrWindow('http://d1zymp9ayga15t.cloudfront.net/images/ExampleRGB.png','','width=380,height=300')"
+                onmouseout="MM_swapImgRestore()" onmouseover=
+                "MM_swapImage('ColorToGray','','http://d1zymp9ayga15t.cloudfront.net/images/ExampleRGBSplit.gif',1)"
+                src="http://d1zymp9ayga15t.cloudfront.net/images/ExampleRGB.png">
+              </td>
+            </tr>
+            <!-- DIB to TIF -->
+
+            <tr>
+              <td valign="top">
+                <ul>
+                  <li>
+                    <a id="FileConvert" name="FileConvert"><span style=
+                    "font-weight:bold">Convert Image File Format</span></a>
+                    Loads image and saves them in a different file format.<br>
+                    <a href=".http://d1zymp9ayga15t.cloudfront.net/content/Examplezips/ExampleDIBtoTIF.zip"
+                    onclick=
+                    "_gaq.push(['_trackEvent', 'FilePipeline', 'Download', 'ConvertFormatDownload']);">
+                    [Download]</a> (0.9 MB)
+                  </li>
+                </ul>
+              </td>
+              <td valign="center">
+                <img alt="File Utility File Format Conversion example" border=
+                "0" class="exampleImage" height="64" id="FileConvert" name=
+                "FileConvert" src="http://d1zymp9ayga15t.cloudfront.net/images/FileConvert.png">
+              </td>
+            </tr>
+          </table>
+
+          <h2>
+            <a id="PublishedPipelines" name="PublishedPipelines">Published
+            Pipelines</a>
+          </h2>
+
+          <p>
+            Pipelines which have appeared in published papers are provided
+            <a href="published_pipelines.html">here</a>. Please keep in mind
+            that the listed pipelines are specific to the published assay and
+            that no images are provided.
+          </p>
+        </div>
+
+        <h2 style="clear:both">
+          CellProfiler Analyst Example Data and Properties File
+        </h2>
+
+        <table border="0">
+          <tr>
+            <td valign="top">
+              <ul>
+                <li>
+                  <span style="font-weight:bold">Example database,
+                  configuration file, and images:</span> Single 96-well plate
+                  of human cellular images, for use with CellProfiler Analyst
+                  2.0. More sample images and information on the image data can
+                  be found on the <a href=
+                  "http://www.broadinstitute.org/bbbc/BBBC017/">BBBC</a>.<br>
+                  Moffat J et al., A lentiviral RNAi library for human and
+                  mouse genes applied to an arrayed viral high-content screen.
+                  Cell. 2006 Mar 24;124(6):1283-98<br>
+                  <a href=
+                  ".http://d1zymp9ayga15t.cloudfront.net/content/Examplezips/cpa_2.0_example.zip">[Download]</a>
+                  (203MB zipped)
+                </li>
+              </ul>
+            </td>
+            <td valign="center">
+              <img alt="CellProfiler Analyst logo" border="0" class=
+              "exampleImage" id="CPA logo" name="CPA logo" src=
+              "http://d1zymp9ayga15t.cloudfront.net/images/cpa_128.png" style="margin-left:100px">
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div id="footer">
+        <div>
+          <center>
+            <img alt="Banner" src="http://d1zymp9ayga15t.cloudfront.net/images/banner_small.png" style=
+            "margin-top:20px" width="100%">
+          </center>
+        </div>
+      </div>
+      <a id="cpa_examples" name="cpa_examples">&nbsp;</a>
+    </div>
+    <!-- Piwik -->
+    <script type="text/javascript">
+    var _paq = _paq || [];
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+    var u="//159.203.72.67/piwik/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', 1]);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+    })();
+    </script> <noscript>
+    <p>
+      <img alt="" src="//159.203.72.67/piwik/piwik.php?idsite=1" style=
+      "border:0;">
+    </p></noscript> <!-- End Piwik Code -->
+  </body>
+</html>

@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    
+    <title></title>
+    
+    <meta name="description" content="">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    
+    <link rel="stylesheet" href="stylesheets/application.css">
+
+    <script src="javascripts/libraries/modernizr-2.8.3.min.js">
+
+    </script>
+  </head>
+  
+  <body>
+    <div id="mainwrapper">
+        <div id="header">
+          <div>
+            <a href="/"><img border="0" class="header1" src=
+            "http://d1zymp9ayga15t.cloudfront.net/images/cp_logo_smaller.png" width="400" /></a> <a href=
+            "http://www.broadinstitute.org/"><img alt="Broad Institute logo"
+            border="0" class="header2" height="68" src=
+            "http://d1zymp9ayga15t.cloudfront.net/images/BroadInstituteLogo_smaller.png" width="220" /></a>
+            <div id="navigation">
+              <hr />
+
+              <ul>
+                <li>
+                  <a href="/" id="header_main">home</a>
+                </li>
+
+                <li>
+                  <a href="#" id="header_getting_started" onclick=
+                  "return false;">getting started</a>
+                  <ul>
+                    <li>
+                      <a href="/faq.html">What is CellProfiler? FAQ</a>
+                    </li>
+
+                    <li>
+                      <a href="/examples.html">examples</a>
+                    </li>
+
+                    <li>
+                      <a href="/tutorials.html">tutorials</a>
+                    </li>
+
+                    <li>
+                      <a href=
+                      "http://d1zymp9ayga15t.cloudfront.net/content/CellProfilerSoftwareBrochure.pdf">brochure</a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a href="#" id="header_download" onclick=
+                  "return false;">download</a>
+                  <ul>
+                    <li>
+                      <a href="/download.html">CellProfiler</a>
+                    </li>
+
+                    <li>
+                      <a href="/downloadCPA.html">CellProfiler Analyst</a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li style="width:109px;text-align:center;">
+                  <a href="#" id="header_help" onclick="return false;">help</a>
+                  <ul>
+                    <li>
+                      <a href="http://forum.cellprofiler.org/">forum</a>
+                    </li>
+
+                    <li>
+                      <a href="/supportplan.html">support plan</a>
+                    </li>
+
+                    <li>
+                      <a href="http://www.broadinstitute.org/bbbc/">BBBC</a>
+                    </li>
+
+                    <li>
+                      <a href=
+                      "https://github.com/CellProfiler/CellProfiler/wiki">for
+                      developers</a>
+                    </li>
+
+                    <li>
+                      <a href="/manuals.html">manuals</a>
+                    </li>
+
+                    <li>
+                      <a href="/wormtoolbox">WormToolbox</a>
+                    </li>
+
+                    <li>
+                      <a href="/imagingflowcytometry">Imaging Flow Cytometry</a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a href="#" id="header_aboutus" onclick="return false;">about
+                  us</a>
+                  <ul>
+                    <li>
+                      <a href="/about.html">CellProfiler Team</a>
+                    </li>
+
+                    <li>
+                      <a href="/impact.html">impact</a>
+                    </li>
+
+                    <li>
+                      <a href="/press.html">press</a>
+                    </li>
+
+                    <li>
+                      <a href="/citations.html">citations</a>
+                    </li>
+
+                    <li>
+                      <a href="/outreach.html">outreach</a>
+                    </li>
+
+                    <li>
+                      <a href="/interfaces.html">interfaces</a>
+                    </li>
+
+                    <li>
+                      <a href="/#CurrentNews">news</a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="navsearch">
+                  <form action="http://google.com/search" method="get" onsubmit=
+                  "location.href = this.action + '?&q=%2Bsite:cellprofiler.org+' + this.query.value; return false;">
+                  <input maxlength="255" name="query" size="20" type="text"
+                    value="" /> <input type="submit" value="search" />
+                  </form>
+                </li>
+              </ul>
+              <br />
+
+              <hr style="clear:left" />
+            </div>
+          </div>
+        </div>
+
+        <div id="content">
+          <h1>
+            What is CellProfiler? FAQ
+          </h1>
+
+          <ul>
+            <li>
+              <a href="./examples.html#GetStarted">How do I get started?</a>
+            </li>
+
+            <li>
+              <a href=
+              "http://cellprofiler.org/wiki/index.php/New_features_in_CP_2.0">Where
+              can I find out more information about CellProfiler 2.1?</a>
+            </li>
+
+            <li>
+              <a href="#q1">Are CellProfiler and CellProfiler Analyst free?</a>
+            </li>
+
+            <li>
+              <a href="#q2">What is the difference between CellProfiler and
+              CellProfiler Analyst?</a>
+            </li>
+
+            <li>
+              <a href="#q3">Do CellProfiler and CellProfiler Analyst have to be
+              used together?</a>
+            </li>
+
+            <li>
+              <a href="#q4">How do I analyze my CellProfiler data?</a>
+            </li>
+
+            <li>
+              <a href="#q5">I'm an image processing expert. Why should I use
+              CellProfiler for development?</a>
+            </li>
+
+            <li>
+              <a href="#q6">I'm an image processing expert. Can I use
+              CellProfiler modules as part of a larger software package?</a>
+            </li>
+
+            <li>
+              <a href="#q7">What happened to the CellVisualizer software
+              project?</a>
+            </li>
+
+            <li>
+              <a href="#q8">I'm not a programmer. How much programming do I need
+              to know?</a>
+            </li>
+
+            <li>
+              <a href="#q9">I don't have MySQL. Can I use Microsoft Access?</a>
+            </li>
+
+            <li>
+              <a href="#q10">I have only a few images, should I use
+              CellProfiler?</a>
+            </li>
+
+            <li>
+              <a href="#q11">I have a small image set (20 images). Should I use
+              CellProfiler Analyst?</a>
+            </li>
+
+            <li>
+              <a href="#q13">Can I collaborate with you on a project?</a>
+            </li>
+
+            <li>
+              <a href="#q14">How can I show my enthusiasm for the CellProfiler
+              project and simultaneously help a good cause?</a>
+            </li>
+
+            <li>
+              <a href="#q15">What if I have more questions?</a>
+            </li>
+          </ul>
+
+          <h2>
+            <a name="q1">Are CellProfiler and CellProfiler Analyst free?</a>
+          </h2>
+
+          <p>
+            Yes. They are free and open source (GPL, some portions are also
+            BSD-licensed).
+          </p>
+
+          <h2>
+            <a name="q2">What is the difference between CellProfiler and
+            CellProfiler Analyst?</a>
+          </h2>
+
+          <p>
+            CellProfiler processes images and produces numerical data, which can
+            exported to Excel (if small) or deposited in files or exported to a
+            database (if large).
+          </p>
+
+          <p>
+            CellProfiler Analyst allows researchers to explore and analyze data.
+            The machine learning-based scoring of complex phenotypes is one
+            example of the analysis tools in CellProfiler Analyst.
+          </p>
+
+          <p>
+            <img alt=
+            "CellProfiler features include identification, measurement and hit picking"
+            border="0" height="383" src="http://d1zymp9ayga15t.cloudfront.net/images/FAQpageGraphic.gif" />
+          </p>
+
+          <h2>
+            <a name="q3">Do CellProfiler and CellProfiler Analyst have to be used
+            together?</a>
+          </h2>
+
+          <p>
+            No – while the two software packages work well together, they can be
+            used individually.
+          </p>
+
+          <h2>
+            <a name="q4">How do I analyze my CellProfiler data?</a>
+          </h2>
+
+          <p>
+            Please see our <a alt=
+            "Free Compatible Open Source Image Analysis Software" href=
+            "interfaces.html">Interfaces</a> page for a full listing of software
+            that can handle CellProfiler data, plus groups who we have partnered
+            with to expand analytical functionality.
+          </p>
+
+          <h2 id="q5">
+            I’m an image processing expert. Why should I use CellProfiler for
+            development?
+          </h2>
+
+          <p>
+            You can take advantage of the existing base of modules for the
+            mundane parts of image processing and focus on developing your own
+            algorithms or complex sequences of modules. When you have developed a
+            solution, you can contribute the code to the open-source CellProfiler
+            project, which saves you from writing your own GUI, compiling for
+            multiple platformsd, and answering basic questions from the public
+            (like installation troubleshooting and basic usage). Your method will
+            be widely available and in a format that biologists can actually use.
+          </p>
+
+          <p>
+            CellProfiler is written in Python, using Scipy and Numpy to implement
+            most of its algorithms. Concerned about speed? You can also wrap C or
+            Java code in Python, or use the Cython extension.
+          </p>
+
+          <p>
+            Check out our <a href="http://cellprofiler.org/wiki">Developer
+            Wiki</a> for more information.
+          </p>
+
+          <h2 id="q6">
+            I'm an image processing expert. Can I use CellProfiler modules as
+            part of a larger software package?
+          </h2>
+
+          <p>
+            Sure! As long as you comply with the open-source <a href=
+            "https://raw.github.com/CellProfiler/CellProfiler/master/LICENSE">license</a>,
+            you can use pieces of the source code in your own software. For more
+            information about CellProfiler development, check out our <a href=
+            "http://cellprofiler.org/wiki">Developer Wiki</a> and our <a href=
+            "interfaces.html#partners">Interfaces</a> page for examples of our
+            current partnerships.
+          </p>
+
+          <h2 id="q7">
+            What happened to the CellVisualizer software project?
+          </h2>
+
+          <p>
+            It was renamed <span style="font-weight:bold">CellProfiler
+            Analyst</span>.
+          </p>
+
+          <h2>
+            <a name="q8">I'm not a programmer. How much programming do I need to
+            know?</a>
+          </h2>
+
+          <p>
+            No programming experience is required to use either CellProfiler or
+            CellProfiler Analyst. CellProfiler Analyst can read data from CSV
+            files or MySQL databases; the latter might require some assistance
+            from your IT department to set up, but it's optional.
+          </p>
+
+          <h2>
+            <a name="q9">I don't have MySQL, can I use Microsoft Access?</a>
+          </h2>
+
+          <p>
+            You can also use Microsoft Access if you have fewer than 65,536 rows
+            per table (but each object in your analysis is a row), by exporting
+            the data as a CSV file using CellProfiler's ExportToExcel module or
+            data tool. Then, you can create various tables in Access, and use
+            another program (such as Excel) to analyze your data.
+          </p>
+
+          <h2>
+            <a name="q10">I have only a few images, should I use
+            CellProfiler?</a>
+          </h2>
+
+          <p>
+            Using CellProfiler lets you extract quantitative information from
+            your images, even if you only have a small number of them. However,
+            CellProfiler is designed to run on large image sets; there is more of
+            a payoff for large sets because the setup time for an analysis is
+            roughly the same whether you have 5 images or 500,000.
+          </p>
+
+          <h2>
+            <a name="q11">I have a small image set (20 images), should I use
+            CellProfiler Analyst?</a>
+          </h2>
+
+          <p>
+            For simple analyses of small image sets (creating plots or sorting
+            data by one particular measurement), it's probably more convenient to
+            use the built-in CellProfiler data tools or a spreadsheet program
+            like Excel after exporting your data with CellProfiler's
+            ExportToExcel module or data tool. CellProfiler Analyst is more
+            useful for large data sets or sophisticated analyses; it has several
+            built in features that will help you create histograms, scatterplots,
+            classify your data by a particular phenotype, and score your
+            classified results. CellProfiler Analyst is a great tool for data
+            exploration, especially if you need a simple-to-use program to help
+            you view your data in several formats.
+          </p>
+
+          <h2>
+            <a name="q13">Can I collaborate with you on a project?</a>
+          </h2>
+
+          <p>
+            Like most academic research groups, we must be very selective about
+            choosing research projects. We collaborate with academic and
+            commercial laboratories to solve challenging image analysis problems,
+            especially in high content screening, and in some cases we can
+            provide help for an hourly fee. Learn more and contact us via the
+            Carpenter lab <a href=
+            "http://www.broadinstitute.org/~anne/">website</a> to explore a
+            collaboration. You may also refer to our <a href=
+            "interfaces.html#partners">Interfaces</a> pages for projects where we
+            have partnered with other software groups to expand CellProfiler
+            functionality.
+          </p>
+
+          <h2>
+            <a name="q14">How can I show my enthusiasm for the CellProfiler
+            project and simultaneously help a good cause?</a>
+          </h2>
+
+          <p>
+            Go here: <a href="http://www.cafepress.com/CellProfiler">The
+            CellProfiler Shop</a>
+          </p>
+
+          <h2>
+            <a name="q15">What if I have more questions?</a>
+          </h2>
+
+          <p>
+            We suggest you visit the <a href=
+            "http://cellprofiler.org/forum">CellProfiler forum</a>.
+          </p>
+        </div>
+
+        <div id="footer">
+          <div>
+            <center>
+              <img alt="Banner" src="http://d1zymp9ayga15t.cloudfront.net/images/banner_small.png" style=
+              "margin-top:20px" width="100%" />
+            </center>
+          </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js">
+
+    </script>
+
+    <script>
+      window.jQuery || document.write('<script src="javascripts/libraries/jquery-2.2.0.min.js"><\/script>')
+    </script>
+  </body>
+</html>
