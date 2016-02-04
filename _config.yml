@@ -1,2 +1,4 @@
 markdown: kramdown
 name: CellProfiler
+gems:
+  - jekyll-redirect-from
