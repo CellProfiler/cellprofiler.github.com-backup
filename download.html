@@ -5,7 +5,7 @@
     </title>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 
-    <script src="jquery-1.4.4.min.js" type="text/javascript">
+    <script src="http://d1zymp9ayga15t.cloudfront.net/jquery-1.4.4.min.js" type="text/javascript">
     </script>
     <style type="text/css">
     
@@ -16,8 +16,7 @@
     <link href="NiftyCube/niftyCorners.css" rel="stylesheet" type="text/css" />
     <script src="NiftyCube/niftycube.js" type="text/javascript">
     </script>
-    <script src="download.js" type="text/javascript">
-    </script>
+
     <link rel="stylesheet" href="stylesheets/application.css">
 
     <link href=
@@ -45,7 +44,7 @@
     var isWin64 = false;
     var isWin32 = false;
     var isMac = false;
-    var baseURL = "http://cellprofiler.org/releases/2.1.1/";
+    var baseURL = "http://d1zymp9ayga15t.cloudfront.net/releases/2.1.1/";
     var win64URL = baseURL + "CellProfiler_2.1.1_win64_r20140723174500.exe";
     var win32URL = baseURL + "CellProfiler_2.1.1_win32_r20140723174513.exe";
     var macURL = baseURL + "CellProfiler-release_2.1.1-6c2d896.pkg";
@@ -313,44 +312,50 @@
 
           <div id="Win64Preferred">
             <center>
-              Looks like you are using a 64-bit Windows OS. This is the best
+              If you are using a 64-bit Windows OS, this is the best
               option:<br />
               <br />
 
-              <div style="display:inline-block;">
-                <div class="boxed_column">
-                  <p style="margin-top:0px;margin-bottom:0px;">
-                    Windows 64-bit
-                  </p>
+                <div style="display:inline-block;">
+                  <div class="boxed_column">
+                    <p style="margin-top:0px;margin-bottom:0px;">
+                      <a href="http://d1zymp9ayga15t.cloudfront.net/releases/2.1.1/CellProfiler_2.1.1_win64_r20140723174500.exe">
+                        Windows 64-bit
+                      </a>
+                    </p>
 
-                  <p style='font-size:9px'>
-                    <a class="download" id="Win64PreferredAnchor" onclick=
-                    "javascript: _gaq.push(['_trackPageview', '/download/win64']);">
-                    <img align="middle" src="http://d1zymp9ayga15t.cloudfront.net/content/winCombo.gif" style=
-                    "margin-bottom:0.5em" /><br /></a> Run the EXE and follow
-                    the prompts. Windows Vista or later.
-                  </p>
+                    <p style='font-size:9px'>
+                      <a class="download" id="Win64PreferredAnchor" onclick=
+                      "javascript: _gaq.push(['_trackPageview', '/download/win64']);">
+                      <img align="middle" src="http://d1zymp9ayga15t.cloudfront.net/winCombo.gif" style=
+                      "margin-bottom:0.5em" /><br /></a> Run the EXE and follow
+                      the prompts. Windows Vista or later.
+                    </p>
+                  </div>
                 </div>
+              </a>
               </div>
             </center>
           </div>
 
           <div id="Win32Preferred">
             <center>
-              Looks like you are using a 32-bit Windows OS. This is the best
+              If you are using a 32-bit Windows OS, this is the best
               option:<br />
               <br />
 
               <div style="display:inline-block;">
                 <div class="boxed_column">
                   <p style="margin-top:0px;margin-bottom:0px;">
-                    Windows 32-bit
+                    <a href="http://d1zymp9ayga15t.cloudfront.net/releases/2.1.1/CellProfiler_2.1.1_win32_r20140723174513.exe">
+                      Windows 32-bit
+                    </a>
                   </p>
 
                   <p style='font-size:9px'>
                     <a class="download" id="Win32PreferredAnchor" onclick=
                     "javascript: _gaq.push(['_trackPageview', '/download/win32']);">
-                    <img align="middle" src="http://d1zymp9ayga15t.cloudfront.net/content/winCombo.gif" style=
+                    <img align="middle" src="http://d1zymp9ayga15t.cloudfront.net/winCombo.gif" style=
                     "margin-bottom:0.5em" /><br /></a> Run the EXE and follow
                     the prompts. Windows Vista or later.
                   </p>
@@ -361,20 +366,22 @@
 
           <div id="MacPreferred">
             <center>
-              Looks like you are using OS X. This is the best download
+              If you are using OS X, this is the best download
               option:<br />
               <br />
 
               <div style="display:inline-block;">
                 <div class="boxed_column">
                   <p style="margin-top:0px;margin-bottom:0px;">
-                    Mac OS X
+                    <a href="http://d1zymp9ayga15t.cloudfront.net/releases/2.1.1/CellProfiler-release_2.1.1-6c2d896.pkg">
+                      Mac OS X
+                    </a>
                   </p>
 
                   <p style='font-size:9px'>
                     <a class="download" id="MacPreferredAnchor" onclick=
                     "javascript: _gaq.push(['_trackPageview', '/download/mac']);">
-                    <img align="middle" src="http://d1zymp9ayga15t.cloudfront.net/content/maccombo.gif" style=
+                    <img align="middle" src="http://d1zymp9ayga15t.cloudfront.net/maccombo.gif" style=
                     "margin-bottom:0.5em" /><br /></a> Install the PKG and
                     follow the prompts. OS X 10.6 or later.<br />
                     NOTE: This will OVERWRITE the currently installed
@@ -385,76 +392,6 @@
               </div>
             </center>
           </div>
-          <!--
-        These are the available downloads, just in case someone wants
-        to override.
-    -->
-
-          <div>
-            <h2 style="margin-left: 115px;">
-              Other downloads
-            </h2>
-          </div>
-
-          <center>
-            <div style="display:inline-block;">
-              <div class="boxed_column" id="OtherMac" style="margin-left:8px;">
-                <p style="margin-top:0px;margin-bottom:0px;">
-                  Mac OS X
-                </p>
-
-                <p style='font-size:9px'>
-                  <a class="download" id="OtherMacAnchor" onclick=
-                  "javascript: _gaq.push(['_trackPageview', '/download/mac']);">
-                  <img align="middle" src="http://d1zymp9ayga15t.cloudfront.net/content/maccombo.gif" style=
-                  "margin-bottom:0.5em" /></a><br />
-                  Install the PKG and follow the prompts. OS X 10.6 or later.
-                </p>
-              </div>
-
-              <div class="boxed_column" id="OtherWin32">
-                <p style="margin-top:0px;margin-bottom:0px;">
-                  Windows 32-bit
-                </p>
-
-                <p style='font-size:9px'>
-                  <a class="download" id="OtherWin32Anchor" onclick=
-                  "javascript: _gaq.push(['_trackPageview', '/download/win32']);">
-                  <img align="middle" src="http://d1zymp9ayga15t.cloudfront.net/content/winCombo.gif" style=
-                  "margin-bottom:0.5em" /></a><br />
-                  Run the EXE and follow the prompts. Windows Vista or later.
-                </p>
-              </div>
-
-              <div class="boxed_column" id="OtherWin64">
-                <p style="margin-top:0px;margin-bottom:0px;">
-                  Windows 64-bit
-                </p>
-
-                <p style='font-size:9px'>
-                  <a class="download" id="OtherWin64Anchor" onclick=
-                  "javascript: _gaq.push(['_trackPageview', '/download/win64']);">
-                  <img align="middle" src="http://d1zymp9ayga15t.cloudfront.net/content/winCombo.gif" style=
-                  "margin-bottom:0.5em" /></a><br />
-                  Run the EXE and follow the prompts. Windows Vista or later.
-                </p>
-              </div>
-
-              <div class="boxed_column">
-                <p style="margin-top:0px;margin-bottom:0px;">
-                  Linux
-                </p>
-
-                <p style='font-size:9px'>
-                  <img align="middle" src="http://d1zymp9ayga15t.cloudfront.net/content/linuxcombo.gif" style=
-                  "margin-bottom:0.5em" /><br />
-                  Go to <a href="http://cellprofiler.org/linux.html" title=
-                  "CellProfiler for Linux machines open source image analysis free software">
-                  this page</a> for instructions on downloading and installing.
-                </p>
-              </div>
-            </div>
-          </center>
 
           <div style="clear:both; padding-top:0.5em">
           </div>
@@ -464,10 +401,10 @@
           CellProfiler v2.1.1 Manual <a href=
           "http://d1zymp9ayga15t.cloudfront.net/content/Documentation/cp2.1.1_manual_6c2d896.pdf" onclick=
           "javascript: _gaq.push(['_trackPageview', '/download/manualPDF']);"><img alt="PDF icon"
-          src="http://d1zymp9ayga15t.cloudfront.net/content/pdficon_small.gif" /></a>&nbsp; <a href=
+          src="http://d1zymp9ayga15t.cloudfront.net/pdficon_small.gif" /></a>&nbsp; <a href=
           "http://www.cellprofiler.org/CPmanual/" onclick=
           "javascript: _gaq.push(['_trackPageview', '/download/manualHTML']);"><img alt="HTML icon"
-          src="http://d1zymp9ayga15t.cloudfront.net/content/htmlicon_small.gif" /></a>
+          src="http://d1zymp9ayga15t.cloudfront.net/htmlicon_small.gif" /></a>
           &nbsp;&nbsp;|&nbsp;&nbsp; <a href="previousReleases.html">Previous
           releases</a> &nbsp;&nbsp;|&nbsp;&nbsp; <a href=
           "http://www.cellprofiler.org/cgi-bin/trunk_build.cgi">Bleeding-edge
