@@ -1,0 +1,3 @@
+<FilesMatch "\.(?i:cppipe|cpproj|xml|cp)$">
+  Header set Content-Disposition attachment
+</FilesMatch>
