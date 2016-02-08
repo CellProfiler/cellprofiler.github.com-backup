@@ -3,11 +3,11 @@ layout: default
 ---
 		<h1>WormToolbox</h1>
 		<p style="font-style:italic;">A component of CellProfiler cell image analysis software</p>
-		<p>The WormToolbox is a toolbox for high-throughput screening of image-based 
-			<span style="font-style:italic;">Caenorhabditis elegans</span> phenotypes. 
-			The image analysis algorithms measure morphological phenotypes in individual 
-			worms and are effective for a variety of assays and imaging systems. WormToolbox 
-			is available through CellProfiler and enables objective scoring of whole-worm 
+		<p>The WormToolbox is a toolbox for high-throughput screening of image-based
+			<span style="font-style:italic;">Caenorhabditis elegans</span> phenotypes.
+			The image analysis algorithms measure morphological phenotypes in individual
+			worms and are effective for a variety of assays and imaging systems. WormToolbox
+			is available through CellProfiler and enables objective scoring of whole-worm
 			high-throughput image-based assays of <span style="font-style:italic;">C. elegans
 			</span> for the study of diverse biological pathways that are relevant to human disease
 			[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3433711/">Nature Methods paper</a>].
@@ -22,35 +22,35 @@ layout: default
 					<img src="http://d1zymp9ayga15t.cloudfront.net/images/WTB_diagram.png" width="350px">
 				</td>
 				<td width="350px">
-					<p>The main analysis pipeline, Pipeline 1, shown in blue, 
-						is fully automated, and consists of the following steps:  
+					<p>The main analysis pipeline, Pipeline 1, shown in blue,
+						is fully automated, and consists of the following steps:
 					</p>
 					<ol type="a">
 						<li>Load input images from QORO assay.</li>
 						<li>Pre-process to detect artifacts such as bubbles and well edges.</li>
-						<li>Detect worms and clusters of worms. Individual worms/worm clusters are 
+						<li>Detect worms and clusters of worms. Individual worms/worm clusters are
 							randomly colored. </li>
-						<li>Delineate individual worms by model-based worm untangling. Now, each 
+						<li>Delineate individual worms by model-based worm untangling. Now, each
 							individual detected worm has a unique color.</li>
-						<li>Digitally straighten worms and align them to a simple worm atlas for 
-							measurement of stain distribution.</li> 
-						<li>Detect fatty regions within worms. Once worms and fatty regions are 
-							identified, a large number of intensity, shape and texture measurements 
+						<li>Digitally straighten worms and align them to a simple worm atlas for
+							measurement of stain distribution.</li>
+						<li>Detect fatty regions within worms. Once worms and fatty regions are
+							identified, a large number of intensity, shape and texture measurements
 							are extracted.</li>
 					</ol>
 
-					<p>If the provided default worm model does not fit the input data (e.g. due to a 
-						different image resolution or different worm strain), a new worm model can be 
-						created using Pipeline 2 (pink) to (g) manually select non-touching worms making 
+					<p>If the provided default worm model does not fit the input data (e.g. due to a
+						different image resolution or different worm strain), a new worm model can be
+						created using Pipeline 2 (pink) to (g) manually select non-touching worms making
 						up a training set for a new model built by Pipeline 3.
-					</p> 
-					<p>For low-throughput experiments, it is possible to manually curate faulty 
-						segmentation results using Pipeline 4 (orange) by (h) manual editing of the output 
-						from step d of pipeline 1, and (i) manual flipping of digitally straightened 
-						worms so that they all align in with heads or tails up. Measurements, such as 
-						intensity of stain, fat stain distribution, fat region size, worm width etc. 
-						may also be extracted from individual worms after manual correction. All 
-						measurements are exported to a database for further exploration and phenotyping. 
+					</p>
+					<p>For low-throughput experiments, it is possible to manually curate faulty
+						segmentation results using Pipeline 4 (orange) by (h) manual editing of the output
+						from step d of pipeline 1, and (i) manual flipping of digitally straightened
+						worms so that they all align in with heads or tails up. Measurements, such as
+						intensity of stain, fat stain distribution, fat region size, worm width etc.
+						may also be extracted from individual worms after manual correction. All
+						measurements are exported to a database for further exploration and phenotyping.
 					</p>
 					<p>Note that CellProfiler 2.1 should be used.</p>
 				</td>
@@ -85,7 +85,7 @@ layout: default
 			<tr>
 			<!--PIPELINE 1 TEXT-->
 				<td class="a" width="320px">
-					<p style="font-size:medium;font-weight:bold;">Pipeline 1: Identify and collect 
+					<p style="font-size:medium;font-weight:bold;">Pipeline 1: Identify and collect
 						measurements from individual worms and sub-regions
 					</p>
 					<p style="font-size:small;">CellProfiler 2.1 pipeline: <a href="worm_files/Pipeline1_UntangleWormsExtractMeasurements.cppipe">Pipeline1_UntangleWormsExtractMeasurements.cppipe</a></p>
@@ -101,15 +101,15 @@ layout: default
 						<li>Identify individual worms by worm untangling and extract measurements.</li>
 						<li>Straighten worms and extract measurements.</li>
 						<li>Identify sub-regions (fat) and extract measurements.</li>
-						<li>Export measurements to an SQLite database, save worm segmentation masks and images of worm and fat outlines.</li>	
+						<li>Export measurements to an SQLite database, save worm segmentation masks and images of worm and fat outlines.</li>
 					</ol>
 				</td>
 			<!--PIPELINE 2 TEXT-->
 				<td class="a" width="320px">
 					<p style="font-size:medium;font-weight:bold;">Pipeline 2: Find, select, and save individual worms
 					</p>
-					<p style="font-size:small;">CellProfiler 2.1 pipeline: <a href="worm_files/Pipeline2_SelectSingleWorms.cppipe">Pipeline2_SelectSingleWorms.cppipe</a></p>
-					<p style="font-size:small;">Download this video: <a href="worm_files/Pipeline2.mp4">Pipeline2.mp4</a></p>
+					<p style="font-size:small;">CellProfiler 2.1 pipeline: <a href="http://d1zymp9ayga15t.cloudfront.net/worm_files/Pipeline2_SelectSingleWorms.cppipe">Pipeline2_SelectSingleWorms.cppipe</a></p>
+					<p style="font-size:small;">Download this video: <a href="http://d1zymp9ayga15t.cloudfront.net/worm_files/Pipeline2.mp4">Pipeline2.mp4</a></p>
 					<p style="font-size:small;">This pipeline may be omitted if a previously created model (e.g. DefaultWormModel.xml provided with Pipeline 1) fits the new data. Steps A-C are the same as in Pipeline 1; the same pre-processing and foreground/background segmentation should be applied both when creating the worm model and when running the analysis as changes to the pre-processing may affect the appearance of the width of the worms, in turn influencing the model. This pipeline requires manual interaction selecting representative non-touching worms.
 					</p>
 					<p style="font-size:small;">Steps of the pipeline:</p>
@@ -118,7 +118,7 @@ layout: default
 						<li>Pre-process data by compensating for non-uniform illumination and removing artifacts such as well edges and bubbles.</li>
 						<li>Separate worms and worm clusters the from image background by foreground/background image segmentation.</li>
 						<li>Manually select single worms for worm modeling. Approximately 50 worms representing the variability in the dataset is usually sufficient.</li>
-						<li>Make sure that the selected single worms are saved as training worms.</li>					
+						<li>Make sure that the selected single worms are saved as training worms.</li>
 					</ol>
 					<p style="font-size:small;"><span style="font-weight:bold;">NOTE</span>: The video incorrectly states that WormObjects should be used as input for the ConvertObjectsToImage module. The correct input for that module is SelectedSingleWorms.
 					</p>
@@ -138,11 +138,11 @@ layout: default
 			<!--PIPELINE 3 TEXT-->
 				<td class="a" width="320px">
 					<p style="font-size:medium;font-weight:bold;">Pipeline 3: Create a new worm model from individual worms </p>
-					<p style="font-size:small;">CellProfiler 2.1 pipeline: <a href="worm_files/Pipeline3_TrainModel.cppipe">Pipeline3_TrainModel.cppipe</a></p>
-					<p style="font-size:small;">Download this video: <a href="worm_files/Pipeline3.mp4">Pipeline3.mp4</a></p>
-					<p style="font-size:small;">This module takes the manually selected training worms from 
-						Pipeline 2 as input. It is recommended to visually browse through the binary input images 
-						before running this pipeline to make sure that they represent single worms. The pipeline 
+					<p style="font-size:small;">CellProfiler 2.1 pipeline: <a href="http://d1zymp9ayga15t.cloudfront.net/worm_files/Pipeline3_TrainModel.cppipe">Pipeline3_TrainModel.cppipe</a></p>
+					<p style="font-size:small;">Download this video: <a href="http://d1zymp9ayga15t.cloudfront.net/worm_files/Pipeline3.mp4">Pipeline3.mp4</a></p>
+					<p style="font-size:small;">This module takes the manually selected training worms from
+						Pipeline 2 as input. It is recommended to visually browse through the binary input images
+						before running this pipeline to make sure that they represent single worms. The pipeline
 						is fully automated, and the resulting model will be called MyWormModel.xml.
 					</p>
 					<ol type="A" style="font-size:small;">
@@ -154,12 +154,12 @@ layout: default
 				<td class="a" width="320px">
 					<p style="font-size:medium;font-weight:bold;">Pipeline 4: Untangle, correct, and straighten worm clusters
 					</p>
-					<p style="font-size:small;">CellProfiler 2.1 pipeline: <a href="worm_files/Pipeline4_ManuallyCorrectStraighten.cppipe">Pipeline4_ManuallyCorrectStraighten.cppipe</a></p>
-					<p style="font-size:small;">Worm model: <a href="worm_files/DefaultWormModel.xml">DefaultWormModel.xml</a></p>
-					<p style="font-size:small;">Download this video: <a href="worm_files/Pipeline4.mp4">Pipeline4.mp4</a></p>
-					<p style="font-size:small;">This pipeline loads the untangling results from Pipeline 1 and allows 
-						the user to edit any errors in the untangling prior to straightening the worms for visualization 
-						and extraction of measurements. A worm model (DefaultWormModel.xml or a new model created by 
+					<p style="font-size:small;">CellProfiler 2.1 pipeline: <a href="http://d1zymp9ayga15t.cloudfront.net/worm_files/Pipeline4_ManuallyCorrectStraighten.cppipe">Pipeline4_ManuallyCorrectStraighten.cppipe</a></p>
+					<p style="font-size:small;">Worm model: <a href="http://d1zymp9ayga15t.cloudfront.net/worm_files/DefaultWormModel.xml">DefaultWormModel.xml</a></p>
+					<p style="font-size:small;">Download this video: <a href="http://d1zymp9ayga15t.cloudfront.net/worm_files/Pipeline4.mp4">Pipeline4.mp4</a></p>
+					<p style="font-size:small;">This pipeline loads the untangling results from Pipeline 1 and allows
+						the user to edit any errors in the untangling prior to straightening the worms for visualization
+						and extraction of measurements. A worm model (DefaultWormModel.xml or a new model created by
 						Pipelines 2 and 3) is needed as input for the straightening step.
 					</p>
 					<ol type="A" style="font-size:small;">
@@ -174,12 +174,12 @@ layout: default
 		</table>
 
 		<hr />
-		
+
 		<h2>Files needed for the tutorials</h2>
 			<ul>
-				<li><a href="worm_files/WormToolbox_tutorial_pipelines.zip">CellProfiler 2.1 tutorial Pipelines 1–4 (zip)</a></li>
+				<li><a href="http://d1zymp9ayga15t.cloudfront.net/worm_files/WormToolbox_tutorial_pipelines.zip">CellProfiler 2.1 tutorial Pipelines 1–4 (zip)</a></li>
 				<!--<li><a href="worm_files/ORO_controls_130801.zip">Image data (zip)</a></li>-->
-				<li><a href="worm_files/Example_image_data.zip">Example image data for tutorials (zip)</a></li>
+				<li><a href="http://d1zymp9ayga15t.cloudfront.net/worm_files/Example_image_data.zip">Example image data for tutorials (zip)</a></li>
 			</ul>
 
 		<h2>Video tutorials on how to use CellProfiler Analyst</h2>
@@ -191,7 +191,7 @@ layout: default
 
 		<h2>Example pipelines</h2>
 			<p style="font-size:small;margin-left:27px;">Previously published example pipelines using the WormToolbox</p>
-			<p style="font-size:small;font-style:italic;margin-left:27px;">As presented in Wählby et al. 2012, these additional pipelines 
+			<p style="font-size:small;font-style:italic;margin-left:27px;">As presented in Wählby et al. 2012, these additional pipelines
 				include illumination correction and feature extraction from fluorescence microscopy data.</p>
 			<ul>
 				<li><a href="http://cellprofiler.org/examples.html#UntangleWorms">Untangle worms</a></li>
@@ -199,7 +199,7 @@ layout: default
 				<li><a href="http://cellprofiler.org/examples.html#CreateModel">Create your own worm model</a></li>
 				<li><a href="http://cellprofiler.org/examples.html#UntangleWormsBright-field">Untangle worms and make measurements bright-field staining pattern phenotype</a></li>
 			</ul>
-			
+
 		<h2>Broad Bioimage Benchmark Collection (BBBC) <em>C. elegans</em> datasets</h2>
 			<ul>
 				<li><a href="http://www.broadinstitute.org/bbbc/BBBC010/">BBBC010 <em>C. elegans</em> live/dead assay</a></li>
@@ -211,36 +211,36 @@ layout: default
 			<ul>
 				<li><a href="../outreach.html"><em>C. elegans</em> image analysis written exercise</a></li>
 			</ul>
-		
+
 		<hr />
 
 		<h2>Publications</h2>
 		<ol>
-			<li>Wählby C, Kamentsky L, Liu ZH, Riklin-Raviv T, Conery AL, O'Rourke EJ, Sokolnicki KL, 
-				Visvikis O, Ljosa V, Irazoqui JE, Golland P, Ruvkun G, Ausubel FM and Carpenter AE (2012) 
-				An image analysis toolbox for high-throughput <em>C. elegans</em> assays. <i>Nature 
-				Methods</i> 9(7):714-U273. doi: 10.1038/nmeth.1984 PMID: 22522656. PMCID: PMC3433711. 
+			<li>Wählby C, Kamentsky L, Liu ZH, Riklin-Raviv T, Conery AL, O'Rourke EJ, Sokolnicki KL,
+				Visvikis O, Ljosa V, Irazoqui JE, Golland P, Ruvkun G, Ausubel FM and Carpenter AE (2012)
+				An image analysis toolbox for high-throughput <em>C. elegans</em> assays. <i>Nature
+				Methods</i> 9(7):714-U273. doi: 10.1038/nmeth.1984 PMID: 22522656. PMCID: PMC3433711.
 				Available at <a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3433711/">
 				http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3433711/</a>
 			</li>
-			<li>Riklin-Raviv T, Ljosa V, Conery AL, Ausubel FM, Carpenter AE, Golland P and Wählby C 
+			<li>Riklin-Raviv T, Ljosa V, Conery AL, Ausubel FM, Carpenter AE, Golland P and Wählby C
 				(2010) Morphology-guided graph search for untangling objects: <span style="font-style:italic">
-				C elegans</span> analysis. In <em>Medical Image Computing and Computer Assisted Intervention</em> 
-				(MICCAI) 2010; 13(3):634-641. PMID: 20879454. PMCID: PMC3050593. Available at 
+				C elegans</span> analysis. In <em>Medical Image Computing and Computer Assisted Intervention</em>
+				(MICCAI) 2010; 13(3):634-641. PMID: 20879454. PMCID: PMC3050593. Available at
 				<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3050593/">
 				http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3050593/</a>
 			</li>
-			<li>Wählby C, Riklin-Raviv T, Ljosa V, Conery AL, Golland P, Ausubel FM and Carpenter AE 
-				(2010) Resolving clustered worms via probabilistic shape models. In <em>ISBI 2010 (Proceedings 
-				of the IEEE International Symposium on Biomedical Imaging: From Nano to Macro)</em>, 552-555. 
-				doi: 10.1109/ISBI.2010.5490286 PMID: 21383863. PMCID: PMC3048333. Available at 
+			<li>Wählby C, Riklin-Raviv T, Ljosa V, Conery AL, Golland P, Ausubel FM and Carpenter AE
+				(2010) Resolving clustered worms via probabilistic shape models. In <em>ISBI 2010 (Proceedings
+				of the IEEE International Symposium on Biomedical Imaging: From Nano to Macro)</em>, 552-555.
+				doi: 10.1109/ISBI.2010.5490286 PMID: 21383863. PMCID: PMC3048333. Available at
 				<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3048333/">
 				http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3048333/</a>
 			</li>
-			<li>Wählby C, Lee Conery A, Bray MA, Kamentsky L, Larkins-Ford J, Sokolnicki KL, Veneskey M, 
-				Michaels K, Carpenter AE and O'Rourke EJ (2014). High- and low-throughput scoring of fat mass 
-				and body fat distribution in C. elegans.<i> Methods</i> 68(3):492-499. doi: 10.1016/j.ymeth.2014.04.017 
-				PMID: 24784529 PMCID: 4112171. Available at 
+			<li>Wählby C, Lee Conery A, Bray MA, Kamentsky L, Larkins-Ford J, Sokolnicki KL, Veneskey M,
+				Michaels K, Carpenter AE and O'Rourke EJ (2014). High- and low-throughput scoring of fat mass
+				and body fat distribution in C. elegans.<i> Methods</i> 68(3):492-499. doi: 10.1016/j.ymeth.2014.04.017
+				PMID: 24784529 PMCID: 4112171. Available at
 				<a href="http://www.ncbi.nlm.nih.gov/pubmed/24784529">
 				http://www.ncbi.nlm.nih.gov/pubmed/24784529</a>
 			</li>
