@@ -1,0 +1,542 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html><head>
+<title>CellProfiler cell image analysis software</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<style type="text/css" media="all">
+	@import "../cp_stylesheet.css";
+	</style>
+<style>
+	div.hours-banner
+	{
+	width:600px;
+	font-weight:bold;
+	font-size:x-large;
+	background-color:#FFEF99;
+	border:3px outset #FFF7CC;
+	padding:20px;
+	}
+
+	div.feature-wrapper
+	{
+	width:800px;
+	}
+
+	div.feature-row
+	{
+	padding:25px 0px;
+	display:inline-block;
+	margin-left:auto;
+	margin-right:auto;
+	}
+
+	div.feature-box
+	{
+	float:left;
+	width:340px;
+	}
+
+	div.feature-pic
+	{
+	width:280px;
+	height:160px;
+	}
+
+	div.feature-title
+	{
+	width:280px;
+	font-weight:bold;
+	font-size:large;
+	padding-top:15px;
+	padding-bottom:5px;
+	}
+
+	div.feature-details
+	{
+	width:280px;
+	text-align:left;
+	}
+
+	div.link-button
+	{
+	margin:10px;
+	width:280px;
+	height:160px;
+	line-height:100px;
+	display:table-cell;
+	vertical-align:middle;
+	}
+
+	p.link-button-text
+	{
+	font-size:xx-large;
+	color:#FFFFFF;
+	font-weight:bold;
+	vertical-align:middle;
+	}
+
+	p.line-statement
+	{
+	font-style:italic;
+	}
+
+	a.button-link:link
+	{
+	text-decoration:none;
+	}
+
+	a.button-link:hover
+	{
+	text-decoration:underline;
+	color:#FFFFFF;
+	}
+
+	img.pro-pic
+	{
+	width:280px;
+	height:160px;
+	}
+
+	div.bonus-features
+	{
+	display:inline-table;
+	max-width:520px;
+	width:520px;
+	height:83px;
+	font-weight:bold;
+	font-size:large;
+	}
+
+	div.bonus-left-part
+	{
+	display:table-cell;
+	font-size:x-large;
+	height:83px;
+	width:80px;
+	line-height:40px;
+	vertical-align:middle;
+	padding-left:10px;
+	font-weight:bold;
+	}
+
+	div.bonus-right-part
+	{
+	display:inline-table;
+	width:520px;
+	height:83px;
+	text-align:left;
+	padding-left:20px;
+	font-weight:normal;
+	}
+
+	ul.bonus-list
+	{
+	margin:0px;
+	padding-left:20px;
+	line-height:30px;
+	}
+
+	.sign-up-button
+	{
+	-moz-box-shadow:inset 0px 1px 0px 0px #f9eca0;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #f9eca0;
+	box-shadow:inset 0px 1px 0px 0px #f9eca0;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #fff099), color-stop(1, #f2ab1e) );
+	background:-moz-linear-gradient( center top, #fff099 5%, #f2ab1e 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff099', endColorstr='#f2ab1e');
+	background-color:#fff099;
+	-webkit-border-top-left-radius:20px;
+	-moz-border-radius-topleft:20px;
+	border-top-left-radius:20px;
+	-webkit-border-top-right-radius:20px;
+	-moz-border-radius-topright:20px;
+	border-top-right-radius:20px;
+	-webkit-border-bottom-right-radius:20px;
+	-moz-border-radius-bottomright:20px;
+	border-bottom-right-radius:20px;
+	-webkit-border-bottom-left-radius:20px;
+	-moz-border-radius-bottomleft:20px;
+	border-bottom-left-radius:20px;
+	text-indent:0;
+	border:1px solid #e6b045;
+	display:inline-block;
+	color:#000000;
+	font-family:Arial;
+	font-size:24px;
+	font-weight:bold;
+	font-style:normal;
+	height:60px;
+	line-height:60px;
+	width:250px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #ded17c;
+	}
+
+	.sign-up-button:hover
+	{
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f2ab1e), color-stop(1, #fff099) );
+	background:-moz-linear-gradient( center top, #f2ab1e 5%, #fff099 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f2ab1e', endColorstr='#fff099');
+	background-color:#f2ab1e;
+	}
+
+	.sign-up-button:active
+	{
+	position:relative;
+	top:1px;
+	}
+	/* This button was initially generated using CSSButtonGenerator.com and customized by Matthew Veneskey */
+
+	.questions-button
+	{
+	-moz-box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+	box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #79bbff), color-stop(1, #378de5) );
+	background:-moz-linear-gradient( center top, #79bbff 5%, #378de5 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#79bbff', endColorstr='#378de5');
+	background-color:#79bbff;
+	-webkit-border-top-left-radius:20px;
+	-moz-border-radius-topleft:20px;
+	border-top-left-radius:20px;
+	-webkit-border-top-right-radius:20px;
+	-moz-border-radius-topright:20px;
+	border-top-right-radius:20px;
+	-webkit-border-bottom-right-radius:20px;
+	-moz-border-radius-bottomright:20px;
+	border-bottom-right-radius:20px;
+	-webkit-border-bottom-left-radius:20px;
+	-moz-border-radius-bottomleft:20px;
+	border-bottom-left-radius:20px;
+	text-indent:0;
+	border:1px solid #84bbf3;
+	display:inline-block;
+	color:#000000;
+	font-family:Arial;
+	font-size:24px;
+	font-weight:bold;
+	font-style:normal;
+	height:60px;
+	line-height:60px;
+	width:250px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #528ecc;
+	}
+
+	.questions-button:hover
+	{
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #378de5), color-stop(1, #79bbff) );
+	background:-moz-linear-gradient( center top, #378de5 5%, #79bbff 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#378de5', endColorstr='#79bbff');
+	background-color:#378de5;
+	}
+
+	.questions-button:active
+	{
+	position:relative;
+	top:1px;
+	}
+	/* This button was initially generated using CSSButtonGenerator.com and customized by Matthew Veneskey */
+</style>
+
+
+<script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script><script> function clientSideInclude(id, url) { return; }</script>
+
+
+<style type="text/css">div.boxed {background:#CCCCFF;color:#000;display:inline-block}</style>
+<link rel="stylesheet" type="text/css" href="../NiftyCube/niftyCorners.css">
+<script type="text/javascript" src="../NiftyCube/niftycube.js"></script>
+<link rel="alternate" type="application/rss+xml" href="../news.rss" title="CellProfiler News">
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-4307992-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<link type="text/css" rel="stylesheet" href="../NiftyCube/niftyCorners.css" media="screen"></head>
+
+<body onload="clientSideInclude('header','../header.txt');
+              clientSideInclude('footer','../footer.txt');
+              Nifty('div.boxed','big');
+              document.getElementById('header_help').id='current';">
+
+<div id="mainwrapper">
+
+<div id="header">
+<div>
+<a href="/">
+<img class="header1" src="../images/cp_logo_smaller.png" width="400" border="0"></a>
+
+<a href="http://www.broadinstitute.org/science/platforms/imaging/imaging-platform">
+<img class="header2" src="../images/BroadInstituteLogo_smaller.png" width="220" height="68" border="0" alt="Broad Institute logo"></a>
+
+<div id="navigation">
+<hr />
+  <ul>
+    <li><a href="/" id="header_main">home</a> </li>
+    <li><a href="/gettingStarted.shtml" id="header_getting_started">getting started </a>
+      <ul>
+       <li><a href="/faq.shtml">What is CellProfiler?</a></li>
+       <li><a href="/examples.shtml">examples</a></li>
+       <li><a href="/tutorials.shtml">tutorials</a></li>
+       <li><a href="/linked_files/CellProfilerSoftwareBrochure.pdf">brochure</a></li>
+      </ul>
+    </li>
+    <li><a href="/download.shtml" id="header_download">download</a>
+      <ul>
+        <li><a href="/download.shtml">CellProfiler</a></li>
+        <li><a href="/downloadCPA.shtml">CellProfiler Analyst</a></li>
+      </ul>
+    </li>
+	<li style="width:109px;text-align:center;"><a href="/forum/" id="header_help">help</a>
+      <ul>
+    	<li><a href="/forum/">forum</a></li>
+	<li><a href="/supportplan.shtml">support plan</a>
+       	<li><a href="http://www.broadinstitute.org/bbbc/">BBBC</a></li>
+    	<li><a href="https://github.com/CellProfiler/CellProfiler/wiki">for developers</a></li>
+	<li><a href="/manuals.shtml">manuals</a></li>
+	<li><a href="/wormtoolbox">WormToolbox</a></li>
+      </ul>
+	</li>
+    <li><a href="/about.shtml" id="header_aboutus">about us</a>
+      <ul>
+      	<li><a href="/about.shtml">CellProfiler Team</a>
+        <li><a href="/press.shtml">press</a></li>
+        <li><a href="/citations.shtml">citations</a></li>
+	<li><a href="/impact.shtml">impact</a></li>
+        <li><a href="/outreach.shtml">outreach</a></li>
+	<li><a href="/interfaces.shtml">interfaces</a></li>
+    	<li><a href="/#CurrentNews">news</a> </li>
+      </ul>
+    </li>
+    <li class="navsearch">
+      <form method="get" action="http://google.com/search"
+            onsubmit="location.href = this.action + '?&q=%2Bsite:cellprofiler.org+' + this.query.value; return false;">
+        <input type="text" name="query" size="20" maxlength="255" value="" />
+        <input type="submit" value="search" />
+      </form>
+  </ul>
+
+  <br />
+  <hr style="clear:left"/>
+</div>
+</div>
+
+</div>
+
+
+<div id="content">
+<!--Content here-->
+
+<table><tr>
+<td>
+<h1>Tracer</h1>
+<p style="font-style:italic;"> A component of CellProfiler Analyst cell image analysis software</p>
+<p><b>CellProfiler Tracer</b> is a data visualization and exploration tool for time-lapse image-based assays.
+Tracer is available within CellProfiler Analyst and enables visualization and quality assessment of
+cellular trajectories obtained via time-lapse imaging.</p>
+
+<p>In the world of cellular image analysis, time-lapse assays remain one of the more challenging domains in biology.
+Often, the dynamic behavior of organisms, cells, organelles, or molecular assemblies can only appreciated by observing them over time. While a wide range of tracking algorithms have been developed, open-source tools tailored
+towards the visualization of their results, in particular the assessment of the result quality, are uncommon. In particular,
+for high-content screening purposes, where the biologist is looking at a large number of per-cell measurements, it is vital to be able to visually assess the development of these measurements across time within the local context of the cell being examined. </p>
+
+<p>The <a href="http://www.broadinstitute.org/~anne/">Imaging Platform</a> at the <a href="http://www.broadinstitute.org/">Broad Institute</a> specializes in producing the rich set of measurements characteristic of these screening efforts. In addition, we have included object tracking functionality in our CellProfiler open-source software. Lastly, we have developed CellProfiler Analyst for the purpose of data exploration. We have leveraged all of these capabilities into a new package, CellProfiler Tracer.</p>
+
+<table>
+<tr>
+<td><a href="files/software/CellProfiler-Analyst.exe"><img src="images/download_button.png" height="50px"></a></td>
+<td>(Windows 64-bit)</td></tr>
+</table></br>
+Source code available <a href="tech_notes">below</a>.</br>
+<p><b>Important installation notes:</b> 
+<ul>
+<li>Tracer is a modification of the CellProfiler Analyst package. If you already have CellProfiler Analyst installed on your system, it is recommended to install the Tracer version to a different folder.</li>
+<li>The Java Development Environment (JDK) is requried for Tracer to run; download from <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">here<a/a>. Make sure to install the 64-bit Windows version, and then add the JDK <i>bin</i> location to your PATH environment variable (<a href="https://java.com/en/download/help/path.xml">instructions</a>).</li>
+</ul></p>
+<p><b>Questions?</b> Please direct them to our online <a href="http://cellprofiler.org/forum/viewforum.php?f=11">forum</a> dedicated to CellProfiler Analyst.</p>
+
+<h4>Quick links</h4>
+<ul>
+<li><a href="#tutorial">Tutorial</a></li>
+<li>
+<ul>
+<li><a href="#data_display">Data display</a></li>
+<li><a href="#control_panel">Control panel components</a></li>
+<li><a href="#context_menu">Trajectory context menu</a></li>
+<li><a href="#quality_assessment">Quality assessment metrics</a></li>
+</ul></li>
+<li><a href="#files_needed">Files needed for the tutorials</a></li>
+<li><a href="#tech_notes">Technical and developer notes</a></li>
+</ul>
+
+</td>
+<td valign="top"><table cellpadding="5" ><tr><td><img src="images/xyt_screenshot.png" width="500px"><td></tr></table></td>
+</tr></table>
+
+<hr />
+
+<a name="tutorial"><h2>Tutorial</h2>
+
+<a name="data_display"><h3>Data display</h3>
+<p>To start a Tracer session, start the Tracer version of the CellProfiler Analyst application (available <a href="files/software/CellProfiler-Analyst.exe">here</a>), which will request a properties file. The <i>properties file</i> is a human-readable configuration file which provides the configuration details for the collected data. If CellProfiler is used to produce the data to be analyzed in Tracer, the <a href="http://cellprofiler.org/CPmanual/ExportToDatabase.html">ExportToDatabase</a> module can be used to automatically generate a properties file. Otherwise, one can be created manually; please refer to the <a href="http://cellprofiler.org/examples.shtml#cpa_examples">Examples</a> page or the "Files needed" section below for an template properties file. Once this file is loaded, the main CellProfiler Analyst user interface is displayed and Tracer is selected from the row of icons presented </p>
+<img src="images/cpa_screenshot.png" width="500px">
+<p>The data set used in this example consists of dividing cells in a Drosophila embryo (<a href="#dataset2">download</a>), in which the genes were modified to make the DNA fluorescent. CellProfiler was used to analyze this movie using the <a href="http://www.cellprofiler.org/CPmanual/TrackObjects.html">TrackObjects</a> module to track the individual cells across time, and collect measurements such as intensity, morphology and texture; the pipeline is available here (<a href="#dataset2">download</a>).</p>
+
+<p>When starting Tracer, this tracking data is read in order to construct a network graph that is displayed in two complementary formats:
+<table>
+<tr>
+<td><img src="images/tracer.png" width="500px"><td>
+<td><p>The panel on the left is an <b>XYT plot</b> which shows the evolution of the individual cells across time; the spatial axes are the horizontal plane with the vertical axes representing time. </p>
+<p>The panel on the right is a <b>lineage plot</b> which shows the same graph as on the left, but without the spatial information so that the ancestor/descendant relationships can be seen in more detail.</p>
+<p>Below both is a <b>control panel</b> with various operations that can be used to re-display or interrogate the data.
+</tr>
+</table>
+</p>
+
+<a name="control_panel"><h3>Control panel components</h3>
+A number of functions are available from the control panel:
+<ul>
+<li><i>Data Source:</i> If multiple movies were analyzed in the course of a single pipeline, they can be selected by index here.</li>
+<li><i>Data Tracks:</i> The original, unedited tracks are the default for this drop-down. Edits made to the trajectories may saved under a new identifier and are then also listed here.</li>
+<li><i>Data Tracks:</i> The original, unedited tracks are the default for this drop-down. Edits made to the trajectories may saved under a new identifier and are then also listed here.</li>
+<li><i>Select Tracks to Visualize...:</i> This button will bring up a listbox allowing selection of any individual trajectory to better assess its behavior. Multiple trajectories can be selected.</li>
+<li><i>Show LAP Diagnostic Graphs:</i> (This button only appears if the LAP method was used in the object tracking in CellProfiler) Pressing this button will bring up a new window displaying histograms of two linear-assignment problem (LAP)-related metrics (described in <a href="http://cshprotocols.cshlp.org/content/2009/12/pdb.top65.full">Jaqaman and Danuser, 2009</a>):
+<ul><li>The frame-to-frame displacement histogram is useful for determining the appropriate search radius to find an object from one frame to the next. The histogram is typically unimodal and decays with higher linking distances. A decay towards zero indicates that the given maximum search radius is sufficiently large; if the distribution decay is truncated, then the specified maximum search radius is too small. The tool will report the abscissa at 95% of the maximum count as the recommended search radius.</li>
+<li>The gap length histogram can be used for finding the optimal time window for reconnecting trajectory gaps resulting from the temporary disappearance of an object. A distribution which plateaus towards longer gap lengths indicates that the chosen time window is too large, and gaps are probably being closed incorrectly. A distribution with no plateau indicates a proper time window length. </li>
+</ul></li>
+<li><i>Data Measurements:</i> Any of the cellular measurements generated during the analysis run may be selected here. Selecting "Other derived metrics…" from the drop-down enables additional tools in the control panel, described below.</li>
+<li><i>Colormap:</i>The color scheme to apply to both panels may be selected here.</li>
+<li><i>Update Display:</i> Press this button whenever a change is made to the data source, measurement, tracks and colormap drop-downs.</li>
+<li><i>? (question mark):</i> Click this button and then click on an interface element to bring up help for that element.
+<li><i>Derived Metrics:</i> This drop-down is activated when "Derived metrics" is selected from "Data Measurements". It lists the various quality control metrics that are generated from the graph topology of the tracked data. The metrics are listed below.</li>
+</ul>
+
+<a name="context_menu"><h3>Trajectory context menu items</h3>
+<p>Right-clicking on either panel brings up a number of options:
+<ul>
+<li><i>Select cell using object ID:</i> The image and object index can entered in order to select a cell in the panels. This can be used in place of finding and clicking on a individual cell.
+<li><i>Make all trajectories visible:</i> Restores the visibility of all trajectories in the panels.</li>
+<li><i>Display measurement heatmap...:</i> Displays a heatmap of measurements averaged across all trajectroies for each timepoint. You can select which measurements to display. The display is shown using the current colormap.
+</ul>
+If a cell is selected in the panels, the context menu shows the selected trajectory number plus the image number/object number index of the selected cell. Additional context menu options are also shown:
+<ul>
+<li><i>Show selected cell as...:</i> This gives additional options of showing the selected cell in the following ways:
+<ul>
+<li><i>Image tile:</i>Shows a square "window" displaying an individual cell. The size of the tile is set with the <code>image_tile_size</code> field in the properties file.</li>
+<li><i>Full image:</i>Shows the full image, with the selected cell highlighted with a small square dot.</li>
+<li><i>Data table from select trajectory:</i> Provides tabular data of measurement values along the trajectory containing the selected cell. A data table is displayed with each row representing the frame index and the column values corresponding that of the currently selected measurement in the control panel.</li>
+</ul></li>
+<li><i>Define trajectory segment as...:</i> A contiguous sub-section of the trajectory (the trajectory segment) containing the selected object can be defined with this option. A trajectory segment can be defined in the following ways:
+<ul>
+<li><i>Endpoint #1:</i> Use the selected point to define the first endpoint of a segment.</li>
+<li><i>Endpoint #2:</i> Use the selected point to define the second endpoint of a segment.</li>
+<li><i>N frames before/after:</i> Enter the number of frames upstream and downstream of the selected cell in order to define the segment. If there are branchpoints upstream/downstream of the cell, the longer branch will be used.</li>
+</ul>
+<li><i>Display trajectory segment as...:</i> The trajectory segment can be displayed in the following ways:
+<ul>
+<li><i>Synchrogram (Image montage):</i> Display an image montage (synchrogram) of the selected cell as a series of image tiles, with the selected cell centered in the middle of the tile.</li>
+<li><i>Plot of currently selected measurement:</i> Display a graph of the currently selected measurement along the points specified by the trajectory segment. </li>
+</ul>
+</ul>
+</p>
+
+<a name="quality_assessment"><h3>Quality assessment metrics</h3>
+The trajectories in both panels can be color-coded according to network graph topological metrics; it is these metrics which allow for  assessment of tracking quality.
+
+<ul>
+<li><i>Singletons:</i> Trajectories of very short length are highlighted. Problems in image foreground identification may produce objects that appear transiently and then disappear.</li>
+<li><i>Crossings:</i> In biology, cells typically do not merge, so a merge event followed quickly by a split is more likely the result of two neighboring cells getting erroneously combined for a few frames. This would be indicated in a graph as an node with an <a href="http://en.wikipedia.org/wiki/Directed_graph#Indegree_and_outdegree">in-degree</a> > 1 and an <a href="http://en.wikipedia.org/wiki/Directed_graph#Indegree_and_outdegree">out-degree</a> > 1.</li>
+<li><i>Loops:</i> Transient errors in segmentation in which a single cell is erroneously divided into multiple pieces tend to occur as a brief temporal split and merge of a single object. In graph terminology, this is characterized as a <a href="http://en.wikipedia.org/wiki/Cycle_(graph_theory)">simple cycle</a>, an element readily identifiable in a graph as a closed loop. </li>
+<li><i>BetweennessCentrality:</i> Another more flexible approach to the above is to examine the betweenness centrality of the nodes downstream from a branchpoint. The <a href="http://en.wikipedia.org/wiki/Betweenness_centrality">betweenness centrality</a> of a node is the sum of the number of paths that traverse that node. A downstream node located on a short branch would have a lower betweenness centrality than nodes on a longer branch. </li>
+<li><i> NodesWithinDistanceCutoff:</i> An alternate version of the above is one where the new object terminates at t = 1 rather than being registered as a merge with the original object. In this case, the graph appears as a branchpoint in which one branch is much shorter than the other. Such terminal nodes can be detected as those (a) within a certain node distance from the branchpoint and (b) an out-degree of 0. This is most likely due to a mis-segmentation in which one piece was subsequently lost.</li>
+</ul>
+
+<p>For the "Singletons" and "Nodes within Distance Cutoff" metrics, the user can enter the number of nodes defining a singleton or a terminal branch, respectively. For the "Singletons" metric, a button is available which presents the user with a histogram of the track lengths along with some basic statistics, e.g., total number of tracks, number of singletons, etc.</p>
+
+<p>Upon selecting a metric, pressing the "Update Plot" button will re-draw the trajectories with the flagged nodes highlighted in red for ease of viewing. At this point, the user has several buttons for how to treat these nodes:
+<ul>
+<li><i>Preview Pruned Edges:</i> Toggling this button will re-draw the graphs with the linking edges of the flagged nodes removed.</li>
+<li><i>Add Pruning To Edits:</i> Add the pruning selection to a list of graph edits. This allows the user build an edited version of the original graph based on the cumulative results of several metrics. </li>
+<li><i>Save Edited Tracks...:</i> Create a new graph based on the final list of graph edits. This graph will be assigned a name provided by the user, and will then be added to the "Data Tracks" drop-down. The derived metrics will be re-calculated for this graph, so further edits can be made with updated information. Additionally, the new graph will be added to the adjacency table in the database so it can retrieved across Tracer sessions.</li>
+</ul></p>
+
+<hr />
+
+<a name="files_needed"><h2>Files needed for the tutorials</h2>
+<p>We have two sample datasets available to use with Tracer. The image data is in the form of individual image frames; the movies shown below are for illustrative purposes.</p>
+<p>Note that CellProfiler 2.1 or greater should be used to run the pipelines (<a href="http://www.cellprofiler.org/download.shtml">download</a>).</p>
+<table border="1">
+<tr>
+<td><a name="dataset1" href="files/dataset1.zip">Two image sequences of MCF-7 cells labeled with NLS-mCerulean fusion protein, plus analysis pipeline</a> (ZIP, 54MB). Contributed by Albert Yeh (<a href="http://www.massgeneral.org/cancer/research/researchlab.aspx?id=1188">Ramaswamy lab</a>).</td>
+<td>
+<img src="files/videos/1.gif">
+<img src="files/videos/5.gif">
+</td>
+</tr>
+<tr>
+<td><a name="dataset2" href="files/dataset2.zip">An image sequence of a <i>Drosophila</i> blastoderm embryo with GFP-histone marking the nuclear DNA, plus analysis pipeline</a> (ZIP, 25MB). Contributed by Victoria Foe (<a href="http://celldynamics.org/celldynamics/people/foe/">Foe lab</a>).</td>
+<td>
+<img src="files/videos/cropped.gif">
+</td>
+</tr>
+</table>
+<p>Note that when using the properties files associated with these datasets, the <i>images</i> and <i>output</i> subfolders must stay in the same location relative to the properties files and the SQLite database (.db) file.</p>
+<hr />
+<a name="tech_notes"><h2>Technical and developer notes</h2>
+
+<h3>Source code</h3>
+<p>The <a href="https://github.com/CellProfiler/CellProfiler-Analyst/tree/cellprofiler-tracer">source code</a> is available as a branch from the main CellProfiler Analyst public repository on GitHub.</p>
+
+<h3>Compilations</h3>
+<p>Currently, compiled versions are available for Windows 64-bit only. Producing a compilation for Mac OS would require a significant amount of additional work.</p>
+
+<h3>Data schema</h3>
+Tracer is designed to process and explore any MySQL- or SQLite-based database of image-based screening data structure according to the following simple scheme:
+<ul>
+<li>An <i>image table</i> with the rows corresponding to channel data from single field of view at a single timepoint and the columns containing the image data (e.g., the name of the treatment condition, the path to and filename of the original image, etc.). A requirement for this table is an image index, a column of integers referencing each site acquired.</li>
+<li>At least <i>one object table</i> with rows corresponding to a given object (e.g., cells) from a single image table row and the columns containing the object data (e.g., area of the cell, intensity of DNA stain in the nucleus, location of the cell in the original image). Required for this table is an image index as described above, as well as an object index, a column of integers reference each object identified in an image.</li>
+<li>In addition, an <i>object relationship table</i> is also required. Each row corresponds to the image and object index for a given object and that of its “parent”, i.e, tracked predecessor. </li>
+</ul>
+<p>For large image-based screens (>10,000 images), the typical workflow is to store the data set remotely on an MySQL database due to the prohibitive storage requirements for the collected measurements. However, using SQLite for local storage provides the same functionality and is more suitable for small or intermediate-level screens.</p>
+
+<p>The image and object data tables are automatically produced by the <a href="http://cellprofiler.org/CPmanual/ExportToDatabase.html">ExportToDatabase</a> module if the raw images are analyzed with CellProfiler 1.0 and above. The object relationship table is also produced by this module if using CellProfiler 2.1.0 and above. Ideally, the tracking data should be produced using the <a href="http://www.cellprofiler.org/CPmanual/TrackObjects.html">TrackObjects</a> module, but any tracking algorithm capable of producing the requisite relationship table will suffice. </p>
+
+<h3>Dependencies</h3>
+<ul>
+<li><a href="http://www.lfd.uci.edu/~gohlke/pythonlibs/#wxpython">wxPython</a> 2.8+ (3.0+ is NOT supported)
+<li><a href="http://www.lfd.uci.edu/~gohlke/pythonlibs/#matplotlib">matplotlib</a> 1.3+ (note additional dependencies at link)
+<li><a href="http://www.lfd.uci.edu/~gohlke/pythonlibs/#mysql-python">MySQL-python</a> 1.2+
+<li><a href="http://www.lfd.uci.edu/~gohlke/pythonlibs/#ets">Enthought Tool Suite</a> (for Mayavi2) </li>
+<li><a href="http://www.lfd.uci.edu/~gohlke/pythonlibs/#vtk">VTK</a> (5.10+) </li>
+<li><a href="http://www.lfd.uci.edu/~gohlke/pythonlibs/#networkx">NetworkX</a> (1.7+) </li>
+<li><a href="http://www.lfd.uci.edu/~gohlke/pythonlibs/#numpy">NumPy-MKL</a> (1.71+) </li>
+<li><a href="https://pypi.python.org/pypi/configobj">configobj</a> (required by Enthought)</li>
+<li><a href="https://pypi.python.org/pypi/decorator">decorator</a> (required by networkx)</li>
+<li><a href="https://pypi.python.org/pypi/verlib">verlib (required by distutils)</a>
+<li><a href="https://pypi.python.org/pypi/python-bioformats/">python-bioformats</a>
+<li><a href="https://pypi.python.org/pypi/javabridge/">python-javabridge</a>
+</ul>
+<hr />
+
+<!--End content-->
+</div>
+</div>
+<div id="footer">
+<div>
+<center><img src="../images/banner_small.png" width="100%" alt="Banner" style="margin-top:20px"/></center>
+</div>
+</div>
+</body>
+</html>
