@@ -1,394 +1,190 @@
-<html>
-  <head>
-    <title>
-      CellProfiler written and video tutorials
-    </title>
-    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-    <link rel="stylesheet" href="stylesheets/application.css">
-    <style media="all" type="text/css">
-    .column {
-    -webkit-column-count: 2;
-    -moz-column-count: 2
-    column-count: 1;
-    text-align: center;
-    }
+---
+layout: default
+---
 
-    </style>
-    <link href=
-    'https://fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,500'
-    rel='stylesheet' type='text/css' />
+  <h1>
+    Tutorials
+  </h1>
 
-    <script type="text/javascript">
-    //
+  <p style="font-size:11px">
+    Documents are in PDF and PPS (self-starting Powerpoint slide) format.
+  </p>
 
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-4307992-1']);
-    _gaq.push(['_trackPageview']);
+  <p>
+    Technical descriptions of CellProfiler and CellProfiler Analyst
+    software can be found in <a href="citations.html">our papers</a>.
+  </p>
 
-    (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
+  <p>
+    Our introduction to automated image analysis principles and
+    practicalities is published as an <a href=
+    "http://www.ploscompbiol.org/article/info:doi/10.1371/journal.pcbi.1000603">
+    educational article</a> at PLoS.
+  </p>
 
-    //
-    </script>
-  </head>
-  <body onload=
-  "clientSideInclude('header','header.txt'); clientSideInclude('footer','footer.txt'); document.getElementById('header_getting_started').id='current';">
-  <div id="mainwrapper">
-      <div id="header">
-        <div>
-          <a href="/"><img border="0" class="header1" src=
-          "http://d1zymp9ayga15t.cloudfront.net/images/cp_logo_smaller.png" width="400" /></a> <a href=
-          "http://www.broadinstitute.org/"><img alt="Broad Institute logo"
-          border="0" class="header2" height="68" src=
-          "http://d1zymp9ayga15t.cloudfront.net/images/BroadInstituteLogo_smaller.png" width="220" /></a>
-          <div id="navigation">
-            <hr />
+  <p>
+    The NIH has published a introductory <a href=
+    "http://www.ncbi.nlm.nih.gov/books/NBK100913/">chapter</a> of "best
+    practices" for image-based high-content screening (in which
+    CellProfiler is mentioned) as part of the <a href=
+    "http://www.ncbi.nlm.nih.gov/books/NBK53196/">Assay Guidance
+    Manual</a>, and our group has published a more advanced follow-up
+    <a href=
+    "http://www.ncbi.nlm.nih.gov/books/n/assayguide/hcsimage/">chapter</a>
+    on image analysis methods.
+  </p>
 
-            <ul>
-              <li>
-                <a href="/" id="header_main">home</a>
-              </li>
+  <h3>
+    <a name="CPVideoTutorials">CellProfiler Video Tutorials</a>
+  </h3>
 
-              <li>
-                <a href="#" id="header_getting_started" onclick=
-                "return false;">getting started</a>
-                <ul>
-                  <li>
-                    <a href="/faq.html">What is CellProfiler? FAQ</a>
-                  </li>
-
-                  <li>
-                    <a href="/examples.html">examples</a>
-                  </li>
-
-                  <li>
-                    <a href="/tutorials.html">tutorials</a>
-                  </li>
-
-                  <li>
-                    <a href=
-                    "http://d1zymp9ayga15t.cloudfront.net/content/CellProfilerSoftwareBrochure.pdf">brochure</a>
-                  </li>
-                </ul>
-              </li>
-
-              <li>
-                <a href="#" id="header_download" onclick=
-                "return false;">download</a>
-                <ul>
-                  <li>
-                    <a href="/download.html">CellProfiler</a>
-                  </li>
-
-                  <li>
-                    <a href="/downloadCPA.html">CellProfiler Analyst</a>
-                  </li>
-                </ul>
-              </li>
-
-              <li style="width:109px;text-align:center;">
-                <a href="#" id="header_help" onclick="return false;">help</a>
-                <ul>
-                  <li>
-                    <a href="http://forum.cellprofiler.org/">forum</a>
-                  </li>
-
-                  <li>
-                    <a href="/supportplan.html">support plan</a>
-                  </li>
-
-                  <li>
-                    <a href="http://www.broadinstitute.org/bbbc/">BBBC</a>
-                  </li>
-
-                  <li>
-                    <a href=
-                    "https://github.com/CellProfiler/CellProfiler/wiki">for
-                    developers</a>
-                  </li>
-
-                  <li>
-                    <a href="/manuals.html">manuals</a>
-                  </li>
-
-                  <li>
-                    <a href="/wormtoolbox">WormToolbox</a>
-                  </li>
-
-                  <li>
-                    <a href="/imagingflowcytometry">Imaging Flow Cytometry</a>
-                  </li>
-                </ul>
-              </li>
-
-              <li>
-                <a href="#" id="header_aboutus" onclick="return false;">about
-                us</a>
-                <ul>
-                  <li>
-                    <a href="/about.html">CellProfiler Team</a>
-                  </li>
-
-                  <li>
-                    <a href="/impact.html">impact</a>
-                  </li>
-
-                  <li>
-                    <a href="/press.html">press</a>
-                  </li>
-
-                  <li>
-                    <a href="/citations.html">citations</a>
-                  </li>
-
-                  <li>
-                    <a href="/outreach.html">outreach</a>
-                  </li>
-
-                  <li>
-                    <a href="/interfaces.html">interfaces</a>
-                  </li>
-
-                  <li>
-                    <a href="/#CurrentNews">news</a>
-                  </li>
-                </ul>
-              </li>
-
-              <li class="navsearch">
-                <form action="http://google.com/search" method="get" onsubmit=
-                "location.href = this.action + '?&q=%2Bsite:cellprofiler.org+' + this.query.value; return false;">
-                <input maxlength="255" name="query" size="20" type="text"
-                  value="" /> <input type="submit" value="search" />
-                </form>
-              </li>
-            </ul>
-            <br />
-
-            <hr style="clear:left" />
-          </div>
-        </div>
-      </div>
-
-      <div id="content">
-        <h1>
-          Tutorials
-        </h1>
-
-        <p style="font-size:11px">
-          Documents are in PDF and PPS (self-starting Powerpoint slide) format.
-        </p>
-
-        <p>
-          Technical descriptions of CellProfiler and CellProfiler Analyst
-          software can be found in <a href="citations.html">our papers</a>.
-        </p>
-
-        <p>
-          Our introduction to automated image analysis principles and
-          practicalities is published as an <a href=
-          "http://www.ploscompbiol.org/article/info:doi/10.1371/journal.pcbi.1000603">
-          educational article</a> at PLoS.
-        </p>
-
-        <p>
-          The NIH has published a introductory <a href=
-          "http://www.ncbi.nlm.nih.gov/books/NBK100913/">chapter</a> of "best
-          practices" for image-based high-content screening (in which
-          CellProfiler is mentioned) as part of the <a href=
-          "http://www.ncbi.nlm.nih.gov/books/NBK53196/">Assay Guidance
-          Manual</a>, and our group has published a more advanced follow-up
-          <a href=
-          "http://www.ncbi.nlm.nih.gov/books/n/assayguide/hcsimage/">chapter</a>
-          on image analysis methods.
-        </p>
-
-        <h3>
-          <a name="CPVideoTutorials">CellProfiler Video Tutorials</a>
-        </h3>
-
-        <div style="list-style: none; margin-left: 2em">
-          <div class="column">
-            <center>
-              <iframe allowfullscreen="" frameborder="0" height="315" src=
-              "https://www.youtube.com/embed/OEHYXdOINg0" width=
-              "560"></iframe><br />
-              CellProfiler: Getting Started. Demonstrates some of
-              CellProfiler's features.<br />
-              <iframe allowfullscreen="" frameborder="0" height="315" src=
-              "https://www.youtube.com/embed/J0JPUrDNHJ0" width=
-              "560"></iframe><br />
-              Pipeline example to find individual worms. [<a href=
-              "Pipeline1.pdf">PDF</a>]
-            </center>
-          </div>
-          <br />
-
-          <ul style="list-style:none">
-            <li>For an introductory tutorial to construct pipelines, visit
-            <a href=
-            "https://youtu.be/PEaiGs18AF0?list=PL7CC87670239B4D10">CellProfiler:
-            Constructing pipelines</a>. [<a href=
-            "Constructing_Pipelines.pdf">PDF</a>]
-            </li>
-
-            <li style="list-style: none">
-              <br />
-            </li>
-
-            <li>
-              <a href="https://www.youtube.com/embed/WTHY4Rbf49M">Using
-              CellProfiler and FCS Express 4 Image Cytometry</a>: joint webinar
-              with <a href=
-              "http://denovosoftware.com/site/recordedWebinars.html">DeNovo
-              Software</a> on using CellProfiler to peform basic image assays
-              and generate data compatible with export into FCS Express.
-            </li>
-          </ul>
-
-          <h3>
-            <a name="CPWrittenTutorials">CellProfiler Written Tutorials</a>
-          </h3>
-
-          <ul style="list-style:none">
-            <li>Using CellProfiler for Quantitative Image Analysis <a href=
-            "http://d1zymp9ayga15t.cloudfront.net/content/Using_CellProfiler_for_quantitative_analysis.pptx">
-              [PPT]</a>
-            </li>
-
-            <li>Using the Input modules in CellProfiler 2.1:
-              <ul>
-                <li>Images <a href=
-                "http://d1zymp9ayga15t.cloudfront.net/tutorials/Using%20the%20Images%20module.pdf">[PDF]</a>
-                </li>
-
-                <li>Metadata <a href=
-                "http://d1zymp9ayga15t.cloudfront.net/tutorials/Using%20the%20Metadata%20module.pdf">[PDF]</a>
-                </li>
-
-                <li>NamesAndTypes <a href=
-                "http://d1zymp9ayga15t.cloudfront.net/tutorials/Using%20the%20NamesAndTypes%20module.pdf">[PDF]</a>
-                </li>
-
-                <li>Groups <a href=
-                "http://d1zymp9ayga15t.cloudfront.net/tutorials/Using%20the%20Groups%20module.pdf">[PDF]</a>
-                </li>
-
-                <li>Loading image stacks and movies <a href=
-                "http://d1zymp9ayga15t.cloudfront.net/tutorials/Loading_image_stacks_and_movies.pdf">[PDF]</a>
-                </li>
-              </ul>
-            </li>
-
-            <li>Identifying, measuring, and classifying yeast colonies
-              <a href="http://d1zymp9ayga15t.cloudfront.net/content/papers/85-Bray_CurrentProtocols_2015.pdf">
-              [PDF]</a> (<a href="examples.html#YeastColonies">relevant example
-              pipeline</a>)
-            </li>
-
-            <li>Identifying and measuring cells: Cytoplasm-nucleus
-            translocation assay <a href=
-            "http://d1zymp9ayga15t.cloudfront.net/content/papers/29-Carpenter_MethodsMolBio_2009.pdf">[PDF]</a>
-            (<a href="examples.html#SBS_Bioimage_CNT">relevant example
-            pipeline</a>)
-            </li>
-
-            <li>Calculating and applying illumination correction for images
-            <a href=
-            "http://d1zymp9ayga15t.cloudfront.net/content/ExampleIlluminationCorrection_Tutorial.pdf">[PDF]</a>
-            (<a href="examples.html#IlluminationCorrection">relevant example
-            pipeline</a>)
-            </li>
-
-            <li>Using the <a href="http://dx.doi.org/10.1038/nmeth.1984">Worm
-            Toolbox</a> for image analysis of <i>C. elegans</i> phenotypes
-            <a href=
-            "http://d1zymp9ayga15t.cloudfront.net/content/WormToolbox_How_to_get_started.pdf">[PDF]</a>
-            (<a href="examples.html#WormToolbox">relevant example
-            pipelines</a>)
-            </li>
-
-            <li>Performing a colocalization assay <a href=
-            "http://d1zymp9ayga15t.cloudfront.net/content/ExampleColocalization_Tutorial.pdf">[PDF]</a>
-            (<a href="examples.html#Colocalization">relevant example
-            pipeline</a>)
-            </li>
-
-            <li>Simple nuclei identification tutorial <a href=
-            "http://d1zymp9ayga15t.cloudfront.net/content/CellProfiler_BasicIntroduction.pdf">[PDF]</a>
-            (<a href="http://d1zymp9ayga15t.cloudfront.net/content/Example-RawData_CountNuclei.zip">sample
-            data</a>) (courtesy of the <a href=
-            "http://germanbioimaging.org/wiki/index.php/Main_Page">German
-            BioImaging</a> network)
-            </li>
-          </ul>
-
-          <ul style="list-style:none">
-            <li>We also post guided exercises as part of our educational
-            outreach effort <a href="outreach.html">here</a>.
-            </li>
-          </ul>
-
-          <h3>
-            <a name="CPAVideoTutorials">CellProfiler Analyst Video
-            Tutorials</a>
-          </h3>
-
-          <div style="list-style: none; margin-left: 2em">
-            <div class="column">
-              <iframe allowfullscreen="" frameborder="0" height="315" src=
-              "https://www.youtube.com/embed/g7rMdA44fZ0?list=PL7CC87670239B4D10"
-              width="560"></iframe><br />
-              Demonstrates some of CellProfiler Analyst's data exploration
-              features. [<a href="Exploring_Image_Data.pdf">PDF</a>]
-              <iframe allowfullscreen="" frameborder="0" height="315" src=
-              "https://www.youtube.com/embed/9mKrR9J3n2w?list=PL7CC87670239B4D10"
-              width="560"></iframe><br />
-              Provides an example of selecting phenotypes using gating.
-            </div>
-            <br />
-            For applying the machine learning tool to identify a phenotype of
-            interest, vist <a href=
-            "https://youtu.be/XMKgiRGb4IY?list=PL7CC87670239B4D10">Classifying
-            cells with machine learning</a>. [<a href=
-            "Classifying_Cells.pdf">PDF</a>]<br />
-            For all CellProfiler tutorials, visit <a href=
-            "https://www.youtube.com/user/broadinstitute/search?query=cellprofiler">
-            our YouTube channel</a>.
-          </div>
-        </div>
-      </div>
-
-      <div id="footer">
-        <div>
-          <center>
-            <img alt="Banner" src="http://d1zymp9ayga15t.cloudfront.net/images/banner_small.png" style=
-            "margin-top:20px" width="100%" />
-          </center>
-        </div>
-      </div>
+  <div style="list-style: none; margin-left: 2em">
+    <div class="column">
+      <center>
+        <iframe allowfullscreen="" frameborder="0" height="315" src=
+        "https://www.youtube.com/embed/OEHYXdOINg0" width=
+        "560"></iframe><br />
+        CellProfiler: Getting Started. Demonstrates some of
+        CellProfiler's features.<br />
+        <iframe allowfullscreen="" frameborder="0" height="315" src=
+        "https://www.youtube.com/embed/J0JPUrDNHJ0" width=
+        "560"></iframe><br />
+        Pipeline example to find individual worms. [<a href=
+        "Pipeline1.pdf">PDF</a>]
+      </center>
     </div>
-    <!-- Piwik -->
-    <script type="text/javascript">
-    //
-    var _paq = _paq || [];
-    _paq.push(['trackPageView']);
-    _paq.push(['enableLinkTracking']);
-    (function() {
-    var u="//159.203.72.67/piwik/";
-    _paq.push(['setTrackerUrl', u+'piwik.php']);
-    _paq.push(['setSiteId', 1]);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-    })();
-    //
-    </script> <noscript>
-    <p>
-      <img alt="" src="//159.203.72.67/piwik/piwik.php?idsite=1" style=
-      "border:0;" />
-    </p></noscript> <!-- End Piwik Code -->
-  </body>
-</html>
+    <br />
+
+    <ul style="list-style:none">
+      <li>For an introductory tutorial to construct pipelines, visit
+      <a href=
+      "https://youtu.be/PEaiGs18AF0?list=PL7CC87670239B4D10">CellProfiler:
+      Constructing pipelines</a>. [<a href=
+      "Constructing_Pipelines.pdf">PDF</a>]
+      </li>
+
+      <li style="list-style: none">
+        <br />
+      </li>
+
+      <li>
+        <a href="https://www.youtube.com/embed/WTHY4Rbf49M">Using
+        CellProfiler and FCS Express 4 Image Cytometry</a>: joint webinar
+        with <a href=
+        "http://denovosoftware.com/site/recordedWebinars.html">DeNovo
+        Software</a> on using CellProfiler to peform basic image assays
+        and generate data compatible with export into FCS Express.
+      </li>
+    </ul>
+
+    <h3>
+      <a name="CPWrittenTutorials">CellProfiler Written Tutorials</a>
+    </h3>
+
+    <ul style="list-style:none">
+      <li>Using CellProfiler for Quantitative Image Analysis <a href=
+      "http://d1zymp9ayga15t.cloudfront.net/content/Using_CellProfiler_for_quantitative_analysis.pptx">
+        [PPT]</a>
+      </li>
+
+      <li>Using the Input modules in CellProfiler 2.1:
+        <ul>
+          <li>Images <a href=
+          "http://d1zymp9ayga15t.cloudfront.net/tutorials/Using%20the%20Images%20module.pdf">[PDF]</a>
+          </li>
+
+          <li>Metadata <a href=
+          "http://d1zymp9ayga15t.cloudfront.net/tutorials/Using%20the%20Metadata%20module.pdf">[PDF]</a>
+          </li>
+
+          <li>NamesAndTypes <a href=
+          "http://d1zymp9ayga15t.cloudfront.net/tutorials/Using%20the%20NamesAndTypes%20module.pdf">[PDF]</a>
+          </li>
+
+          <li>Groups <a href=
+          "http://d1zymp9ayga15t.cloudfront.net/tutorials/Using%20the%20Groups%20module.pdf">[PDF]</a>
+          </li>
+
+          <li>Loading image stacks and movies <a href=
+          "http://d1zymp9ayga15t.cloudfront.net/tutorials/Loading_image_stacks_and_movies.pdf">[PDF]</a>
+          </li>
+        </ul>
+      </li>
+
+      <li>Identifying, measuring, and classifying yeast colonies
+        <a href="http://d1zymp9ayga15t.cloudfront.net/content/papers/85-Bray_CurrentProtocols_2015.pdf">
+        [PDF]</a> (<a href="examples.html#YeastColonies">relevant example
+        pipeline</a>)
+      </li>
+
+      <li>Identifying and measuring cells: Cytoplasm-nucleus
+      translocation assay <a href=
+      "http://d1zymp9ayga15t.cloudfront.net/content/papers/29-Carpenter_MethodsMolBio_2009.pdf">[PDF]</a>
+      (<a href="examples.html#SBS_Bioimage_CNT">relevant example
+      pipeline</a>)
+      </li>
+
+      <li>Calculating and applying illumination correction for images
+      <a href=
+      "http://d1zymp9ayga15t.cloudfront.net/content/ExampleIlluminationCorrection_Tutorial.pdf">[PDF]</a>
+      (<a href="examples.html#IlluminationCorrection">relevant example
+      pipeline</a>)
+      </li>
+
+      <li>Using the <a href="http://dx.doi.org/10.1038/nmeth.1984">Worm
+      Toolbox</a> for image analysis of <i>C. elegans</i> phenotypes
+      <a href=
+      "http://d1zymp9ayga15t.cloudfront.net/content/WormToolbox_How_to_get_started.pdf">[PDF]</a>
+      (<a href="examples.html#WormToolbox">relevant example
+      pipelines</a>)
+      </li>
+
+      <li>Performing a colocalization assay <a href=
+      "http://d1zymp9ayga15t.cloudfront.net/content/ExampleColocalization_Tutorial.pdf">[PDF]</a>
+      (<a href="examples.html#Colocalization">relevant example
+      pipeline</a>)
+      </li>
+
+      <li>Simple nuclei identification tutorial <a href=
+      "http://d1zymp9ayga15t.cloudfront.net/content/CellProfiler_BasicIntroduction.pdf">[PDF]</a>
+      (<a href="http://d1zymp9ayga15t.cloudfront.net/content/Example-RawData_CountNuclei.zip">sample
+      data</a>) (courtesy of the <a href=
+      "http://germanbioimaging.org/wiki/index.php/Main_Page">German
+      BioImaging</a> network)
+      </li>
+    </ul>
+
+    <ul style="list-style:none">
+      <li>We also post guided exercises as part of our educational
+      outreach effort <a href="outreach.html">here</a>.
+      </li>
+    </ul>
+
+    <h3>
+      <a name="CPAVideoTutorials">CellProfiler Analyst Video
+      Tutorials</a>
+    </h3>
+
+    <div style="list-style: none; margin-left: 2em">
+      <div class="column">
+        <iframe allowfullscreen="" frameborder="0" height="315" src=
+        "https://www.youtube.com/embed/g7rMdA44fZ0?list=PL7CC87670239B4D10"
+        width="560"></iframe><br />
+        Demonstrates some of CellProfiler Analyst's data exploration
+        features. [<a href="Exploring_Image_Data.pdf">PDF</a>]
+        <iframe allowfullscreen="" frameborder="0" height="315" src=
+        "https://www.youtube.com/embed/9mKrR9J3n2w?list=PL7CC87670239B4D10"
+        width="560"></iframe><br />
+        Provides an example of selecting phenotypes using gating.
+      </div>
+      <br />
+      For applying the machine learning tool to identify a phenotype of
+      interest, vist <a href=
+      "https://youtu.be/XMKgiRGb4IY?list=PL7CC87670239B4D10">Classifying
+      cells with machine learning</a>. [<a href=
+      "Classifying_Cells.pdf">PDF</a>]<br />
+      For all CellProfiler tutorials, visit <a href=
+      "https://www.youtube.com/user/broadinstitute/search?query=cellprofiler">
+      our YouTube channel</a>.
+    </div>
+  </div>
