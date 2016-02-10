@@ -1,7 +1,8 @@
 ---
 layout: default
----
-  <center>
+---      
+      <div id="content">
+          <center>
     <div class="boxed" style="margin: 0 auto; width: 30em">
       <form action="./cgi-bin/downloadCPA.cgi" enctype=
       "multipart/form-data" method="post" name="download" target=
@@ -16,20 +17,50 @@ layout: default
         "30" type="text" />. <input name="target_file" type="hidden" />
       </form>
       <br />
-      <a href="http://d1zymp9ayga15t.cloudfront.net/releases/11710/CPAnalyst_2.0_r11710.dmg"
-      onclick=
-      "submitform(this); javascript: _gaq.push(['_trackPageview', '/downloadCPA/mac'])">
-      Download CellProfiler Analyst 2.0 DMG for Mac (r11710)</a><br />
-      (then open the DMG, copy CPAnalyst.app to your Applications
-      folder)<br />
-      <br />
-      <a href=
-      "http://d1zymp9ayga15t.cloudfront.net/releases/11710/CPAnalyst_2.0_r11710_setup.exe"
-      onclick=
-      "submitform(this); javascript: _gaq.push(['_trackPageview', '/downloadCPA/windows'])">
-      Download CellProfiler Analyst 2.0 for Windows (r11710)</a><br />
-      (run the EXE and follow the prompts)
-    </div>
+
+      <div id="Win64Preferred">
+        <center>
+          <a href="http://d1zymp9ayga15t.cloudfront.net/releases/11710/CPAnalyst_2.0_r11710.dmg"
+          onclick=
+          "submitform(this); javascript: _gaq.push(['_trackPageview', '/downloadCPA/mac'])">
+          Download CellProfiler Analyst 2.0 DMG for Mac (r11710)</a><br />
+          (then open the DMG, copy CPAnalyst.app to your Applications
+          folder)<br />
+
+
+                <p style='font-size:9px'>
+                  <a class="download" id="Win64PreferredAnchor" onclick=
+                  "javascript: _gaq.push(['_trackPageview', '/download/win64']);">
+                  <img align="middle" src="http://d1zymp9ayga15t.cloudfront.net/maccombo.gif" style=
+                  "margin-bottom:0.5em" /><br />
+                </p>
+              </div>
+            </div>
+          </a>
+          </div>
+        </center>
+      </div>
+      <div id="Win64Preferred">
+        <center>
+          <a href="http://d1zymp9ayga15t.cloudfront.net/releases/11710/CPAnalyst_2.0_r11710.dmg"
+          onclick=
+          "submitform(this); javascript: _gaq.push(['_trackPageview', '/downloadCPA/mac'])">
+          Download CellProfiler Analyst 2.0 for Windows (r11710)</a><br />
+          (run the EXE and follow the prompts)
+
+
+                <p style='font-size:9px'>
+                  <a class="download" id="Win64PreferredAnchor" onclick=
+                  "javascript: _gaq.push(['_trackPageview', '/download/win64']);">
+                  <img align="middle" src="http://d1zymp9ayga15t.cloudfront.net/winCombo.gif" style=
+                  "margin-bottom:0.5em" /><br />
+                </p>
+              </div>
+            </div>
+          </a>
+          </div>
+        </center>
+      </div>
     <br />
     <br />
     <a href="http://d1zymp9ayga15t.cloudfront.net/content/Documentation/cpa2_manual.pdf" onclick=
@@ -72,3 +103,25 @@ layout: default
     "https://svn.broadinstitute.org/CellProfiler/trunk/oldCPA/">https://svn.broadinstitute.org/CellProfiler/trunk/oldCPA/</a>
     </li>
   </ul>
+
+      </div>
+
+      <div id="footer">
+  <div>
+    <center>
+      <img alt="Banner" src="http://d1zymp9ayga15t.cloudfront.net/images/banner_small.png" style="margin-top:20px" width="100%">
+    </center>
+  </div>
+</div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js">
+
+    </script>
+
+    <script>
+      window.jQuery || document.write('<script src="javascripts/libraries/jquery-2.2.0.min.js"><\/script>')
+    </script>
+  </body>
+</html>
