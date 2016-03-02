@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    
+<html>
+<head>
+<title>CellProfiler cell image analysis software</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<style type="text/css" media="all">
+	@import "cp_stylesheet.css";
+	</style>
+
+
+<!--#if expr="'true'='true'" -->
+<script> function clientSideInclude(id, url) { return; }</script>
+<!--#else -->
+<script language="JavaScript" src="clientSideInclude.js"></script>
+<!--#endif -->
+
+<style type="text/css">div.boxed {background:#CCCCFF;color:#000;display:inline-block}</style> 
+<link rel="stylesheet" type="text/css" href="NiftyCube/niftyCorners.css" /> 
+
+</head>
+
+<body onLoad="clientSideInclude('header','header.txt');
+              clientSideInclude('footer','footer.txt');
+              document.getElementById('header_aboutus').id='current';">
+
+<div id="mainwrapper">
+
+<div id="header">
+<!--#include file="header.txt" -->
+</div>
+<div id="content">
+  <p><a href="./linked_files/FeaturesList.txt">FeaturesList.txt</a></p>
+  <p><a href="./linked_files/ClassifierRules.zip">ClassifierRules.zip</a></p>
+  <p><a href="./linked_files/CombinedScores.xls">CombinedScores.xls</a></p>
+  <p><a href="./linked_files/AnalysisPIPE.txt">AnalysisPIPE.txt</a></p>
+  <p><a href="./linked_files/AnalysisPIPE.mat.zip">AnalysisPIPE.mat.zip</a></p>
+  <p><a href="./linked_files/SamplesScores.zip">SamplesScores.zip</a></p>
+  <p><a href="./linked_files/Jones_PNAS_2009_training_sets.zip">TrainingSets.zip</a></p>
+  <p>_______</p>
+  <p><a href="./linked_files/SupplementalData.zip">AllSupplementalData.zip</a></p>
+</div>
+
+<div id="footer">
+<!--#include file="footer.txt" -->
+</div>
+
+</div>
+</body>
+</html>
