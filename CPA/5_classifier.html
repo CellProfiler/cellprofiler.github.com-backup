@@ -24,7 +24,7 @@
 
   
   
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="static/css/theme.css" type="text/css" />
   
 
   
@@ -35,7 +35,7 @@
         <link rel="prev" title="IV. The CellProfiler Analyst Interface" href="4_cpa_interface.html"/> 
 
   
-  <script src="_static/js/modernizr.min.js"></script>
+  <script src="static/js/modernizr.min.js"></script>
 
 </head>
 
@@ -155,7 +155,7 @@
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="_sources/5_classifier.txt" rel="nofollow"> View page source</a>
+            <a href="sources/5_classifier.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -208,10 +208,10 @@ enrichment/depletion of each class per image or per group.</p>
 <h3>V.B.1 Configuring Classifier<a class="headerlink" href="#v-b-1-configuring-classifier" title="Permalink to this headline">¶</a></h3>
 <p>Launch Classifier by clicking the Classifier icon in the CPA toolbar. The main Classifier screen will appear. If you have previously saved a training set, you can load it using <strong>File &gt; Load Training Set:</strong></p>
 <div class="figure align-center">
-<img alt="_images/05_01.jpg" src="_images/05_01.jpg" />
+<img alt="images/05_01.jpg" src="images/05_01.jpg" />
 </div>
 <div class="figure align-center" id="id1">
-<img alt="_images/05_02.jpg" src="_images/05_02.jpg" />
+<img alt="images/05_02.jpg" src="images/05_02.jpg" />
 <p class="caption"><span class="caption-text">Initial Classifier screen.</span></p>
 </div>
 <div class="section" id="adding-deleting-and-renaming-bins">
@@ -221,15 +221,15 @@ enrichment/depletion of each class per image or per group.</p>
 </ul>
 <p>To add more bins at any time, click the <strong>Add new class</strong>. button in the extreme lower right-hand corner of the window. You will see the <strong>Rename class</strong> popup window:</p>
 <div class="figure align-center" id="id2">
-<img alt="_images/05_03.jpg" src="_images/05_03.jpg" />
+<img alt="images/05_03.jpg" src="images/05_03.jpg" />
 <p class="caption"><span class="caption-text">Adding a sorting bin.</span></p>
 </div>
 <p>Right-clicking inside any bin displays a popup menu that contains a number of options, including <strong>deleting</strong> and <strong>renaming</strong> bins. The remaining options in this menu apply to the <em>contents</em> of the 17 bin. See section III.C.3 for more information.</p>
 <div class="figure align-center">
-<img alt="_images/05_04.jpg" src="_images/05_04.jpg" />
+<img alt="images/05_04.jpg" src="images/05_04.jpg" />
 </div>
 <div class="figure align-center" id="id3">
-<img alt="_images/05_04b.jpg" src="_images/05_04b.jpg" />
+<img alt="images/05_04b.jpg" src="images/05_04b.jpg" />
 <p class="caption"><span class="caption-text">Right clicking on a sorting bin.</span></p>
 </div>
 </div>
@@ -237,7 +237,7 @@ enrichment/depletion of each class per image or per group.</p>
 <h4><em>Adjusting the display</em><a class="headerlink" href="#adjusting-the-display" title="Permalink to this headline">¶</a></h4>
 <p>The menu bar at the top of the screen contains options for adjusting the display of the image tiles that will be displayed.** View &gt; Image Controls** will bring up the same control panel found in the <strong>Image Viewer</strong> tool (section V), and the <strong>channel menus</strong> can be used to map different colors onto the respective channels. (<strong>Actin</strong>, <strong>pH3</strong>, and <strong>DNA</strong>, in this example; named so in the properties file as described in section II.)</p>
 <div class="figure align-center" id="id4">
-<img alt="_images/05_01.jpg" src="_images/05_01.jpg" />
+<img alt="images/05_01.jpg" src="images/05_01.jpg" />
 <p class="caption"><span class="caption-text">Classifier menu bar.</span></p>
 </div>
 </div>
@@ -246,7 +246,7 @@ enrichment/depletion of each class per image or per group.</p>
 <h3>V.B.2 Fetch an initial batch of objects<a class="headerlink" href="#v-b-2-fetch-an-initial-batch-of-objects" title="Permalink to this headline">¶</a></h3>
 <p>Objects are fetched (retrieved) using the top portion of the main Classifier window:</p>
 <div class="figure align-center" id="id5">
-<img alt="_images/05_05.jpg" src="_images/05_05.jpg" />
+<img alt="images/05_05.jpg" src="images/05_05.jpg" />
 <p class="caption"><span class="caption-text">Controls to fetch objects.</span></p>
 </div>
 <p><em>How many objects</em>? Enter the number of objects you want Classifier to fetch (default = <strong>20</strong>)</p>
@@ -254,7 +254,7 @@ enrichment/depletion of each class per image or per group.</p>
 <p><em>From which images?</em> <strong>Experiment</strong> and <strong>image</strong> are the two system-supplied default values in the right-hand menu. Select <strong>experiment</strong> to have Classifier retrieve objects from your entire experiment; select <strong>image</strong> to retrieve objects from a particular image (you will be asked to type 18 its ID number from your image table). If you want to fetch objects from particular subsets of images in the experiment (e.g., control samples), you can set up filters and groups of images by defining them in your properties file (described earlier in section II.G); these <strong>filters</strong> or <strong>groups</strong> will be available for selection here.</p>
 <p>Click the <strong>Fetch</strong> button (located next to the right-hand menu) when you are ready to proceed, and you will see results like this:</p>
 <div class="figure align-center" id="id6">
-<img alt="_images/05_06.jpg" src="_images/05_06.jpg" />
+<img alt="images/05_06.jpg" src="images/05_06.jpg" />
 <p class="caption"><span class="caption-text">Twenty unclassified cells have been fetched and are ready for initial sorting.</span></p>
 </div>
 </div>
@@ -270,7 +270,7 @@ object that falls under this dot is the object that must be sorted. In the examp
 under the mouse should be sorted based on the blue cell underneath the dot, NOT the cells
 surrounding it. To change cropping size of the tile “window”, adjust the field <code class="docutils literal"><span class="pre">image_tile_size</span></code> in the properties file (section II.D).</p>
 <div class="figure align-center" id="id7">
-<img alt="_images/05_07.jpg" src="_images/05_07.jpg" />
+<img alt="images/05_07.jpg" src="images/05_07.jpg" />
 <p class="caption"><span class="caption-text">The object to be sorted is indicated by a small dot.</span></p>
 </div>
 <p>Once you have placed tiles in at least two bins, you have created Classifier’s initial <strong>training set</strong>,
@@ -280,7 +280,7 @@ which will be used to generate rules to differentiate objects in different class
 </ul>
 <p>Some helpful tools are available when you right-click on a tile:</p>
 <div class="figure align-center" id="id8">
-<img alt="_images/05_08.jpg" src="_images/05_08.jpg" />
+<img alt="images/05_08.jpg" src="images/05_08.jpg" />
 <p class="caption"><span class="caption-text">Right-clicking on a tile.</span></p>
 </div>
 <ul class="simple">
@@ -311,14 +311,14 @@ which will be used to generate rules to differentiate objects in different class
 </ul>
 <p>Click <strong>Find Rules</strong>. You will note that the large text field near the top of the screen contains the initial rules Classifier has identified based on the objects you deposited into the bins, as a series of IF statements:</p>
 <div class="figure align-center" id="id9">
-<img alt="_images/05_09.jpg" src="_images/05_09.jpg" />
+<img alt="images/05_09.jpg" src="images/05_09.jpg" />
 <p class="caption"><span class="caption-text">Classifier, after finding rules. In this example, 5 rules were found out of the specified maximum of 5.</span></p>
 </div>
 <p>Usually the number of rules shown in the window is equal to the maximum number you selected, unless fewer rules are able to achieve perfect classification of the training set.</p>
 <p>At this point, your goal is to refine the rules by adding more objects to the training set. You can continue to fetch objects at random, but note that the left-most drop-down menu in the fetch controls (top part of the window) now lists the classes that you have trained Classifier to recognize. This allows you to fetch objects that Classifier deems as belonging to a particular
 class. Correcting for misclassified objects by sorting them into the appropriate bins and retraining will help you to rapidly improve the accuracy of Classifier’s rules.</p>
 <div class="figure align-center" id="id10">
-<img alt="_images/05_10.jpg" src="_images/05_10.jpg" />
+<img alt="images/05_10.jpg" src="images/05_10.jpg" />
 <p class="caption"><span class="caption-text">Object class selection options.</span></p>
 </div>
 <p>Continue repeating the process of finding rules, fetching objects, sorting them into their appropriate classes, and finding more rules. Scoring (section III.C.6, following) can be used when you have finished creating a <strong>training set</strong> (that is, you are satisfied by its performance), but note that, as described later, scoring can also be used as another iterative step in creating the training set.</p>
@@ -333,7 +333,7 @@ how Classifier performs on a single image. Although the results cannot be reliab
 to other images, it can be useful to examine control images and further refine the rules by
 adding misclassified objects in those images to the proper bins.</p>
 <div class="figure align-center">
-<img alt="_images/5_d.jpg" src="_images/5_d.jpg" />
+<img alt="images/5_d.jpg" src="images/5_d.jpg" />
 </div>
 <p>The relationship between accuracy on individual cells versus performance scoring wells for
 follow-up is complicated, because false positive and false negatives are not evenly distributed
@@ -361,13 +361,13 @@ shortcut <strong>Ctrl+S</strong>).</p>
 <p class="last"><strong>Note</strong>: This function is not yet capable of saving the classification markings.</p>
 </div>
 <div class="align-center figure" id="id11">
-<img alt="_images/05_a.jpg" src="_images/05_a.jpg" />
+<img alt="images/05_a.jpg" src="images/05_a.jpg" />
 <p class="caption"><span class="caption-text">Scoring an image: Identifying classes by color (blue and yellow squares, left) and by number (right). Note that we have chosen to hide the blue channel (DNA stain) while viewing these images.</span></p>
 </div>
 <p>To display the object classes by number rather than color, select <strong>View &gt; View object classes
 as numbers</strong> from the menu bar.</p>
 <div class="figure align-center" id="id12">
-<img alt="_images/05_14.jpg" src="_images/05_14.jpg" />
+<img alt="images/05_14.jpg" src="images/05_14.jpg" />
 <p class="caption"><span class="caption-text">The Image Viewer control panel after scoring an image.</span></p>
 </div>
 <p>The brightness, contrast, and zoom controls work exactly as described for <strong>Image Viewer</strong>
@@ -386,7 +386,7 @@ you defined. You can then sort by these columns to find images (or groups, e.g.,
 collections of images) that are enriched or depleted for a particular classification, based on
 object counts or enrichment scores (see figure below for details).</p>
 <div class="figure align-center" id="id13">
-<img alt="_images/05_b.jpg" src="_images/05_b.jpg" />
+<img alt="images/05_b.jpg" src="images/05_b.jpg" />
 <p class="caption"><span class="caption-text">Description of enrichment score calculation. (A) While machine-learning methods are used to produce per-cell scores,  the challenge remains to model the sample distributions to generate a per-sample enrichment score. (B) Samples with  varied positive/negative counts can be viewed as being drawn from a Beta distribution. (C) The full population is treated  as independent samples to yield C = Beta(, ) which is used as the full-population-level prior for future observations.  This prior is updated with new observations by computing the distribution of the positive fraction as the posterior T =  Beta( + npos,  + nneg), where npos and nneg are the positive and negative counts, respectively. The enrichment score for  each sample is then calculated as the logit of P(T &gt; C).</span></p>
 </div>
 <p><strong>Note</strong>: <em>Enrichment</em> scores are computed for each sample as the logit area under the ROC curve
@@ -400,7 +400,7 @@ phenotype is treated as positive and all others as negative for each phenotype i
 them here for use in scoring. If no groups or filters are defined, the window will contain only the
 default group <strong>Image</strong> and the default filter <strong>None</strong>.</p>
 <div class="figure align-center" id="id14">
-<img alt="_images/05_18.jpg" src="_images/05_18.jpg" />
+<img alt="images/05_18.jpg" src="images/05_18.jpg" />
 <p class="caption"><span class="caption-text">Classifier group/filter selection window.</span></p>
 </div>
 <p>Classifier presents its results in the <strong>Table Viewer</strong> tool, described in the next section. The table
@@ -408,10 +408,10 @@ shows object counts and enrichment values for each phenotype you trained Classif
 recognize. To view this information graphically, return to the main Classifier screen and select
 <strong>Tools &gt; Plate Viewer</strong> from the menu bar (see section VI for details).</p>
 <div class="figure align-center">
-<img alt="_images/05_19.jpg" src="_images/05_19.jpg" />
+<img alt="images/05_19.jpg" src="images/05_19.jpg" />
 </div>
 <div class="figure align-center" id="id15">
-<img alt="_images/05_y.jpg" src="_images/05_y.jpg" />
+<img alt="images/05_y.jpg" src="images/05_y.jpg" />
 <p class="caption"><span class="caption-text">Enrichment Table Viewer produced by Classifier. Here we have grouped the counts and statistics on a per-image basis. We have ordered the data by the “Enriched Score Positive” column. The most highly enriched images were  172, 171, 169, and 170. With the “Positive Cell Count” column selected, we can see in the status bar that there are a  total of 2331 positive cells in our experiment, with a mean of 6.07 positive cells per image, and a standard deviation  of 7.74.</span></p>
 </div>
 </div>
@@ -466,16 +466,16 @@ recognize. To view this information graphically, return to the main Classifier s
             HAS_SOURCE:  true
         };
     </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="static/jquery.js"></script>
+      <script type="text/javascript" src="static/underscore.js"></script>
+      <script type="text/javascript" src="static/doctools.js"></script>
       <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
   
 
   
   
-    <script type="text/javascript" src="_static/js/theme.js"></script>
+    <script type="text/javascript" src="static/js/theme.js"></script>
   
 
   
